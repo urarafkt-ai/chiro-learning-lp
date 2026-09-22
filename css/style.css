@@ -156,6 +156,7 @@ section.alt .emphasis {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 30%;
   /* 画像が未配置の間、alt文字がプレースホルダーとして自然に見えるようにする */
   color: var(--color-brown-soft);
   font-size: 0.85rem;
@@ -164,6 +165,20 @@ section.alt .emphasis {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 縦位置(ポートレート)写真用フレーム - hero-ando-lecture.jpg など */
+.photo-frame--portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.photo-frame--portrait img {
+  object-position: center 15%;
+}
+
+/* 正方形写真で人物が上寄りにいる場合に使用 - posture-tablet.jpg */
+.photo-frame--top img {
+  object-position: center 15%;
 }
 
 .photo-caption {
