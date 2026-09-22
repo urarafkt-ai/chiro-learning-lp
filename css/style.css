@@ -1,0 +1,433 @@
+/* ==========================================================================
+   身体を学ぶLP - スタイルシート
+   カラー：アイボリー / ベージュ / くすみグリーン / ダークブラウン
+   ========================================================================== */
+
+:root {
+  --color-bg: #FAF6EF;          /* アイボリー(ベース背景) */
+  --color-bg-soft: #F1E9DC;     /* 淡いベージュ(section背景) */
+  --color-card: #FFFFFF;
+  --color-green: #6E7D5F;       /* くすみグリーン(アクセント) */
+  --color-green-dark: #566149;  /* ホバー等 */
+  --color-brown: #3B2F26;       /* ダークブラウン(本文・見出し) */
+  --color-brown-soft: #6B5C4F;  /* 補助テキスト */
+  --color-border: #E3D9C8;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+
+  --max-width: 720px;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-brown);
+  font-family: var(--font-body);
+  line-height: 1.9;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 76px; /* スマホ固定CTA分の余白 */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+section.alt {
+  background: var(--color-bg-soft);
+}
+
+/* ---------- 見出し ---------- */
+
+.section-number {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-brown-soft);
+  margin-bottom: 12px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--color-brown);
+  margin: 0 0 24px;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+h3 {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+p {
+  margin: 0 0 1.4em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  font-size: 1.05rem;
+}
+
+.emphasis {
+  display: block;
+  background: var(--color-bg-soft);
+  border-left: 4px solid var(--color-green);
+  padding: 18px 20px;
+  margin: 28px 0;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+section.alt .emphasis {
+  background: var(--color-card);
+}
+
+/* ---------- ファーストビュー ---------- */
+
+.hero {
+  padding-top: 32px;
+}
+
+.hero .photo-frame {
+  margin-bottom: 28px;
+}
+
+.hero-meta {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-brown-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+/* ---------- 写真 ---------- */
+
+.photo-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 画像が未配置の間、alt文字がプレースホルダーとして自然に見えるようにする */
+  color: var(--color-brown-soft);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-caption {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--color-brown-soft);
+  text-align: center;
+}
+
+/* ---------- CTAボタン ---------- */
+
+.cta-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--color-green);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 18px 20px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(59, 47, 38, 0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  background: var(--color-green-dark);
+}
+
+.cta-button:active {
+  transform: scale(0.99);
+}
+
+.cta-wrap {
+  margin: 32px 0 8px;
+}
+
+.cta-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-brown-soft);
+  margin-top: 10px;
+}
+
+/* スマホ固定CTA */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background: rgba(250, 246, 239, 0.96);
+  border-top: 1px solid var(--color-border);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  display: block;
+}
+
+.sticky-cta .cta-button {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .sticky-cta {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* ---------- ステップ(料金)カード ---------- */
+
+.step-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.step-card__label {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-green-dark);
+  background: var(--color-bg-soft);
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.step-card__price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.step-card__sub {
+  font-size: 0.85rem;
+  color: var(--color-brown-soft);
+  margin-bottom: 16px;
+}
+
+.step-bundle {
+  background: var(--color-bg-soft);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.step-bundle__before {
+  color: var(--color-brown-soft);
+  text-decoration: line-through;
+}
+
+.step-bundle__after {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-green-dark);
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-item {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 4px 20px;
+  margin-bottom: 12px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 16px 0;
+  list-style: none;
+  position: relative;
+  padding-right: 28px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 14px;
+  font-size: 1.3rem;
+  color: var(--color-green);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  padding-bottom: 18px;
+  margin: 0;
+  color: var(--color-brown-soft);
+}
+
+/* ---------- 学ぶ内容 / チェックリスト ---------- */
+
+.learn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.learn-item {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  border: 1px solid var(--color-border);
+}
+
+/* ---------- 無料講座セクション(コンバージョン重視) ---------- */
+
+.offer-box {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 28px 0;
+}
+
+.offer-box ol {
+  padding-left: 1.2em;
+  margin: 0 0 20px;
+}
+
+.offer-box li {
+  margin-bottom: 14px;
+}
+
+.offer-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.offer-facts li {
+  background: var(--color-bg-soft);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--color-brown-soft);
+}
+
+/* ---------- フッター ---------- */
+
+footer {
+  padding: 40px 0 96px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-brown-soft);
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding-bottom: 40px;
+  }
+}
+
+/* ---------- タブレット以上 ---------- */
+
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 88px 0;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    width: auto;
+    display: inline-block;
+    padding: 18px 48px;
+  }
+
+  .cta-wrap {
+    text-align: center;
+  }
+}
