@@ -1,23 +1,33 @@
 /* ==========================================================================
-   身体を学ぶLP - スタイルシート
-   カラー：アイボリー / ベージュ / くすみグリーン / ダークブラウン
+   身体を学ぶLP - スタイルシート v2
+   明るく親しみやすい「参加してみたい」デザイン
+   カラー：アイボリー / クリーム / 淡いグリーン / コーラルオレンジ
    ========================================================================== */
 
 :root {
-  --color-bg: #FAF6EF;          /* アイボリー(ベース背景) */
-  --color-bg-soft: #F1E9DC;     /* 淡いベージュ(section背景) */
+  --color-bg: #FFFDF8;          /* メイン背景(白に近いアイボリー) */
+  --color-bg-cream: #FFF4E8;    /* サブ背景(淡いクリーム) */
+  --color-bg-green: #F3F8EF;    /* サブ背景(淡いグリーン) */
   --color-card: #FFFFFF;
-  --color-green: #6E7D5F;       /* くすみグリーン(アクセント) */
-  --color-green-dark: #566149;  /* ホバー等 */
-  --color-brown: #3B2F26;       /* ダークブラウン(本文・見出し) */
-  --color-brown-soft: #6B5C4F;  /* 補助テキスト */
-  --color-border: #E3D9C8;
+
+  --color-green: #7FA66A;       /* メイングリーン */
+  --color-green-dark: #55724A;  /* 濃いグリーン(見出し・チップ) */
+
+  --color-coral-btn: #E06B49;       /* CTAボタン(白文字とのコントラスト確保のためやや濃いコーラル) */
+  --color-coral-btn-dark: #C6572F;  /* ホバー */
+
+  --color-yellow: #F3C96B;      /* 補助色 */
+
+  --color-brown: #3A332E;       /* 本文(黒に近いブラウン) */
+  --color-brown-soft: #7A6F63;  /* 補助テキスト */
+  --color-border: #EFE6D8;
 
   --font-body: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
 
   --max-width: 720px;
-  --radius: 14px;
+  --radius: 16px;
+  --radius-sm: 10px;
 }
 
 * {
@@ -34,10 +44,11 @@ body {
   background: var(--color-bg);
   color: var(--color-brown);
   font-family: var(--font-body);
-  line-height: 1.9;
+  line-height: 1.85;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 76px; /* スマホ固定CTA分の余白 */
+  padding-bottom: 80px; /* スマホ固定CTA分の余白 */
+  overflow-x: hidden;
 }
 
 img {
@@ -52,51 +63,56 @@ a {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 22px;
 }
 
 section {
-  padding: 64px 0;
+  padding: 56px 0;
 }
 
-section.alt {
-  background: var(--color-bg-soft);
+section.bg-cream {
+  background: var(--color-bg-cream);
+}
+
+section.bg-green {
+  background: var(--color-bg-green);
 }
 
 /* ---------- 見出し ---------- */
 
 .section-number {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 0.15em;
-  color: var(--color-brown-soft);
-  margin-bottom: 12px;
+  color: var(--color-green-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 h1, h2, h3 {
   font-weight: 700;
   color: var(--color-brown);
-  margin: 0 0 24px;
+  margin: 0 0 20px;
 }
 
 h1 {
-  font-size: 1.7rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 1.55;
 }
 
 h2 {
-  font-size: 1.4rem;
-  line-height: 1.7;
+  font-size: 1.32rem;
+  line-height: 1.6;
 }
 
 h3 {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 p {
-  margin: 0 0 1.4em;
+  margin: 0 0 1.25em;
 }
 
 p:last-child {
@@ -104,42 +120,51 @@ p:last-child {
 }
 
 .lead {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
+}
+
+.subcopy {
+  font-size: 1rem;
+  color: var(--color-brown-soft);
+  margin-top: -6px;
 }
 
 .emphasis {
   display: block;
-  background: var(--color-bg-soft);
+  background: var(--color-card);
   border-left: 4px solid var(--color-green);
-  padding: 18px 20px;
-  margin: 28px 0;
+  padding: 16px 18px;
+  margin: 24px 0;
   font-weight: 700;
   border-radius: 4px;
-}
-
-section.alt .emphasis {
-  background: var(--color-card);
+  font-size: 1.02rem;
 }
 
 /* ---------- ファーストビュー ---------- */
 
 .hero {
-  padding-top: 32px;
+  padding-top: 28px;
+  padding-bottom: 8px;
 }
 
 .hero .photo-frame {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-.hero-meta {
-  margin-top: 28px;
-  padding-top: 20px;
-  border-top: 1px solid var(--color-border);
-  font-size: 0.9rem;
-  color: var(--color-brown-soft);
+.badge-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.badge {
+  background: var(--color-bg-green);
+  color: var(--color-green-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 999px;
 }
 
 /* ---------- 写真 ---------- */
@@ -147,7 +172,7 @@ section.alt .emphasis {
 .photo-frame {
   position: relative;
   aspect-ratio: 4 / 3;
-  background: var(--color-bg-soft);
+  background: var(--color-bg-cream);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -157,7 +182,6 @@ section.alt .emphasis {
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  /* 画像が未配置の間、alt文字がプレースホルダーとして自然に見えるようにする */
   color: var(--color-brown-soft);
   font-size: 0.85rem;
   text-align: center;
@@ -167,7 +191,7 @@ section.alt .emphasis {
   justify-content: center;
 }
 
-/* 縦位置(ポートレート)写真用フレーム - hero-ando-lecture.jpg など */
+/* 縦位置(ポートレート)写真用フレーム - hero-ando-lecture.jpg */
 .photo-frame--portrait {
   aspect-ratio: 3 / 4;
 }
@@ -181,11 +205,18 @@ section.alt .emphasis {
   object-position: center 15%;
 }
 
+/* 写真上の短いキャプション */
 .photo-caption {
-  margin-top: 10px;
-  font-size: 0.8rem;
-  color: var(--color-brown-soft);
-  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 18px 16px;
+  background: linear-gradient(to top, rgba(40, 32, 24, 0.72), rgba(40, 32, 24, 0));
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ---------- CTAボタン ---------- */
@@ -194,20 +225,20 @@ section.alt .emphasis {
   display: block;
   width: 100%;
   text-align: center;
-  background: var(--color-green);
+  background: var(--color-coral-btn);
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.02rem;
   padding: 18px 20px;
   border-radius: 999px;
-  box-shadow: 0 6px 16px rgba(59, 47, 38, 0.15);
+  box-shadow: 0 8px 18px rgba(224, 107, 73, 0.32);
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .cta-button:hover,
 .cta-button:focus-visible {
-  background: var(--color-green-dark);
+  background: var(--color-coral-btn-dark);
 }
 
 .cta-button:active {
@@ -215,14 +246,24 @@ section.alt .emphasis {
 }
 
 .cta-wrap {
-  margin: 32px 0 8px;
+  margin: 30px 0 8px;
 }
 
 .cta-note {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--color-brown-soft);
   margin-top: 10px;
+}
+
+.cta-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--color-brown-soft);
 }
 
 /* スマホ固定CTA */
@@ -232,7 +273,7 @@ section.alt .emphasis {
   right: 0;
   bottom: 0;
   z-index: 50;
-  background: rgba(250, 246, 239, 0.96);
+  background: rgba(255, 253, 248, 0.97);
   border-top: 1px solid var(--color-border);
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
   display: block;
@@ -253,14 +294,92 @@ section.alt .emphasis {
   }
 }
 
+/* ---------- 体験できること(4カード) ---------- */
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.promise-card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  border: 1px solid var(--color-border);
+}
+
+.promise-card__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-green);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.promise-card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+}
+
+.promise-card p {
+  font-size: 0.85rem;
+  color: var(--color-brown-soft);
+  margin: 0;
+}
+
+@media (max-width: 420px) {
+  .promise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- おすすめな方(チェックリスト) ---------- */
+
+.fit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.fit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--color-card);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+.fit-item__mark {
+  color: var(--color-green-dark);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* ---------- ステップ(料金)カード ---------- */
 
 .step-card {
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 24px;
-  margin-bottom: 20px;
+  padding: 22px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.step-card--free {
+  border: 2px solid var(--color-green);
 }
 
 .step-card__label {
@@ -268,14 +387,15 @@ section.alt .emphasis {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   color: var(--color-green-dark);
-  background: var(--color-bg-soft);
+  background: var(--color-bg-green);
   border-radius: 999px;
   padding: 4px 12px;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .step-card__price {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 4px;
 }
@@ -283,11 +403,18 @@ section.alt .emphasis {
 .step-card__sub {
   font-size: 0.85rem;
   color: var(--color-brown-soft);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+
+.step-arrow {
+  text-align: center;
+  color: var(--color-green-dark);
+  font-size: 1.2rem;
+  margin: -6px 0 12px;
 }
 
 .step-bundle {
-  background: var(--color-bg-soft);
+  background: var(--color-bg-green);
   border-radius: var(--radius);
   padding: 20px 24px;
   text-align: center;
@@ -300,7 +427,7 @@ section.alt .emphasis {
 }
 
 .step-bundle__after {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-green-dark);
 }
@@ -334,7 +461,7 @@ section.alt .emphasis {
   right: 0;
   top: 14px;
   font-size: 1.3rem;
-  color: var(--color-green);
+  color: var(--color-coral-btn);
 }
 
 .faq-item[open] summary::after {
@@ -352,56 +479,34 @@ section.alt .emphasis {
 .learn-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .learn-item {
   background: var(--color-card);
   border-radius: var(--radius);
-  padding: 20px 22px;
+  padding: 18px 20px;
   border: 1px solid var(--color-border);
 }
 
-/* ---------- 無料講座セクション(コンバージョン重視) ---------- */
+/* ---------- ストーリーカード ---------- */
 
-.offer-box {
+.story-card {
   background: var(--color-card);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 24px;
-  margin: 28px 0;
-}
-
-.offer-box ol {
-  padding-left: 1.2em;
-  margin: 0 0 20px;
-}
-
-.offer-box li {
+  padding: 18px 20px;
+  border: 1px solid var(--color-border);
   margin-bottom: 14px;
 }
 
-.offer-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px;
-}
-
-.offer-facts li {
-  background: var(--color-bg-soft);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  color: var(--color-brown-soft);
+.story-card p {
+  margin: 0;
 }
 
 /* ---------- フッター ---------- */
 
 footer {
-  padding: 40px 0 96px;
+  padding: 36px 0 96px;
   text-align: center;
   font-size: 0.8rem;
   color: var(--color-brown-soft);
@@ -409,7 +514,7 @@ footer {
 
 @media (min-width: 768px) {
   footer {
-    padding-bottom: 40px;
+    padding-bottom: 36px;
   }
 }
 
@@ -421,19 +526,19 @@ footer {
   }
 
   section {
-    padding: 88px 0;
+    padding: 80px 0;
   }
 
   h1 {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .cta-button {
@@ -444,5 +549,9 @@ footer {
 
   .cta-wrap {
     text-align: center;
+  }
+
+  .promise-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
