@@ -1,685 +1,572 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>身体を学ぶ｜カイロの学び・資格｜福岡・福津</title>
-<meta name="description" content="自分や家族の健康のために、身体のことを学びたい方へ。福岡県福津市で無料姿勢講座＋説明会を開催しています。経験・知識がなくても参加できます。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>身体を知る、その先へ</title>
+<meta name="description" content="福岡県福津市のレディースカイロうらら｜無料姿勢講座＋学び方説明会">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-<!-- ===== OGP設定 =====
-     og:url / og:image は GitHub Pages公開後の実際のURLに書き換えてください。
-     例）Pagesの既定URL: https://urarafkt-ai.github.io/chiro-learning-lp/
-     独自ドメインを使う場合はそのURLに変更してください。 -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="身体を学ぶ｜カイロの学び・資格｜福岡・福津">
-<meta property="og:description" content="自分や家族の健康のために、身体のことを学びたい方へ。福岡県福津市で無料姿勢講座＋説明会を開催しています。">
-<meta property="og:url" content="https://urarafkt-ai.github.io/chiro-learning-lp/">
-<meta property="og:image" content="https://urarafkt-ai.github.io/chiro-learning-lp/images/hero-ando-lecture.jpg">
-<meta property="og:locale" content="ja_JP">
-<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --paper:#ffffff;
+    --ivory:#faf6ec;
+    --ink:#221f1a;
+    --ink-muted:#5a5c4e;
+    --line:#e6e1d1;
+    --sage:#5e7a5c;
+    --sage-deep:#3f5940;
+    --sage-tint:#eef2e9;
+    --coral:#d9502e;
+    --coral-deep:#b13f22;
+    --card:#ffffff;
+    --shadow:0 2px 10px rgba(34,31,26,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1b1c16; --ivory:#242419; --ink:#ece8db; --ink-muted:#b7b39c;
+      --line:#3a3c2e; --sage:#8fac8a; --sage-deep:#b7cdb2; --sage-tint:#28311f;
+      --coral:#ef8a68; --coral-deep:#f3a685; --card:#232419; --shadow:0 2px 14px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#1b1c16; --ivory:#242419; --ink:#ece8db; --ink-muted:#b7b39c;
+    --line:#3a3c2e; --sage:#8fac8a; --sage-deep:#b7cdb2; --sage-tint:#28311f;
+    --coral:#ef8a68; --coral-deep:#f3a685; --card:#232419; --shadow:0 2px 14px rgba(0,0,0,.5);
+  }
 
-<link rel="stylesheet" href="css/style.css">
+  *{box-sizing:border-box;}
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;
+    line-height:1.9;font-size:16.5px;-webkit-font-smoothing:antialiased;
+    padding-bottom:76px;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2{font-family:"Shippori Mincho",serif;line-height:1.45;text-wrap:balance;margin:0;text-align:left;}
 
-<!-- META PIXEL CODE HERE -->
-<!-- Meta広告のPixel IDが確定したら、Meta Business Suiteが発行する
-     <script>...</script> と <noscript>...</noscript> のコード一式を
-     このコメントの直後にそのまま貼り付けてください。 -->
+  .wrap{max-width:600px;margin:0 auto;padding-inline:22px;}
+  section{padding-block:38px;}
+  section:first-of-type{padding-top:0;}
 
+  .kicker{font-size:13px;letter-spacing:.08em;color:var(--coral-deep);font-weight:800;margin-bottom:8px;}
+  h2.title{font-size:26px;font-weight:800;margin-bottom:14px;}
+  h2.title .hl{font-style:normal;color:var(--coral-deep);}
+  .body-text{font-size:16px;color:var(--ink);margin:0 0 14px;}
+  .body-text:last-child{margin-bottom:0;}
+
+  .cta{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--coral);color:#fff;text-decoration:none;font-weight:900;letter-spacing:.02em;
+    padding:16px 20px;font-size:16px;border-radius:10px;
+  }
+  .cta svg{width:19px;height:19px;flex-shrink:0;}
+
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:var(--paper);border-top:1px solid var(--line);
+    padding:9px 18px calc(9px + env(safe-area-inset-bottom,0px));
+  }
+  .sticky-cta a.cta{padding:13px 16px;font-size:14.5px;}
+
+  /* ---- hero ---- */
+  .hero-media img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:center 30%;}
+  .hero-body{padding-top:22px;}
+  .hero h1{font-size:29px;font-weight:800;margin-bottom:18px;}
+  .hero h1 .hl{color:var(--coral-deep);}
+  .course-name{font-size:18px;font-weight:700;margin-bottom:14px;}
+  .course-meta{font-size:14px;color:var(--ink-muted);margin-bottom:22px;}
+
+  /* ---- location ---- */
+  .location-box{padding-top:0;}
+  .loc-line{font-size:15px;margin-bottom:4px;}
+  .loc-line:last-child{margin-bottom:0;}
+  .loc-label{color:var(--ink-muted);font-size:13px;margin-right:6px;}
+
+  /* ---- 共感: single ivory box ---- */
+  .empathy-box{background:var(--ivory);border-radius:14px;padding:4px 20px;margin:16px 0;}
+  .empathy-box p{font-size:15.5px;padding:16px 0;margin:0;border-top:1px solid var(--line);}
+  .empathy-box p:first-child{border-top:none;}
+  .closing-line{
+    margin-top:14px;font-size:15px;font-family:"Shippori Mincho",serif;font-weight:700;
+    background:var(--sage-tint);border-radius:10px;padding:12px 16px;color:var(--sage-deep);
+  }
+
+  /* ---- takeaway ---- */
+  .single-photo{border-radius:14px;overflow:hidden;margin:16px 0;box-shadow:var(--shadow);}
+  .single-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+  .mini-photo{display:flex;align-items:center;gap:10px;margin:14px 0 0;background:var(--ivory);border-radius:12px;padding:10px;}
+  .mini-photo img{width:66px;height:88px;object-fit:cover;object-position:bottom;border-radius:8px;flex-shrink:0;}
+  .mini-photo span{font-size:13px;color:var(--ink-muted);font-weight:700;}
+
+  .get-list{list-style:none;margin:14px 0 0;padding:0;}
+  .get-list li{
+    display:flex;gap:10px;align-items:flex-start;font-size:15px;padding:9px 0;border-top:1px solid var(--line);
+  }
+  .get-list li:first-child{border-top:none;}
+  .get-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:9px;}
+  .body-note{font-size:14.5px;color:var(--ink-muted);margin-top:14px;}
+
+  /* ---- flow (知ることから仕事になるまで) ---- */
+  .flow{margin:18px 0 0;position:relative;padding-left:30px;}
+  .flow::before{content:"";position:absolute;left:11px;top:2px;bottom:2px;width:1px;background:var(--line);}
+  .flow-row{position:relative;padding-bottom:16px;font-size:15px;}
+  .flow-row:last-child{padding-bottom:0;}
+  .flow-row .num{
+    position:absolute;left:-30px;top:0;width:23px;height:23px;border-radius:50%;
+    border:1.5px solid var(--ink-muted);color:var(--ink-muted);
+    display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;
+  }
+  .flow-row.final .num{background:var(--coral);border-color:var(--coral);color:#fff;}
+  .flow-row b{font-weight:700;}
+
+  /* ---- proof ---- */
+  .voice-sub{font-size:13.5px;color:var(--ink-muted);margin-bottom:16px;}
+  .voice{border-left:3px solid var(--sage);padding:2px 0 2px 16px;margin-bottom:18px;}
+  .voice .vq{font-family:"Shippori Mincho",serif;font-weight:700;font-size:16px;margin-bottom:6px;}
+  .voice p{margin:0 0 8px;font-size:14.5px;color:var(--ink);}
+  .voice .tag{font-size:11.5px;color:var(--ink-muted);background:var(--ivory);border-radius:999px;padding:3px 10px;display:inline-block;}
+  details.more-voice{margin-top:2px;}
+  details.more-voice summary{cursor:pointer;font-size:13.5px;font-weight:700;color:var(--sage-deep);padding:4px 0 16px;list-style:none;}
+  details.more-voice summary::-webkit-details-marker{display:none;}
+  details.more-voice summary::before{content:"＋ ";}
+  details.more-voice[open] summary::before{content:"－ ";}
+
+  /* ---- story ---- */
+  .story-head{display:flex;gap:14px;align-items:center;margin-bottom:16px;}
+  .story-head img{width:80px;height:80px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .story-name{font-weight:800;font-size:16px;}
+  .story-role{font-size:12.5px;color:var(--ink-muted);margin-top:2px;}
+  .story-tags{display:flex;gap:6px;margin-top:6px;}
+  .story-tags span{font-size:11px;color:var(--sage-deep);background:var(--sage-tint);border-radius:999px;padding:3px 9px;font-weight:700;}
+  .story p{font-size:15px;margin:0 0 13px;}
+  .story p:last-child{margin-bottom:0;}
+  .pull{font-family:"Shippori Mincho",serif;font-weight:700;font-size:15px;color:#fff;margin:16px 0;line-height:1.7;background:var(--sage-deep);padding:14px 16px;border-radius:12px;}
+
+  /* ---- steps ---- */
+  .step-label{font-size:12.5px;color:var(--ink-muted);font-weight:700;margin:14px 0 6px;}
+  .step-label:first-child{margin-top:0;}
+  .stepcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;border-left:4px solid var(--sage);}
+  .stepcard.mid{border-left-color:#c99a2e;}
+  .stepcard.hi{border-left-color:var(--coral);}
+  .stepcard .head{display:flex;justify-content:space-between;align-items:baseline;}
+  .stepcard .name{font-family:"Shippori Mincho",serif;font-weight:700;font-size:15px;}
+  .stepcard .price{font-weight:800;font-size:14.5px;color:var(--ink-muted);}
+  .stepcard .desc{font-size:13px;color:var(--ink-muted);margin-top:4px;}
+  .stepcard .desc2{font-size:12px;color:var(--ink-muted);margin-top:4px;}
+  .reassure{font-size:13px;color:var(--sage-deep);font-weight:700;margin-top:14px;padding:10px 14px;background:var(--sage-tint);border-radius:10px;}
+
+  .org-box{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);}
+  .org-box h3{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:700;margin-bottom:10px;}
+  .org-box p{font-size:14px;color:var(--ink);margin:0 0 10px;}
+  .org-box p:last-child{margin-bottom:0;}
+  .org-photo{border-radius:12px;overflow:hidden;margin:12px 0;box-shadow:var(--shadow);}
+  .org-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+
+  /* ---- recommend ---- */
+  .recommend-box{background:var(--sage-tint);border-radius:14px;padding:18px 20px;margin-top:14px;}
+  .recommend-box ul{margin:0;padding-left:18px;font-size:15px;color:var(--ink);}
+  .recommend-box li{margin-bottom:9px;}
+  .recommend-box li:last-child{margin-bottom:0;}
+  .recommend-note{font-size:13px;color:var(--ink-muted);margin-top:12px;}
+
+  /* ---- faq ---- */
+  details.faq{border-top:1px solid var(--line);}
+  details.faq:last-child{border-bottom:1px solid var(--line);}
+  details.faq summary{
+    padding:15px 0;font-weight:700;font-size:15px;cursor:pointer;
+    list-style:none;display:flex;gap:10px;align-items:baseline;
+  }
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::after{content:"＋";margin-left:auto;color:var(--ink-muted);font-weight:400;}
+  details.faq[open] summary::after{content:"－";}
+  details.faq .a{padding:0 0 16px;font-size:14px;color:var(--ink-muted);}
+
+  /* ---- final ---- */
+  .final-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 16px;}
+  .final-note{font-size:14px;color:var(--ink-muted);margin:14px 0 20px;}
+  .final-meta{font-size:13.5px;color:var(--ink-muted);margin-top:14px;text-align:center;}
+  footer{text-align:center;padding:28px 22px 20px;font-size:12px;color:var(--ink-muted);}
+
+  .chev{height:20px;background:var(--ivory);clip-path:polygon(0 0,100% 0,100% 50%,50% 100%,0 50%);margin-top:-1px;}
+
+  /* ---- 姿勢タイプ診断 ---- */
+  .quiz-sec{background:var(--sage-tint);padding-block:34px;}
+  .quiz-lead{font-size:14.5px;color:var(--ink-muted);margin:0 0 18px;}
+  fieldset.q{min-width:0;}
+  .q{background:var(--card);border-radius:12px;padding:16px 16px 12px;margin-bottom:12px;border:1px solid var(--line);}
+  .q-head{display:flex;gap:10px;align-items:baseline;margin-bottom:10px;}
+  .q-no{font-family:"Shippori Mincho",serif;font-weight:800;color:var(--sage-deep);font-size:15px;flex-shrink:0;}
+  .q-text{font-weight:700;font-size:15.5px;line-height:1.6;}
+  .opts{display:grid;gap:8px;}
+  .opt{position:relative;}
+  .opt input{position:absolute;opacity:0;pointer-events:none;}
+  .opt label{display:block;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:14.5px;line-height:1.55;cursor:pointer;background:var(--paper);transition:border-color .15s,background .15s;}
+  .opt input:checked + label{border-color:var(--sage);background:var(--sage-tint);font-weight:700;color:var(--sage-deep);}
+  .opt input:focus-visible + label{outline:2px solid var(--coral);outline-offset:2px;}
+  .quiz-progress{font-size:13px;color:var(--ink-muted);text-align:center;margin:14px 0 10px;font-variant-numeric:tabular-nums;}
+  .quiz-btn{width:100%;border:0;font:inherit;cursor:pointer;background:var(--sage-deep);color:#fff;font-weight:900;padding:15px;border-radius:10px;font-size:16px;}
+  .quiz-btn:disabled{opacity:.4;cursor:default;}
+  .result{background:var(--card);border-radius:14px;padding:22px 18px;margin-top:16px;border:2px solid var(--sage);}
+  .result-kicker{font-size:13px;color:var(--ink-muted);font-weight:700;}
+  .result-type{font-family:"Shippori Mincho",serif;font-size:25px;font-weight:800;color:var(--coral-deep);line-height:1.4;margin:4px 0 10px;}
+  .result p{font-size:15px;margin:0 0 14px;}
+  .keyword{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--ivory);border-radius:10px;padding:10px 12px;margin:0 0 14px;font-size:13.5px;}
+  .keyword b{font-size:16px;color:var(--ink);user-select:all;}
+  .copy-btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);font:inherit;font-size:12.5px;font-weight:700;padding:6px 10px;border-radius:8px;cursor:pointer;flex-shrink:0;}
+  .cta-note{font-size:12.5px;color:var(--ink-muted);text-align:center;margin-top:8px;line-height:1.7;}
+  .disclaimer{font-size:12px;color:var(--ink-muted);margin-top:12px;}
+  .cta-sub{display:flex;align-items:center;justify-content:center;background:transparent;color:var(--sage-deep);border:1.5px solid var(--sage);text-decoration:none;font-weight:700;padding:12px 16px;border-radius:10px;font-size:14.5px;margin-top:10px;}
+
+  /* ---- 開催案内 ---- */
+  .schedule{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;margin:0 0 18px;background:var(--card);text-align:left;}
+  .schedule div{display:flex;gap:12px;padding:11px 14px;border-top:1px solid var(--line);font-size:14.5px;}
+  .schedule div:first-child{border-top:none;}
+  .schedule dt{color:var(--ink-muted);font-size:13px;width:4.5em;flex-shrink:0;padding-top:1px;}
+  .schedule dd{margin:0;font-weight:700;}
+  .badge-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+  .badge-row span{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--sage-tint);color:var(--sage-deep);}
+  .badge-row span.em{background:var(--coral);color:#fff;}
+  .ai-box{background:var(--ivory);border-radius:12px;padding:14px 16px;margin:14px 0 0;}
+  .ai-box .ai-title{font-weight:900;font-size:15.5px;margin-bottom:4px;}
+  .ai-box p{margin:0;font-size:14px;color:var(--ink);}
+  .ai-box .mini-photo{background:var(--paper);margin-top:10px;}
+</style>
+
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
 </head>
 <body>
-
-<!-- ========================================================================
-     SECTION 1｜ファーストビュー
-     ======================================================================== -->
-<header class="hero">
-  <div class="container">
-
-    <!-- IMAGE: hero-ando-lecture.jpg - 骨格模型を持って少人数に身体について説明・指導している安藤様の写真(縦位置の写真のため、縦長フレームで表示) -->
-    <div class="photo-frame photo-frame--portrait">
-      <img src="images/hero-ando-lecture.jpg" alt="骨格模型を持ちながら、参加者に身体について説明する安藤">
-    </div>
-
-    <h1>
-      身体のことを知るって、おもしろい。<br>
-      それが仕事になったら、もっとおもしろい。
-    </h1>
-
-    <p class="lead">
-      自分や家族の健康のために、身体を学びたい。<br>
-      そしていつか、その知識や技術を人のためにも活かしたい。
-    </p>
-
-    <p>
-      経験・知識がなくても大丈夫。<br>
-      まずは、自分の身体を知るところから。
-    </p>
-
-    <div class="cta-wrap">
-      <a class="cta-button" href="https://forms.gle/SiNTqCJMihZ61Tw16" target="_blank" rel="noopener">無料姿勢講座＋説明会に参加する</a>
-    </div>
-
-    <p class="hero-meta">
-      <span>福津市</span>
-      <span>・</span>
-      <span>約60分</span>
-      <span>・</span>
-      <span>参加無料</span>
-      <span>・</span>
-      <span>男女OK</span>
-    </p>
-
-  </div>
-</header>
-
-<main>
-
-<!-- ========================================================================
-     SECTION 2｜共感
-     ======================================================================== -->
-<section class="alt">
-  <div class="container">
-    <span class="section-number">02</span>
-    <h2>こんなこと、思ったことありませんか？</h2>
-
-    <p>
-      家族が「腰が痛い」「肩がつらい」と言ったとき、<br>
-      自分にも何かできたらいいのに。
-    </p>
-
-    <p>
-      自分の身体がつらいとき、<br>
-      どうしてここが痛くなるんだろう？
-    </p>
-
-    <p>
-      姿勢や骨盤ってよく聞くけれど、<br>
-      身体とどう関係しているんだろう？
-    </p>
-
-    <p>
-      身体のことをもっと知って、<br>
-      自分や家族の健康に役立てたい。
-    </p>
-
-    <p>
-      そして、せっかく学ぶなら——<br><br>
-      いつか誰かにも喜んでもらえたら。<br>
-      それが仕事になったら、おもしろそう。
-    </p>
-
-    <strong class="emphasis">その「知りたい」が、始まりでいい。</strong>
-  </div>
-</section>
-
-<!-- ========================================================================
-     SECTION 3｜身体はつながっている
-     ======================================================================== -->
+<!-- ============ 01 ファーストビュー ============ -->
 <section>
-  <div class="container">
-    <span class="section-number">03</span>
-    <h2>身体は、思っている以上につながっている。</h2>
+  <div class="hero-media">
+    <img src="hero.jpg" alt="骨格模型を使って身体の仕組みを説明する安藤さん">
+  </div>
+  <div class="wrap hero-body">
+    <h1>身体のことを知るって、<span class="hl">おもしろい。</span></h1>
+    <div class="course-name">福岡県福津市開催<br>無料姿勢講座＋学び方説明会</div>
+    <div class="badge-row"><span class="em">完全マンツーマン</span><span>参加無料</span><span>約60分</span><span>未経験OK</span><span>男女OK</span></div>
 
-    <p>たとえば、膝がつらいとき。</p>
-
-    <p>「膝が悪いのかな？」<br>と思いますよね。</p>
-
-    <p>
-      でも身体を見ていくと、<br>
-      膝だけではなく、
-    </p>
-
-    <p>
-      骨盤や股関節、姿勢、身体の使い方など、<br>
-      いろいろなところに目を向けます。
-    </p>
-
-    <p>
-      肩がつらいから、肩だけ。<br>
-      腰がつらいから、腰だけ。
-    </p>
-
-    <p>ではなく、</p>
-
-    <p>「身体全体では、どうなっているんだろう？」</p>
-
-    <p>と考えていく。</p>
-
-    <p>
-      さらに、運動・栄養・睡眠など、<br>
-      毎日の生活も身体を考えるうえで大切です。
-    </p>
-
-    <strong class="emphasis">「どうして？」がわかると、身体はもっとおもしろい。</strong>
-
-    <p>
-      ただ技術を覚えるだけではなく、<br>
-      身体の仕組みを知って、見て、考えられるようになる。
-    </p>
-
-    <p>
-      これが、私がカイロを学んで<br>
-      おもしろいと思ったところです。
-    </p>
+    <a class="cta" href="#shindan">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 8v7M8 11h8M10 21l2-6 2 6"/></svg>
+      30秒でわかる 姿勢タイプ診断
+    </a>
+    <p class="cta-note">5つの質問に答えるだけ。あなたの姿勢のクセがわかります。</p>
   </div>
 </section>
 
-<!-- ========================================================================
-     SECTION 4｜人に喜んでもらえる
-     ======================================================================== -->
-<section class="alt">
-  <div class="container">
-    <span class="section-number">04</span>
-    <h2>知識や技術が、誰かの「できた！」に変わる。</h2>
+<!-- ============ 姿勢タイプ診断 ============ -->
+<section class="quiz-sec" id="shindan">
+  <div class="wrap">
+    <div class="kicker">30秒・無料</div>
+    <h2 class="title">5つの質問でわかる<br><span class="hl">姿勢タイプ診断</span></h2>
+    <p class="quiz-lead">いちばん近いものを選んでください。</p>
+    <form id="quiz" novalidate></form>
+    <div class="quiz-progress" id="progress">0 / 5 回答済み</div>
+    <button type="button" class="quiz-btn" id="showResult" disabled>結果を見る</button>
 
-    <p>
-      身体について学んで、<br>
-      少しずつできることが増えていく。
-    </p>
-
-    <p>
-      そして、その知識や技術が<br>
-      誰かの役に立ったとき。
-    </p>
-
-    <p>
-      「楽になった」<br>
-      「前より動きやすい」<br>
-      「これができるようになった」<br>
-      「ありがとう」
-    </p>
-
-    <p>そんな言葉をもらえることがあります。</p>
-
-    <p>もちろん、身体の状態や変化は人それぞれ。</p>
-
-    <p>
-      でも、<br><br>
-      目の前の人が喜んでくれる。<br>
-      その瞬間を一緒に喜べる。
-    </p>
-
-    <p>
-      私は、そこにこの仕事の面白さを感じています。
-    </p>
-
-    <p>
-      最初は自分や家族のために始めた学びが、<br>
-      いつか誰かのために使えるものになっていく。
-    </p>
-
-    <strong class="emphasis">誰かの「できた！」を、一緒に喜べる仕事。</strong>
+    <div class="result" id="result" hidden>
+      <div class="result-kicker">あなたは…</div>
+      <div class="result-type" id="rType"></div>
+      <p id="rText"></p>
+      <p style="font-weight:700;">なぜこうなるのか、家でできるセルフチェック法と一緒に、LINEで詳しい解説をお届けします。</p>
+      <div class="keyword"><span>登録後、LINEで<br><b id="rKey"></b> と送ってください</span><button type="button" class="copy-btn" id="copyKey">コピー</button></div>
+      <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで詳しい解説を受け取る</a>
+      <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
+      <p class="disclaimer">※医療的な診断ではなく、姿勢の傾向を知るためのものです。無料姿勢講座では、AI姿勢分析「シセイカルテ」で実際の姿勢を数値で確かめられます。</p>
+    </div>
   </div>
 </section>
 
-<!-- ========================================================================
-     SECTION 5｜安藤真奈美のストーリー
-     ======================================================================== -->
+<!-- ============ 02 開催場所 ============ -->
+<section class="location-box">
+  <div class="wrap">
+    <h2 class="title" style="font-size:19px;">開催場所｜レディースカイロうらら</h2>
+    <div class="loc-line"><span class="loc-label">住所</span>福岡県福津市花見ヶ丘1-9-8 ソレイユ105</div>
+    <div class="loc-line"><span class="loc-label">アクセス</span>福間駅より徒歩8分</div>
+    <div class="loc-line"><span class="loc-label"></span>駐車場あり</div>
+  </div>
+</section>
+
+<div class="chev"></div>
+
+<!-- ============ 03 共感 ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <h2 class="title">こんなこと、<br>思ったことは<span class="hl">ありませんか？</span></h2>
+
+    <div class="empathy-box">
+      <p>家族が腰や肩をつらそうにしている。<br>私にも何かできないかな。</p>
+      <p>姿勢や骨盤は、身体とどう関係しているんだろう。</p>
+      <p>自分や家族のために、身体のことを学んでみたい。</p>
+    </div>
+    <p class="closing-line">その「知りたい」が、最初の一歩です。</p>
+  </div>
+</section>
+
+<!-- ============ 04 無料講座でわかること ============ -->
 <section>
-  <div class="container">
-    <span class="section-number">05</span>
-    <h2>私も最初は、仕事にするつもりではありませんでした。</h2>
+  <div class="wrap">
+    <div class="kicker">無料講座でわかること</div>
+    <h2 class="title">姿勢から、<br><span class="hl">身体のつながり</span>が見えてくる</h2>
 
-    <!-- IMAGE: ando-profile.jpg - 安藤真奈美の自然な一人写真 -->
-    <div class="photo-frame" style="margin-bottom:28px;">
-      <img src="images/ando-profile.jpg" alt="安藤真奈美の自然な様子">
+    <div class="single-photo">
+      <img src="ai-diagnosis.jpg" alt="タブレットを見ながら参加者に説明する安藤さん" style="object-position:center 18%;">
     </div>
 
-    <p>私はもともと、一級建築士として働いていました。</p>
+    <p class="body-text" style="margin-top:16px;">自分の姿勢を確認しながら、骨盤や背骨が身体とどう関係しているのかを、わかりやすく学びます。</p>
 
-    <p>カイロとは、まったく違う世界です。</p>
+    <div class="ai-box">
+      <div class="ai-title">当日、AI姿勢分析「シセイカルテ」で診断します</div>
+      <p>正面と横から撮影し、あなたの姿勢の傾きやゆがみを数値で見える化。姿勢タイプ診断の結果を、実際の数値で確かめられます。</p>
+      <div class="mini-photo">
+        <img src="diagnosis-result.png" alt="シセイカルテの診断結果画面">
+        <span>診断結果はその場で一緒に確認します</span>
+      </div>
+    </div>
 
-    <p>
-      私自身、生まれつき両足の股関節に問題があり、<br>
-      幼稚園に入る前までに5回の手術を経験しました。
-    </p>
+    <ul class="get-list">
+      <li>シセイカルテで、今の自分の姿勢のゆがみが数値でわかる</li>
+      <li>骨盤・背骨と姿勢のつながりを、その場で体感できる</li>
+      <li>家に帰ってすぐ試せる、簡単な姿勢チェック法がわかる</li>
+    </ul>
 
-    <p>
-      歩けるようにはなったものの、<br>
-      身体のことで悩むこともあり、
-    </p>
-
-    <p>「手術をしているんだから、仕方ない」</p>
-
-    <p>そんなふうに思っていたこともあります。</p>
-
-    <p>
-      カイロを学び始めたのも、<br>
-      仕事にするためではありませんでした。
-    </p>
-
-    <p>最初は、自分と家族の身体のため。</p>
-
-    <p>ところが学んでみると、</p>
-
-    <p>「身体って、おもしろい。」</p>
-
-    <p>
-      骨盤や背骨、筋肉、姿勢。<br>
-      そして運動・栄養・睡眠。
-    </p>
-
-    <p>
-      知らなかったことを知るたびに、<br>
-      もっと知りたくなりました。
-    </p>
-
-    <p>
-      そして、自分や家族だけではなく、<br>
-      いろいろな方の身体を見るようになって、
-    </p>
-
-    <p>「ありがとう」</p>
-
-    <p>と喜んでもらえることが増えていきました。</p>
-
-    <p>それが、うれしかったんです。</p>
-
-    <p>
-      もっと知りたい。<br>
-      もっとできることを増やしたい。
-    </p>
-
-    <p>そうやって学び続けていたら、</p>
-
-    <p>「好きで学んでいたことが、<br>人に喜んでもらえる仕事になっていました。」</p>
-
-    <p>
-      現在は福津市で、<br>
-      女性専用のカイロプラクティック院を開いて12年。
-    </p>
-
-    <p>今度は私が、</p>
-
-    <p>「身体について学んでみたい」</p>
-
-    <p>と思った方の最初の一歩をお手伝いしています。</p>
+    <p class="body-note">身体の知識がなくても大丈夫。知るほどに、身体はおもしろくなります。</p>
   </div>
 </section>
 
-<!-- ========================================================================
-     SECTION 6｜何を学ぶのか
-     ======================================================================== -->
-<section class="alt">
-  <div class="container">
-    <span class="section-number">06</span>
-    <h2>知れば知るほど、身体はおもしろい。</h2>
+<div class="chev"></div>
 
-    <!-- IMAGE: classroom-lecture.jpg - 男女が参加している講義・勉強会の写真 -->
-    <div class="photo-frame" style="margin-bottom:28px;">
-      <img src="images/classroom-lecture.jpg" alt="男女が参加している講義・勉強会の様子">
+<!-- ============ 06 受講生の声 ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <h2 class="title">受講生の声</h2>
+    <p class="voice-sub">学び始めた理由も、今の働き方もさまざまです。</p>
+
+    <div class="voice">
+      <div class="vq">「母のために学び始めました」</div>
+      <p>病気がちな母に何かしてあげたいと思い受講。今はマンションの一室で施術院を開き、活動しています。</p>
+      <span class="tag">奈良県</span>
     </div>
 
-    <div class="learn-list">
-      <div class="learn-item">
-        <h3>【身体を知る】</h3>
-        <p>骨盤・背骨・筋肉・姿勢など、身体の仕組みを学びます。</p>
-      </div>
-
-      <div class="learn-item">
-        <h3>【身体をみる】</h3>
-        <p>
-          姿勢や身体の動きを確認しながら、<br>
-          「どこに負担がかかっているんだろう？」<br>
-          と身体全体を見る視点を身につけていきます。
-        </p>
-      </div>
-
-      <div class="learn-item">
-        <h3>【実際にやってみる】</h3>
-        <p>
-          骨盤・腰・背中・肩・首など、<br>
-          段階に合わせて技術を学び、実際に練習していきます。
-        </p>
-      </div>
-
-      <div class="learn-item">
-        <h3>【健康を守ることを学ぶ】</h3>
-        <p>運動・栄養・睡眠など、毎日の生活習慣についても学びます。</p>
-      </div>
+    <div class="voice">
+      <div class="vq">「子どもとの時間も大切にできています」</div>
+      <p>手に職をつけ、子どもとの時間を増やしたいと思い受講。現在は共同施術院で仕事をしています。</p>
+      <span class="tag">徳島県</span>
     </div>
 
-    <p style="margin-top:28px;">そして、学びが進むと、</p>
-
-    <p>
-      自分のため<br>
-      ↓<br>
-      家族のため<br>
-      ↓<br>
-      誰かのため
-    </p>
-
-    <p>へ、できることが少しずつ広がっていきます。</p>
-
-    <strong class="emphasis">施術する技術だけじゃない。「身体をどう見るか」を学べる。</strong>
+    <details class="more-voice">
+      <summary>ほかの声を見る</summary>
+      <div class="voice" style="margin-top:4px;">
+        <div class="vq">前職はトラックドライバーの方</div>
+        <p>家族や知人を看ることから始め、今は夫婦で2店舗の施術院を運営しています。</p>
+        <span class="tag">兵庫県</span>
+      </div>
+    </details>
   </div>
 </section>
 
-<!-- ========================================================================
-     SECTION 7｜学びのステップ
-     ======================================================================== -->
+<div class="chev"></div>
+
+<!-- ============ 07 講師紹介 ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap story">
+    <div class="kicker">講師紹介</div>
+    <h2 class="title">私も、家族のために<br><span class="hl">学び始めました。</span></h2>
+
+    <div class="story-head">
+      <img src="story.jpg" alt="院長 安藤真奈美">
+      <div>
+        <div class="story-name">安藤 真奈美</div>
+        <div class="story-role">レディースカイロうらら 院長</div>
+        <div class="story-tags"><span>元一級建築士</span><span>福津で開院12年</span></div>
+      </div>
+    </div>
+
+    <p>私はもともと一級建築士でした。生まれつき両足の股関節に問題があり、幼稚園に入る前までに5回の手術を経験しています。</p>
+    <p>カイロを学び始めたのは、最初は自分と家族の身体のためでした。学ぶうちに「身体って、おもしろい」と感じるようになり、知ることが楽しくなっていきました。</p>
+
+    <p class="pull">「ありがとう」と喜んでもらえることが増え、気づけば好きで学んでいたことが仕事になっていました。</p>
+
+    <p>現在は福津市で開院12年。今度は私が、学んでみたいと思った方の一歩をお手伝いしています。</p>
+  </div>
+</section>
+
+<!-- ============ 09 無料講座から、その先の学び + 10 Zenkenkai ============ -->
 <section>
-  <div class="container">
-    <span class="section-number">07</span>
-    <h2>最初から、仕事にすると決めなくて大丈夫。</h2>
+  <div class="wrap">
+    <div class="kicker">無料講座のその先に</div>
+    <h2 class="title">もっと学びたいと思ったら、<br><span class="hl">次の学びへ</span>進めます</h2>
 
-    <p>
-      まずは知る。<br>
-      やってみる。
-    </p>
-
-    <p>「もっと知りたい」と思ったら、次へ。</p>
-
-    <p>段階を踏みながら学んでいけます。</p>
-
-    <div class="step-card">
-      <span class="step-card__label">STEP 1</span>
-      <h3>無料姿勢講座＋説明会</h3>
-      <p class="step-card__price">0円</p>
-      <p>
-        まずは自分の身体から。<br>
-        姿勢チェックやAI姿勢診断を通して、<br>
-        身体のつながりやカイロの考え方を体験します。
-      </p>
-      <p class="step-card__sub">福津市・レディースカイロうららで開催／約60分／男女参加OK</p>
+    <div class="step-label">STEP1・体験編</div>
+    <div class="stepcard">
+      <div class="head"><div class="name">無料姿勢講座＋学び方説明会</div><div class="price">0円</div></div>
+      <div class="desc">自分の姿勢や身体のつながりを知る、約60分の無料講座です。各回お一人の完全マンツーマンで行います。</div>
     </div>
 
-    <div class="step-card">
-      <span class="step-card__label">STEP 2</span>
-      <h3>1日で学ぶカラダ講座</h3>
-      <p class="step-card__price">10,000円</p>
-      <p>
-        身体や姿勢について学びながら、<br>
-        自分や家族にも活かせるケアを実際に体験します。
-      </p>
+    <div class="step-label">STEP2・実践編</div>
+    <div class="stepcard mid">
+      <div class="head"><div class="name">1日で学ぶカラダ講座</div><div class="price">10,000円</div></div>
+      <div class="desc">骨盤を中心に、自分や家族に活かせる身体の知識とケアを、1日かけて学びます。</div>
     </div>
 
-    <p>
-      ここまでは、<br>
-      「身体のことをもっと知りたい」<br>
-      で大丈夫。
-    </p>
-
-    <p>そして、</p>
-
-    <p>
-      「もっと技術を身につけたい」<br>
-      「人にも喜んでもらえるようになりたい」<br>
-      「仕事としてやってみたい」
-    </p>
-
-    <p>と思ったら、次の学びへ。</p>
-
-    <!-- IMAGE: ando-practice.jpg - 安藤様が実際に技術指導している写真 -->
-    <div class="photo-frame" style="margin-bottom:28px;">
-      <img src="images/ando-practice.jpg" alt="技術指導をする安藤">
+    <div class="step-label">STEP3・マスター編</div>
+    <div class="stepcard hi">
+      <div class="head"><div class="name">初級カイロ事業セミナー</div></div>
+      <div class="desc">全身を対象に、カイロプラクティックの基礎から技術まで本格的に学ぶ4日間のセミナーです。<br>仕事にしたい方はもちろん、家族や大切な人のためにしっかり技術を身につけたい方も受講しています。</div>
+      <div class="desc2">費用・日程・内容は説明会で詳しくご案内します。</div>
+      <div class="org-photo" style="margin-top:12px;margin-bottom:0;"><img src="hands-on.jpg" alt="実技練習の様子"></div>
     </div>
 
-    <div class="step-card">
-      <span class="step-card__label">STEP 3</span>
-      <h3>初級カイロ事業セミナー</h3>
-      <p class="step-card__price">418,000円</p>
-      <p class="step-card__sub">3泊4日</p>
-      <p>
-        身体の基礎から、カイロの理論・検査・技術、<br>
-        運動・栄養・睡眠などを学びます。
-      </p>
+    <p class="reassure">無料講座に参加したからといって、次の講座を受講する必要はありません。</p>
+
+    <div class="org-box">
+      <h3>初級カイロ事業セミナーを主催する<br>Zenkenkaiとは</h3>
+      <p>Zenkenkaiは、1977年の創業以来、全国でカイロプラクティックの普及と人材育成に取り組んできた、日本最大級のカイロプラクティック団体です。</p>
+      <div class="org-photo"><img src="seminar-scale.jpg" alt="全国から集まる会員による研修会の様子"></div>
+      <p>さらに深く学びたい方が進む「初級カイロ事業セミナー」は、Zenkenkaiが主催しています。無料姿勢講座はレディースカイロうららが主催し、初級カイロ事業セミナーはZenkenkaiが主催という関係です。無料講座では、セミナーの内容や費用、その後の活動についても詳しくご説明します。</p>
     </div>
-
-    <div class="step-card">
-      <span class="step-card__label">STEP 4</span>
-      <h3>腰肩集中事業セミナー</h3>
-      <p class="step-card__price">198,000円</p>
-      <p class="step-card__sub">2泊3日</p>
-      <p>腰や肩について、さらに知識と技術を深めていきます。</p>
-    </div>
-
-    <div class="step-bundle">
-      <p style="margin-bottom:6px;">初級＋腰肩をセットで受講する場合</p>
-      <p class="step-bundle__before" style="margin-bottom:2px;">通常616,000円</p>
-      <p style="margin-bottom:2px;">↓ 20,000円引き</p>
-      <p class="step-bundle__after" style="margin-bottom:0;">596,000円</p>
-    </div>
-
-    <p>腰肩集中事業セミナー修了後から、有料施術ができるようになります。</p>
-
-    <!-- IMAGE: group-practice.jpg - 多人数で技術練習をしている写真 -->
-    <div class="photo-frame" style="margin:28px 0;">
-      <img src="images/group-practice.jpg" alt="複数人で技術練習をしている様子">
-    </div>
-
-    <p>その先も、中級・上級など、学びを続けていく道があります。</p>
-
-    <strong class="emphasis">知る → できる → 喜んでもらえる → 仕事へ。</strong>
-
-    <p>最初から全部を決める必要はありません。</p>
-
-    <p>
-      「もっと知りたい」<br>
-      その気持ちに合わせて、一つずつ進んでいけば大丈夫です。
-    </p>
   </div>
 </section>
 
-<!-- ========================================================================
-     SECTION 8｜よくある不安
-     ======================================================================== -->
-<section class="alt">
-  <div class="container">
-    <span class="section-number">08</span>
-    <h2>私にもできるかな？</h2>
+<div class="chev"></div>
 
-    <details class="faq-item">
-      <summary>身体の知識がなくても大丈夫？</summary>
-      <p>
-        大丈夫です。私自身も、もともとは一級建築士。<br>
-        身体とはまったく違う分野から始めました。
-      </p>
-    </details>
+<!-- ============ 11 おすすめする方 ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <div class="kicker">ひとつでも当てはまる方へ</div>
+    <h2 class="title">身体のことを学んで、<br><span class="hl">誰かの役に立ちたい</span></h2>
 
-    <details class="faq-item">
-      <summary>今の仕事を続けながらでもいい？</summary>
-      <p>
-        最初から仕事を辞める必要はありません。<br>
-        まず学んでみて、「もっとやってみたい」と思ったら、<br>
-        その先を考えていけば大丈夫です。
-      </p>
-    </details>
-
-    <details class="faq-item">
-      <summary>子育て中でもできる？</summary>
-      <p>
-        私自身も、二人の娘を育てながら学び、仕事を続けてきました。<br>
-        今の生活を全部変えてから始める必要はありません。
-      </p>
-    </details>
-
-    <details class="faq-item">
-      <summary>男性も参加できる？</summary>
-      <p>
-        はい。講座や学びは男女ともに参加できます。<br>
-        ※レディースカイロうららの店舗施術は女性専用です。
-      </p>
-    </details>
-
-    <strong class="emphasis">「できるかな？」より、「知ってみたい」から始めてほしい。</strong>
-  </div>
-</section>
-
-<!-- ========================================================================
-     SECTION 9｜無料姿勢講座＋説明会(コンバージョン重視セクション)
-     ======================================================================== -->
-<section id="offer">
-  <div class="container">
-    <span class="section-number">09</span>
-    <h2>まずは、自分の身体を知るところから。</h2>
-
-    <!-- IMAGE: posture-tablet.jpg - 安藤様がタブレットを見せながら姿勢・身体について説明している写真(正方形の写真のため、人物が上寄りに写るよう調整) -->
-    <div class="photo-frame photo-frame--top">
-      <img src="images/posture-tablet.jpg" alt="タブレットを見せながら姿勢について説明する様子">
-    </div>
-
-    <p style="margin-top:24px;">「カイロって何をするの？」</p>
-
-    <p>「身体を学ぶって、どんな感じ？」</p>
-
-    <p>
-      「仕事にするかは分からないけど、<br>
-      ちょっと興味がある」
-    </p>
-
-    <p>
-      そんな方のために、<br>
-      まずは無料姿勢講座＋説明会を開催しています。
-    </p>
-
-    <div class="offer-box">
-      <p style="margin-bottom:16px;"><strong>当日は、</strong></p>
-      <ol>
-        <li>
-          <strong>① 自分の姿勢をチェック</strong><br>
-          AI姿勢診断などを使って、まずは自分の身体を見てみます。
-        </li>
-        <li>
-          <strong>② 身体のつながりを知る</strong><br>
-          骨盤や背骨、姿勢などが身体とどう関係しているのか、分かりやすくお話しします。
-        </li>
-        <li>
-          <strong>③ カイロを実際に体験</strong><br>
-          「聞くだけ」ではなく、実際にカイロに触れてみます。
-        </li>
-        <li>
-          <strong>④ 学び方・仕事について聞く</strong><br>
-          1日講座から初級・腰肩集中、その先の学びまで。<br>
-          仕事として活動するまでの流れもお話しします。
-        </li>
-      </ol>
-
-      <ul class="offer-facts">
-        <li>福津市・レディースカイロうららで開催</li>
-        <li>約60分</li>
-        <li>参加無料</li>
-        <li>未経験OK</li>
-        <li>男女参加OK</li>
+    <div class="recommend-box">
+      <ul>
+        <li>自分や家族の健康に役立てたい</li>
+        <li>身体のことを知るのがおもしろそう</li>
+        <li>人に喜んでもらえる仕事がしたい</li>
+        <li>今の仕事を続けながら、新しいことを始めたい</li>
+        <li>手に職をつけ、収入につなげたい</li>
       </ul>
-
-      <!-- 開催日はGoogleフォーム内で確認できます -->
-      <p style="font-size:0.85rem; color:var(--color-brown-soft);">
-        開催日は、下の申込みフォームからご確認いただけます。
-      </p>
     </div>
-
-    <p>
-      参加したからといって、<br>
-      次の講座を受ける必要はありません。
-    </p>
-
-    <p>まずは体験して、</p>
-
-    <p>「もっと知りたい」と思えるかどうか。</p>
-
-    <p>それを確かめに来てください。</p>
-
-    <div class="cta-wrap">
-      <a class="cta-button" href="https://forms.gle/SiNTqCJMihZ61Tw16" target="_blank" rel="noopener">無料姿勢講座＋説明会に参加する</a>
-      <p class="cta-note">Googleフォームが新しいタブで開きます</p>
-    </div>
+    <p class="recommend-note">学んだ知識や技術を、仕事や収入につなげる道もあります。</p>
   </div>
 </section>
 
-<!-- ========================================================================
-     SECTION 10｜最後のメッセージ
-     ======================================================================== -->
-<section class="alt">
-  <div class="container">
-    <span class="section-number">10</span>
-    <h2>身体を知ることを、一緒に楽しめる人と出会いたい。</h2>
+<div class="chev"></div>
 
-    <p>
-      私は、最初からカイロを<br>
-      仕事にしようと思っていたわけではありません。
-    </p>
+<!-- ============ 知ることから仕事になるまで ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <div class="kicker">学びは、少しずつ広がっていきます</div>
+    <h2 class="title">知ることから、<br><span class="hl">仕事になるまで</span></h2>
 
-    <p>自分や家族の身体のために学び始めて、</p>
+    <p class="body-text">まずは、自分の身体を知ることから。学んだことが家族に役立ち、誰かに喜ばれ、その経験を仕事にする道もあります。</p>
 
-    <p>
-      「身体って、こんなふうにつながっているんだ」<br>
-      「もっと知りたい」
-    </p>
-
-    <p>そう思ったことが始まりでした。</p>
-
-    <p>
-      学べば学ぶほど、おもしろくなって、<br>
-      できることが増えていく。
-    </p>
-
-    <p>そして誰かに喜んでもらえるようになる。</p>
-
-    <p>私は、それがすごくうれしかったんです。</p>
-
-    <p>気がつけば、それが私の仕事になっていました。</p>
-
-    <p>だから私は、</p>
-
-    <p>
-      「資格だけ取れればいい」ではなく、<br>
-      身体のことをもっと知りたい人と出会いたい。
-    </p>
-
-    <p>
-      できることを増やしたい。<br>
-      人に喜んでもらえることが好き。
-    </p>
-
-    <p>
-      そして仕事にするなら、<br>
-      ちゃんと学んで、経験を重ねていきたい。
-    </p>
-
-    <p>
-      そんな方と、<br>
-      一緒に身体のことを学んでいけたらと思っています。
-    </p>
-
-    <p>最初の一歩は、「知ってみたい」で大丈夫。</p>
-
-    <p>仕事にするかどうかを、今決める必要はありません。</p>
-
-    <p>
-      まず自分の身体を知ってみる。<br>
-      カイロを体験してみる。<br>
-      実際に私と話してみる。
-    </p>
-
-    <p>そして、</p>
-
-    <p>「もっと知りたい」</p>
-
-    <p>と思ったら、そこから次へ進めばいい。</p>
-
-    <strong class="emphasis">
-      身体のことを知るって、おもしろい。<br>
-      それが仕事になったら、もっとおもしろい。
-    </strong>
-
-    <div class="cta-wrap">
-      <a class="cta-button" href="https://forms.gle/SiNTqCJMihZ61Tw16" target="_blank" rel="noopener">無料姿勢講座＋説明会に参加する</a>
+    <div class="flow">
+      <div class="flow-row"><div class="num">1</div><b>知る</b> — 自分の身体や姿勢を知る</div>
+      <div class="flow-row"><div class="num">2</div><b>できる</b> — 学んだことを家族に活かす</div>
+      <div class="flow-row"><div class="num">3</div><b>喜ばれる</b> — 誰かの役に立つ喜びを知る</div>
+      <div class="flow-row final"><div class="num">4</div><b>仕事になる</b> — さらに学び、仕事として活かす</div>
     </div>
+
+    <p class="body-note">最初から、仕事にすると決めなくても大丈夫です。</p>
   </div>
 </section>
 
-</main>
+<!-- ============ 12 FAQ ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="title">よくあるご質問</h2>
 
-<footer>
-  <div class="container">
-    <p>レディースカイロうらら（福岡県福津市）</p>
+    <details class="faq"><summary>一人で参加しても大丈夫ですか？</summary><div class="a">はい。無料講座は各回お一人の完全マンツーマンです。ほかの参加者を気にせず、気になることをその場で質問できます。</div></details>
+    <details class="faq"><summary>男性も参加できますか？</summary><div class="a">はい。無料姿勢講座と学び方説明会は、男女ともご参加いただけます。レディースカイロうららでの施術は女性専用です。</div></details>
+    <details class="faq"><summary>身体の知識がなくても参加できますか？</summary><div class="a">はい。初めての方にも分かりやすい内容です。専門知識は必要ありません。</div></details>
+    <details class="faq"><summary>無料講座に参加すると、次の講座も受ける必要がありますか？</summary><div class="a">いいえ。無料講座だけの参加でも大丈夫です。もっと学びたいと思った方に、その先の講座をご案内します。</div></details>
+    <details class="faq"><summary>今の仕事を続けながらでもいい？</summary><div class="a">はい。まず学んでみて、その先は個別にご相談しながら考えていけます。</div></details>
+    <details class="faq"><summary>子育て中でもできる？</summary><div class="a">私自身も、二人の娘を育てながら学び、仕事を続けてきました。</div></details>
   </div>
-</footer>
+</section>
 
-<!-- スマートフォン用の固定CTA(本文の邪魔にならない小型サイズ) -->
+<!-- ============ 13 最終CTA ============ -->
+<section style="text-align:center;">
+  <div class="wrap">
+    <img class="final-photo" src="smile.jpg" alt="笑顔で話す安藤さん">
+    <h2 class="title" style="text-align:center;">まずは、身体のことを知る<br>60分から。</h2>
+    <dl class="schedule">
+      <div><dt>形式</dt><dd>完全マンツーマン（各回1名）</dd></div>
+      <div><dt>日程</dt><dd>直近2週間の中で複数日開催</dd></div>
+      <div><dt>申込み</dt><dd>ご都合のよい日をLINEでお選びください</dd></div>
+    </dl>
+
+    <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
+      LINEで講座の日程を受け取る
+    </a>
+    <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
+
+    <div class="final-meta">参加無料｜未経験OK｜男女OK<br>福岡県福津市 レディースカイロうららにて開催</div>
+  </div>
+</section>
+
+<footer>レディースカイロうらら（福岡県福津市）</footer>
+
 <div class="sticky-cta">
-  <a class="cta-button" href="https://forms.gle/SiNTqCJMihZ61Tw16" target="_blank" rel="noopener">無料姿勢講座＋説明会に参加する</a>
+  <a class="cta" id="stickyCta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
+    <span id="stickyLabel">LINEで無料講座の日程を受け取る</span>
+  </a>
 </div>
+
+<script>
+(function(){
+  var Q=[
+    ["疲れやすいのはどこ？",["首・肩","腰","片側の肩や腰","太もも・膝"]],
+    ["横から見た自分の姿は？",["頭が前に出ている","お尻が後ろに出ている","肩の高さが左右で違う","お腹が前に出て見える"]],
+    ["座るときのクセは？",["スマホを見て前かがみ","背筋を伸ばそうと腰を反らす","足を組む・横座り","背もたれにもたれてずり落ちる"]],
+    ["仰向けで寝ると？",["枕がないと落ち着かない","腰の下に手がすっぽり入る","体が左右どちらかに傾く感じ","膝を立てたほうが楽"]],
+    ["よくあることは？",["「疲れてる？」と言われる","姿勢はいいと言われるのに腰がつらい","バッグはいつも同じ肩","お腹がぽっこりしやすい"]]
+  ];
+  var T=[
+    {n:"前かがみ猫背タイプ",k:"猫背タイプ",t:"頭が前に出て、首や肩に負担が集まりやすい姿勢です。スマホやパソコンの時間が長い方に多い傾向があります。"},
+    {n:"がんばり反り腰タイプ",k:"反り腰タイプ",t:"「いい姿勢」を意識するほど腰を反らせてしまい、腰に負担がかかりやすいタイプです。"},
+    {n:"左右バランスくずれタイプ",k:"左右バランスタイプ",t:"片側に体重をかけるクセで、身体に左右差が出やすいタイプです。"},
+    {n:"骨盤うしろ倒れタイプ",k:"骨盤うしろ倒れタイプ",t:"骨盤が後ろに倒れ、背中が丸くお腹が前に出やすいタイプです。座る時間が長い方に多い傾向があります。"}
+  ];
+  var L="ABCD", form=document.getElementById("quiz"), html="";
+  Q.forEach(function(q,i){
+    html+='<fieldset class="q" style="margin-inline:0"><legend class="q-head" style="padding:0;float:left;width:100%"><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span></legend><div class="opts" style="clear:both">';
+    q[1].forEach(function(o,j){
+      var id="q"+i+"_"+j;
+      html+='<div class="opt"><input type="radio" name="q'+i+'" id="'+id+'" value="'+j+'"><label for="'+id+'">'+L[j]+'　'+o+'</label></div>';
+    });
+    html+='</div></fieldset>';
+  });
+  form.innerHTML=html;
+  var btn=document.getElementById("showResult"), prog=document.getElementById("progress");
+  function answers(){ var a=[]; for(var i=0;i<5;i++){ var c=form.querySelector('input[name="q'+i+'"]:checked'); a.push(c?+c.value:null);} return a; }
+  form.addEventListener("change",function(){
+    var n=answers().filter(function(x){return x!==null}).length;
+    prog.textContent=n+" / 5 回答済み"; btn.disabled=n<5;
+  });
+  btn.addEventListener("click",function(){
+    var a=answers(), c=[0,0,0,0]; a.forEach(function(x){c[x]++});
+    var max=Math.max.apply(null,c), best=a[1];
+    if(c[best]!==max) best=c.indexOf(max);
+    var r=T[best];
+    document.getElementById("rType").textContent=r.n;
+    document.getElementById("rText").textContent=r.t;
+    document.getElementById("rKey").textContent=r.k;
+    document.getElementById("stickyLabel").textContent="LINEで「"+r.k+"」の解説を受け取る";
+    var box=document.getElementById("result"); box.hidden=false;
+    box.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+  });
+  document.getElementById("copyKey").addEventListener("click",function(e){
+    var b=e.currentTarget, k=document.getElementById("rKey");
+    function sel(){ var r=document.createRange(); r.selectNodeContents(k); var s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent="選択しました"; }
+    try{ navigator.clipboard.writeText(k.textContent).then(function(){b.textContent="コピーしました"},sel); }catch(err){ sel(); }
+  });
+})();
+</script>
 
 </body>
 </html>
