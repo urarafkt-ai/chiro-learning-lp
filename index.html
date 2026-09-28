@@ -1,10 +1,6 @@
-<!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
 <title>身体を知る、その先へ</title>
-<meta name="description" content="福岡県福津市のレディースカイロうらら｜無料姿勢講座＋学び方説明会">
+<meta name="description" content="福岡県福津市のレディースカイロうらら｜無料姿勢講座">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -53,6 +49,7 @@
   section:first-of-type{padding-top:0;}
 
   .kicker{font-size:13px;letter-spacing:.08em;color:var(--coral-deep);font-weight:800;margin-bottom:8px;}
+  .kicker-major{color:var(--sage-deep);letter-spacing:.16em;padding-top:20px;margin-bottom:12px;border-top:1px solid var(--line);}
   h2.title{font-size:26px;font-weight:800;margin-bottom:14px;}
   h2.title .hl{font-style:normal;color:var(--coral-deep);}
   .body-text{font-size:16px;color:var(--ink);margin:0 0 14px;}
@@ -80,6 +77,8 @@
   .hero h1 .hl{color:var(--coral-deep);}
   .course-name{font-size:18px;font-weight:700;margin-bottom:14px;}
   .course-meta{font-size:14px;color:var(--ink-muted);margin-bottom:22px;}
+  .hero-loc{font-size:15.5px;font-weight:700;color:var(--ink);margin-bottom:18px;line-height:1.7;}
+  .hero-loc-label{display:inline-block;font-size:12px;font-weight:800;color:var(--sage-deep);background:var(--sage-tint);border-radius:999px;padding:2px 9px;margin-bottom:6px;letter-spacing:.03em;}
 
   /* ---- location ---- */
   .location-box{padding-top:0;}
@@ -135,6 +134,12 @@
   details.more-voice summary::-webkit-details-marker{display:none;}
   details.more-voice summary::before{content:"＋ ";}
   details.more-voice[open] summary::before{content:"－ ";}
+  .step-voices{margin:-8px 0 20px;}
+  .step-voices summary{padding-left:2px;}
+  .step-voices .voice{margin-left:16px;margin-bottom:0;padding-top:10px;padding-bottom:10px;}
+  .step-voices .voice + .voice{margin-top:14px;}
+  .step-voices-mid .voice{border-left-color:#c99a2e;}
+  .step-voices-hi .voice{border-left-color:var(--coral);}
 
   /* ---- story ---- */
   .story-head{display:flex;gap:14px;align-items:center;margin-bottom:16px;}
@@ -196,7 +201,8 @@
 
   /* ---- 姿勢タイプ診断 ---- */
   .quiz-sec{background:var(--sage-tint);padding-block:34px;}
-  .quiz-lead{font-size:14.5px;color:var(--ink-muted);margin:0 0 18px;}
+  .quiz-lead{font-size:14.5px;color:var(--ink-muted);margin:0 0 10px;}
+  .quiz-tap-hint{font-size:14.5px;font-weight:800;color:var(--sage-deep);margin:0 0 16px;}
   fieldset.q{min-width:0;}
   .q{background:var(--card);border-radius:12px;padding:16px 16px 12px;margin-bottom:12px;border:1px solid var(--line);}
   .q-head{display:flex;gap:10px;align-items:baseline;margin-bottom:10px;}
@@ -233,14 +239,15 @@
   .badge-row span{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--sage-tint);color:var(--sage-deep);}
   .badge-row span.em{background:var(--coral);color:#fff;}
   .ai-box{background:var(--ivory);border-radius:12px;padding:14px 16px;margin:14px 0 0;}
-  .ai-box .ai-title{font-weight:900;font-size:15.5px;margin-bottom:4px;}
+  .ai-box .ai-title{font-weight:900;font-size:15.5px;margin-bottom:2px;}
+  .ai-box .ai-sub{font-size:13px;color:var(--ink-muted);font-weight:700;margin-bottom:10px;}
   .ai-box p{margin:0;font-size:14px;color:var(--ink);}
   .ai-box .mini-photo{background:var(--paper);margin-top:10px;}
+  .ai-flow{margin:12px 0 0;}
+  .ai-flow-step{background:var(--paper);border-radius:8px;padding:9px 12px;font-size:13.5px;font-weight:700;color:var(--sage-deep);text-align:center;}
+  .ai-flow-arrow{text-align:center;font-size:13px;color:var(--ink-muted);padding:2px 0;}
 </style>
 
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
-</head>
-<body>
 <!-- ============ 01 ファーストビュー ============ -->
 <section>
   <div class="hero-media">
@@ -248,54 +255,14 @@
   </div>
   <div class="wrap hero-body">
     <h1>身体のことを知るって、<span class="hl">おもしろい。</span></h1>
-    <div class="course-name">福岡県福津市開催<br>無料姿勢講座＋学び方説明会</div>
+    <div class="course-name">福岡県福津市開催<br>無料姿勢講座</div>
+    <div class="hero-loc"><span class="hero-loc-label">開催場所</span><br>レディースカイロうらら<br>福岡県福津市花見ヶ丘1-9-8 ソレイユ105<br>福間駅より徒歩8分・駐車場あり</div>
     <div class="badge-row"><span class="em">完全マンツーマン</span><span>参加無料</span><span>約60分</span><span>未経験OK</span><span>男女OK</span></div>
-
-    <a class="cta cta-quiz" href="#shindan">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 8v7M8 11h8M10 21l2-6 2 6"/></svg>
-      30秒でわかる 姿勢タイプ診断
-    </a>
-    <p class="cta-note">5つの質問に答えるだけ。あなたの姿勢のクセがわかります。</p>
   </div>
 </section>
-
-<!-- ============ 姿勢タイプ診断 ============ -->
-<section class="quiz-sec" id="shindan">
-  <div class="wrap">
-    <div class="kicker">30秒・無料</div>
-    <h2 class="title">5つの質問でわかる<br><span class="hl">姿勢タイプ診断</span></h2>
-    <p class="quiz-lead">いちばん近いものを選んでください。</p>
-    <form id="quiz" novalidate></form>
-    <div class="quiz-progress" id="progress">0 / 5 回答済み</div>
-    <button type="button" class="quiz-btn" id="showResult" disabled>結果を見る</button>
-
-    <div class="result" id="result" hidden>
-      <div class="result-kicker">あなたは…</div>
-      <div class="result-type" id="rType"></div>
-      <p id="rText"></p>
-      <p style="font-weight:700;">なぜこうなるのか、家でできるセルフチェック法と一緒に、LINEで詳しい解説をお届けします。</p>
-      <div class="keyword"><span>登録後、LINEで<br><b id="rKey"></b> と送ってください</span><button type="button" class="copy-btn" id="copyKey">コピー</button></div>
-      <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで詳しい解説を受け取る</a>
-      <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
-      <p class="disclaimer">※医療的な診断ではなく、姿勢の傾向を知るためのものです。無料姿勢講座では、AI姿勢分析「シセイカルテ」で実際の姿勢を数値で確かめられます。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 02 開催場所 ============ -->
-<section class="location-box">
-  <div class="wrap">
-    <h2 class="title" style="font-size:19px;">開催場所｜レディースカイロうらら</h2>
-    <div class="loc-line"><span class="loc-label">住所</span>福岡県福津市花見ヶ丘1-9-8 ソレイユ105</div>
-    <div class="loc-line"><span class="loc-label">アクセス</span>福間駅より徒歩8分</div>
-    <div class="loc-line"><span class="loc-label"></span>駐車場あり</div>
-  </div>
-</section>
-
-<div class="chev"></div>
 
 <!-- ============ 03 共感 ============ -->
-<section style="padding-top:28px;">
+<section id="shindan" style="padding-top:28px;">
   <div class="wrap">
     <h2 class="title">こんなこと、<br>思ったことは<span class="hl">ありませんか？</span></h2>
 
@@ -321,12 +288,29 @@
     <p class="body-text" style="margin-top:16px;">自分の姿勢を確認しながら、骨盤や背骨が身体とどう関係しているのかを、わかりやすく学びます。</p>
 
     <div class="ai-box">
-      <div class="ai-title">当日、AI姿勢分析「シセイカルテ」で診断します</div>
-      <p>正面と横から撮影し、あなたの姿勢の傾きやゆがみを数値で見える化。姿勢タイプ診断の結果を、実際の数値で確かめられます。</p>
+      <div class="ai-title">無料なのに、ここまでわかる</div>
+      <div class="ai-sub">AI姿勢分析「シセイカルテ」で診断します</div>
+      <div class="ai-flow">
+        <div class="ai-flow-step">正面と横から撮影</div>
+        <div class="ai-flow-arrow">↓</div>
+        <div class="ai-flow-step">姿勢の傾きやゆがみを数値化</div>
+        <div class="ai-flow-arrow">↓</div>
+        <div class="ai-flow-step">その場で一緒に確認</div>
+      </div>
       <div class="mini-photo">
         <img src="diagnosis-result.png" alt="シセイカルテの診断結果画面">
         <span>診断結果はその場で一緒に確認します</span>
       </div>
+    </div>
+
+    <div class="step-label" style="margin-top:22px;">当日の流れ</div>
+    <div class="flow" style="margin-top:10px;">
+      <div class="flow-row"><div class="num">1</div>カウンセリング</div>
+      <div class="flow-row"><div class="num">2</div>姿勢をチェック</div>
+      <div class="flow-row"><div class="num">3</div>AI姿勢分析「シセイカルテ」</div>
+      <div class="flow-row"><div class="num">4</div>骨盤・背骨と姿勢のつながりを学ぶ</div>
+      <div class="flow-row"><div class="num">5</div>自分の身体を確認</div>
+      <div class="flow-row final"><div class="num">6</div>家でもできるチェック方法</div>
     </div>
 
     <ul class="get-list">
@@ -339,43 +323,36 @@
   </div>
 </section>
 
-<div class="chev"></div>
-
-<!-- ============ 06 受講生の声 ============ -->
-<section style="padding-top:28px;">
+<!-- ============ 姿勢タイプ診断 ============ -->
+<section class="quiz-sec">
   <div class="wrap">
-    <h2 class="title">受講生の声</h2>
-    <p class="voice-sub">学び始めた理由も、今の働き方もさまざまです。</p>
+    <div class="kicker">30秒・無料</div>
+    <h2 class="title">5つの質問でわかる<br><span class="hl">姿勢タイプ診断</span></h2>
+    <p class="quiz-lead">まずは、簡単な質問で自分の姿勢タイプを知ることから始めてみませんか。</p>
+    <p class="quiz-tap-hint">👆 いちばん近いものをタップしてください</p>
+    <form id="quiz" novalidate></form>
+    <div class="quiz-progress" id="progress">0 / 5 回答済み</div>
+    <button type="button" class="quiz-btn" id="showResult" disabled>結果を見る</button>
 
-    <div class="voice">
-      <div class="vq">「母のために学び始めました」</div>
-      <p>病気がちな母に何かしてあげたいと思い受講。今はマンションの一室で施術院を開き、活動しています。</p>
-      <span class="tag">奈良県</span>
+    <div class="result" id="result" hidden>
+      <div class="result-kicker">あなたは…</div>
+      <div class="result-type" id="rType"></div>
+      <p id="rText"></p>
+      <p style="font-weight:700;">なぜこうなるのか、家でできるセルフチェック法と一緒に、LINEで詳しい解説をお届けします。</p>
+      <div class="keyword"><span>登録後、LINEで<br><b id="rKey"></b> と送ってください</span><button type="button" class="copy-btn" id="copyKey">コピー</button></div>
+      <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで詳しい解説を受け取る</a>
+      <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
+      <p class="disclaimer">※医療的な診断ではなく、姿勢の傾向を知るためのものです。無料姿勢講座では、AI姿勢分析「シセイカルテ」で実際の姿勢を数値で確かめられます。</p>
     </div>
-
-    <div class="voice">
-      <div class="vq">「子どもとの時間も大切にできています」</div>
-      <p>手に職をつけ、子どもとの時間を増やしたいと思い受講。現在は共同施術院で仕事をしています。</p>
-      <span class="tag">徳島県</span>
-    </div>
-
-    <details class="more-voice">
-      <summary>ほかの声を見る</summary>
-      <div class="voice" style="margin-top:4px;">
-        <div class="vq">前職はトラックドライバーの方</div>
-        <p>家族や知人を看ることから始め、今は夫婦で2店舗の施術院を運営しています。</p>
-        <span class="tag">兵庫県</span>
-      </div>
-    </details>
   </div>
 </section>
 
 <div class="chev"></div>
 
 <!-- ============ 07 講師紹介 ============ -->
-<section style="padding-top:28px;">
+<section id="storySec" style="padding-top:28px;">
   <div class="wrap story">
-    <div class="kicker">講師紹介</div>
+    <div class="kicker kicker-major">講師紹介</div>
     <h2 class="title">私も、家族のために<br><span class="hl">学び始めました。</span></h2>
 
     <div class="story-head">
@@ -399,12 +376,12 @@
 <!-- ============ 09 無料講座から、その先の学び + 10 Zenkenkai ============ -->
 <section>
   <div class="wrap">
-    <div class="kicker">無料講座のその先に</div>
+    <div class="kicker kicker-major">無料講座のその先に</div>
     <h2 class="title">もっと学びたいと思ったら、<br><span class="hl">次の学びへ</span>進めます</h2>
 
     <div class="step-label">STEP1・体験編</div>
     <div class="stepcard">
-      <div class="head"><div class="name">無料姿勢講座＋学び方説明会</div><div class="price">0円</div></div>
+      <div class="head"><div class="name">無料姿勢講座</div><div class="price">0円</div></div>
       <div class="desc">自分の姿勢や身体のつながりを知る、約60分の無料講座です。各回お一人の完全マンツーマンで行います。</div>
     </div>
 
@@ -414,6 +391,27 @@
       <div class="desc">骨盤を中心に、自分や家族に活かせる身体の知識とケアを、1日かけて学びます。</div>
     </div>
 
+    <details class="more-voice step-voices step-voices-mid">
+      <summary>受講した方の声を見る</summary>
+      <div class="voice" style="margin-top:4px;">
+        <div class="vq">「根本のゆがみを直すことが大事だと、すごくよくわかりました」</div>
+        <p>「体が好調だとメンタルにも現れるんだな」と、先生や参加者との明るい雰囲気も印象的だったそうです。</p>
+        <span class="tag">1日で学ぶカラダ講座 受講者</span>
+      </div>
+
+      <div class="voice">
+        <div class="vq">「色んな方とお話しすることができて、視野が広がりました」</div>
+        <p>骨格の仕組みや実践ワークを通して、姿勢と身体のつながりを体感していただけました。</p>
+        <span class="tag">1日で学ぶカラダ講座 受講者</span>
+      </div>
+
+      <div class="voice">
+        <div class="vq">「楽しかったです。自分の体をもっと知って、病気にならないようにします」</div>
+        <p>睡眠や栄養など、日常にすぐ活かせる内容が印象に残ったという声です。</p>
+        <span class="tag">1日で学ぶカラダ講座 受講者</span>
+      </div>
+    </details>
+
     <div class="step-label">STEP3・マスター編</div>
     <div class="stepcard hi">
       <div class="head"><div class="name">初級カイロ事業セミナー</div></div>
@@ -422,13 +420,33 @@
       <div class="org-photo" style="margin-top:12px;margin-bottom:0;"><img src="hands-on.jpg" alt="実技練習の様子"></div>
     </div>
 
+    <details class="more-voice step-voices step-voices-hi">
+      <summary>受講した方の声を見る</summary>
+      <div class="voice" style="margin-top:4px;">
+        <div class="vq">「母のために学び始めました」</div>
+        <p>病気がちな母に何かしてあげたいと思い受講。今はマンションの一室で施術院を開き、活動しています。</p>
+        <span class="tag">奈良県</span>
+      </div>
+
+      <div class="voice">
+        <div class="vq">「子どもとの時間も大切にできています」</div>
+        <p>手に職をつけ、子どもとの時間を増やしたいと思い受講。現在は共同施術院で仕事をしています。</p>
+        <span class="tag">徳島県</span>
+      </div>
+
+      <div class="voice">
+        <div class="vq">前職はトラックドライバーの方</div>
+        <p>家族や知人を看ることから始め、今は夫婦で2店舗の施術院を運営しています。</p>
+        <span class="tag">兵庫県</span>
+      </div>
+    </details>
+
     <p class="reassure">無料講座に参加したからといって、次の講座を受講する必要はありません。</p>
 
     <div class="org-box">
       <h3>初級カイロ事業セミナーを主催する<br>Zenkenkaiとは</h3>
-      <p>Zenkenkaiは、1977年の創業以来、全国でカイロプラクティックの普及と人材育成に取り組んできた、日本最大級のカイロプラクティック団体です。</p>
       <div class="org-photo"><img src="seminar-scale.jpg" alt="全国から集まる会員による研修会の様子"></div>
-      <p>さらに深く学びたい方が進む「初級カイロ事業セミナー」は、Zenkenkaiが主催しています。無料姿勢講座はレディースカイロうららが主催し、初級カイロ事業セミナーはZenkenkaiが主催という関係です。無料講座では、セミナーの内容や費用、その後の活動についても詳しくご説明します。</p>
+      <p>1977年創業、全国でカイロプラクティックの普及と人材育成に取り組んできた団体です。無料姿勢講座はレディースカイロうららが主催、初級カイロ事業セミナーはZenkenkaiが主催という関係で、内容や費用は無料講座の中で詳しくご案内します。</p>
     </div>
   </div>
 </section>
@@ -438,7 +456,7 @@
 <!-- ============ 11 おすすめする方 ============ -->
 <section style="padding-top:28px;">
   <div class="wrap">
-    <div class="kicker">ひとつでも当てはまる方へ</div>
+    <div class="kicker kicker-major">ひとつでも当てはまる方へ</div>
     <h2 class="title">身体のことを学んで、<br><span class="hl">誰かの役に立ちたい</span></h2>
 
     <div class="recommend-box">
@@ -451,6 +469,11 @@
       </ul>
     </div>
     <p class="recommend-note">学んだ知識や技術を、仕事や収入につなげる道もあります。</p>
+    <ul class="get-list" style="margin-top:10px;">
+      <li>家族や身近な人のケアから始める</li>
+      <li>今の仕事を続けながら、少しずつ学ぶ</li>
+      <li>将来、自宅やお部屋の一室で施術院を開く</li>
+    </ul>
   </div>
 </section>
 
@@ -481,7 +504,7 @@
     <h2 class="title">よくあるご質問</h2>
 
     <details class="faq"><summary>一人で参加しても大丈夫ですか？</summary><div class="a">はい。無料講座は各回お一人の完全マンツーマンです。ほかの参加者を気にせず、気になることをその場で質問できます。</div></details>
-    <details class="faq"><summary>男性も参加できますか？</summary><div class="a">はい。無料姿勢講座と学び方説明会は、男女ともご参加いただけます。レディースカイロうららでの施術は女性専用です。</div></details>
+    <details class="faq"><summary>男性も参加できますか？</summary><div class="a">はい。無料姿勢講座は男女ともご参加いただけます。レディースカイロうららでの施術は女性専用です。</div></details>
     <details class="faq"><summary>身体の知識がなくても参加できますか？</summary><div class="a">はい。初めての方にも分かりやすい内容です。専門知識は必要ありません。</div></details>
     <details class="faq"><summary>無料講座に参加すると、次の講座も受ける必要がありますか？</summary><div class="a">いいえ。無料講座だけの参加でも大丈夫です。もっと学びたいと思った方に、その先の講座をご案内します。</div></details>
     <details class="faq"><summary>今の仕事を続けながらでもいい？</summary><div class="a">はい。まず学んでみて、その先は個別にご相談しながら考えていけます。</div></details>
@@ -502,7 +525,7 @@
 
     <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
-      LINEで講座の日程を受け取る
+      LINEで無料姿勢講座の日程を受け取る
     </a>
     <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
 
@@ -515,7 +538,7 @@
 <div class="sticky-cta">
   <a class="cta" id="stickyCta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
-    <span id="stickyLabel">LINEで無料講座の日程を受け取る</span>
+    <span id="stickyLabel">LINEで無料姿勢講座の日程を受け取る</span>
   </a>
 </div>
 
@@ -536,7 +559,7 @@
   ];
   var L="ABCD", form=document.getElementById("quiz"), html="";
   Q.forEach(function(q,i){
-    html+='<fieldset class="q" style="margin-inline:0"><legend class="q-head" style="padding:0;float:left;width:100%"><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span></legend><p class="q-hint">当てはまるものを、いくつでも選べます</p><div class="opts" style="clear:both">
+    html+='<fieldset class="q" style="margin-inline:0"><legend class="q-head" style="padding:0;float:left;width:100%"><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span></legend><p class="q-hint">当てはまるものを、いくつでも選べます</p><div class="opts" style="clear:both">';
     q[1].forEach(function(o,j){
       var id="q"+i+"_"+j;
       html+='<div class="opt"><input type="checkbox" name="q'+i+'" id="'+id+'" value="'+j+'"><label for="'+id+'">'+L[j]+'　'+o+'</label></div>';
@@ -566,7 +589,6 @@
     if(secondMax>0){ txt+=" "+T[second].k+"の傾向も少し混ざっています。"; }
     document.getElementById("rText").textContent=txt;
     document.getElementById("rKey").textContent=r.k;
-    document.getElementById("stickyLabel").textContent="LINEで「"+r.k+"」の解説を受け取る";
     var box=document.getElementById("result"); box.hidden=false;
     box.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
   });
@@ -578,5 +600,4 @@
 })();
 </script>
 
-</body>
-</html>
+</body></html>
