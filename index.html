@@ -64,6 +64,7 @@
     padding:16px 20px;font-size:16px;border-radius:10px;
   }
   .cta svg{width:19px;height:19px;flex-shrink:0;}
+  .cta-quiz{background:var(--sage-deep);}
 
   .sticky-cta{
     position:fixed;left:0;right:0;bottom:0;z-index:50;
@@ -201,6 +202,7 @@
   .q-head{display:flex;gap:10px;align-items:baseline;margin-bottom:10px;}
   .q-no{font-family:"Shippori Mincho",serif;font-weight:800;color:var(--sage-deep);font-size:15px;flex-shrink:0;}
   .q-text{font-weight:700;font-size:15.5px;line-height:1.6;}
+  .q-hint{clear:both;font-size:12px;color:var(--ink-muted);margin:0 0 10px;}
   .opts{display:grid;gap:8px;}
   .opt{position:relative;}
   .opt input{position:absolute;opacity:0;pointer-events:none;}
@@ -249,7 +251,7 @@
     <div class="course-name">福岡県福津市開催<br>無料姿勢講座＋学び方説明会</div>
     <div class="badge-row"><span class="em">完全マンツーマン</span><span>参加無料</span><span>約60分</span><span>未経験OK</span><span>男女OK</span></div>
 
-    <a class="cta" href="#shindan">
+    <a class="cta cta-quiz" href="#shindan">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 8v7M8 11h8M10 21l2-6 2 6"/></svg>
       30秒でわかる 姿勢タイプ診断
     </a>
@@ -521,40 +523,48 @@
 (function(){
   var Q=[
     ["疲れやすいのはどこ？",["首・肩","腰","片側の肩や腰","太もも・膝"]],
-    ["横から見た自分の姿は？",["頭が前に出ている","お尻が後ろに出ている","肩の高さが左右で違う","お腹が前に出て見える"]],
+    ["横から見た自分の姿は？",["猫背で頭が前に出ている","お尻が後ろに出ている","肩の高さが左右で違う","お腹が前に出て見える"]],
     ["座るときのクセは？",["スマホを見て前かがみ","背筋を伸ばそうと腰を反らす","足を組む・横座り","背もたれにもたれてずり落ちる"]],
     ["仰向けで寝ると？",["枕がないと落ち着かない","腰の下に手がすっぽり入る","体が左右どちらかに傾く感じ","膝を立てたほうが楽"]],
     ["よくあることは？",["「疲れてる？」と言われる","姿勢はいいと言われるのに腰がつらい","バッグはいつも同じ肩","お腹がぽっこりしやすい"]]
   ];
   var T=[
-    {n:"前かがみ猫背タイプ",k:"猫背タイプ",t:"頭が前に出て、首や肩に負担が集まりやすい姿勢です。スマホやパソコンの時間が長い方に多い傾向があります。"},
-    {n:"がんばり反り腰タイプ",k:"反り腰タイプ",t:"「いい姿勢」を意識するほど腰を反らせてしまい、腰に負担がかかりやすいタイプです。"},
-    {n:"左右バランスくずれタイプ",k:"左右バランスタイプ",t:"片側に体重をかけるクセで、身体に左右差が出やすいタイプです。"},
-    {n:"骨盤うしろ倒れタイプ",k:"骨盤うしろ倒れタイプ",t:"骨盤が後ろに倒れ、背中が丸くお腹が前に出やすいタイプです。座る時間が長い方に多い傾向があります。"}
+    {n:"A　前かがみ猫背タイプ",k:"猫背タイプ",t:"頭が前に出て、首や肩に負担が集まりやすい姿勢です。スマホやパソコンの時間が長い方に多い傾向があります。"},
+    {n:"B　がんばり反り腰タイプ",k:"反り腰タイプ",t:"「いい姿勢」を意識するほど腰を反らせてしまい、腰に負担がかかりやすいタイプです。"},
+    {n:"C　左右バランスくずれタイプ",k:"左右バランスタイプ",t:"片側に体重をかけるクセで、身体に左右差が出やすいタイプです。"},
+    {n:"D　骨盤うしろ倒れタイプ",k:"骨盤うしろ倒れタイプ",t:"骨盤が後ろに倒れ、背中が丸くお腹が前に出やすいタイプです。座る時間が長い方に多い傾向があります。"}
   ];
   var L="ABCD", form=document.getElementById("quiz"), html="";
   Q.forEach(function(q,i){
-    html+='<fieldset class="q" style="margin-inline:0"><legend class="q-head" style="padding:0;float:left;width:100%"><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span></legend><div class="opts" style="clear:both">';
+    html+='<fieldset class="q" style="margin-inline:0"><legend class="q-head" style="padding:0;float:left;width:100%"><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span></legend><p class="q-hint">当てはまるものを、いくつでも選べます</p><div class="opts" style="clear:both">
     q[1].forEach(function(o,j){
       var id="q"+i+"_"+j;
-      html+='<div class="opt"><input type="radio" name="q'+i+'" id="'+id+'" value="'+j+'"><label for="'+id+'">'+L[j]+'　'+o+'</label></div>';
+      html+='<div class="opt"><input type="checkbox" name="q'+i+'" id="'+id+'" value="'+j+'"><label for="'+id+'">'+L[j]+'　'+o+'</label></div>';
     });
     html+='</div></fieldset>';
   });
   form.innerHTML=html;
   var btn=document.getElementById("showResult"), prog=document.getElementById("progress");
-  function answers(){ var a=[]; for(var i=0;i<5;i++){ var c=form.querySelector('input[name="q'+i+'"]:checked'); a.push(c?+c.value:null);} return a; }
+  function answered(){ var n=0; for(var i=0;i<5;i++){ if(form.querySelectorAll('input[name="q'+i+'"]:checked').length>0) n++; } return n; }
   form.addEventListener("change",function(){
-    var n=answers().filter(function(x){return x!==null}).length;
+    var n=answered();
     prog.textContent=n+" / 5 回答済み"; btn.disabled=n<5;
   });
   btn.addEventListener("click",function(){
-    var a=answers(), c=[0,0,0,0]; a.forEach(function(x){c[x]++});
-    var max=Math.max.apply(null,c), best=a[1];
-    if(c[best]!==max) best=c.indexOf(max);
+    if(btn.disabled) return;
+    var c=[0,0,0,0];
+    for(var i=0;i<5;i++){
+      form.querySelectorAll('input[name="q'+i+'"]:checked').forEach(function(el){ c[+el.value]++; });
+    }
+    var max=Math.max.apply(null,c), best=0;
+    for(var j=0;j<4;j++){ if(c[j]===max){ best=j; break; } }
+    var second=-1, secondMax=-1;
+    for(var k=0;k<4;k++){ if(k!==best && c[k]>secondMax){ secondMax=c[k]; second=k; } }
     var r=T[best];
     document.getElementById("rType").textContent=r.n;
-    document.getElementById("rText").textContent=r.t;
+    var txt=r.t;
+    if(secondMax>0){ txt+=" "+T[second].k+"の傾向も少し混ざっています。"; }
+    document.getElementById("rText").textContent=txt;
     document.getElementById("rKey").textContent=r.k;
     document.getElementById("stickyLabel").textContent="LINEで「"+r.k+"」の解説を受け取る";
     var box=document.getElementById("result"); box.hidden=false;
