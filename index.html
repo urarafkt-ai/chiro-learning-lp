@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
 <title>身体を知る、その先へ</title>
-<meta name="description" content="福岡県福津市のレディースカイロうらら｜無料姿勢講座">
+<meta name="description" content="カイロを学ぶと、あなたにできることが増える。福岡県福津市レディースカイロうらら｜無料姿勢講座＋説明会">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
 
   .kicker{font-size:13px;letter-spacing:.08em;color:var(--coral-deep);font-weight:800;margin-bottom:8px;}
   .kicker-major{color:var(--sage-deep);letter-spacing:.16em;padding-top:20px;margin-bottom:12px;border-top:1px solid var(--line);}
-  h2.title{font-size:26px;font-weight:800;margin-bottom:14px;}
+  h2.title{font-size:26px;font-weight:800;margin-bottom:14px;text-wrap:wrap;}
   h2.title .hl{font-style:normal;color:var(--coral-deep);}
   .body-text{font-size:16px;color:var(--ink);margin:0 0 14px;}
   .body-text:last-child{margin-bottom:0;}
@@ -73,8 +73,8 @@
   /* ---- hero ---- */
   .hero-media img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:center 30%;}
   .hero-body{padding-top:22px;}
-  .hero h1{font-size:29px;font-weight:800;margin-bottom:18px;}
-  .hero h1 .hl{color:var(--coral-deep);}
+  .hero-body h1{text-wrap:wrap;font-size:clamp(22px,7vw,29px);font-weight:800;margin-bottom:18px;}
+  .hero-body h1 .hl{color:var(--coral-deep);}
   .course-name{font-size:18px;font-weight:700;margin-bottom:14px;}
   .course-meta{font-size:14px;color:var(--ink-muted);margin-bottom:22px;}
   .hero-loc{font-size:15.5px;font-weight:700;color:var(--ink);margin-bottom:18px;line-height:1.7;}
@@ -249,6 +249,41 @@
   .ai-flow{margin:12px 0 0;}
   .ai-flow-step{background:var(--paper);border-radius:8px;padding:9px 12px;font-size:13.5px;font-weight:700;color:var(--sage-deep);text-align:center;}
   .ai-flow-arrow{text-align:center;font-size:13px;color:var(--ink-muted);padding:2px 0;}
+
+  /* ---- LP2.0 ---- */
+  .hero-sub{font-family:"Shippori Mincho",serif;font-weight:700;font-size:17px;color:var(--sage-deep);margin:-6px 0 22px;line-height:1.8;}
+  .hero-offer{background:var(--ivory);border-radius:14px;padding:16px 18px 4px;}
+  .hero-offer .course-name{margin-bottom:10px;}
+  .hero-offer .hero-loc{font-size:14.5px;margin-bottom:14px;}
+  .hero-offer .badge-row{margin-bottom:12px;}
+  .point-list{margin-top:6px;}
+  .point{padding:14px 0;border-top:1px solid var(--line);}
+  .point:first-child{border-top:none;padding-top:4px;}
+  .point-h{font-weight:800;font-size:15.5px;color:var(--sage-deep);margin-bottom:4px;}
+  .point p{margin:0;font-size:15px;}
+  .gain-sec{background:var(--ivory);}
+  .gain-sec .kicker-major{border-top-color:transparent;padding-top:0;}
+  .quote{margin:18px 0 0;padding:14px 16px;border-left:3px solid var(--sage);background:var(--paper);border-radius:0 10px 10px 0;font-family:"Shippori Mincho",serif;font-weight:700;font-size:15.5px;line-height:1.8;}
+  .quote cite{display:block;font-style:normal;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:12.5px;color:var(--ink-muted);margin-top:6px;}
+  .gain{background:var(--card);border-radius:14px;padding:18px 18px 16px;margin-top:12px;box-shadow:var(--shadow);}
+  .gain-no{font-family:"Shippori Mincho",serif;font-weight:800;font-size:22px;color:var(--coral-deep);line-height:1;margin-bottom:6px;}
+  .gain-h{font-weight:900;font-size:17px;margin-bottom:6px;line-height:1.5;}
+  .gain p{margin:0;font-size:15px;}
+  .mid-cta{margin-top:26px;text-align:center;}
+  .mid-cta > p:first-child{font-family:"Shippori Mincho",serif;font-weight:700;font-size:16px;margin:0 0 14px;}
+  .spread{margin:16px 0 0;display:grid;gap:8px;}
+  .spread-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:var(--sage-tint);border-radius:10px;padding:11px 14px;font-size:14px;color:var(--ink-muted);}
+  .spread-row b{color:var(--ink);font-size:15.5px;margin-right:4px;}
+  .spread-no{width:22px;height:22px;border-radius:50%;background:var(--paper);color:var(--sage-deep);font-weight:800;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;align-self:center;}
+  .spread-row.final{background:var(--coral);color:#fff;}
+  .spread-row.final b{color:#fff;}
+  .spread-row.final .spread-no{color:var(--coral-deep);}
+  .safe-box{background:var(--sage-tint);border-radius:14px;padding:16px 18px 8px;margin-top:20px;}
+  .safe-h{font-weight:900;font-size:16px;color:var(--sage-deep);}
+  .safe-box .get-list li{border-top-color:rgba(0,0,0,.06);}
+  details.quiz-toggle > summary{list-style:none;text-align:center;display:block;}
+  details.quiz-toggle > summary::-webkit-details-marker{display:none;}
+  details.quiz-toggle[open] > summary{display:none;}
 </style>
 
 <!-- ============ 01 ファーストビュー ============ -->
@@ -257,38 +292,251 @@
     <img src="hero.jpg" alt="骨格模型を使って身体の仕組みを説明する安藤さん">
   </div>
   <div class="wrap hero-body">
-    <h1>身体のことを知るって、<span class="hl">おもしろい。</span></h1>
-    <div class="course-name">福岡県福津市開催<br>無料姿勢講座</div>
-    <div class="hero-loc"><span class="hero-loc-label">開催場所</span><br>レディースカイロうらら<br>福岡県福津市花見ヶ丘1-9-8 ソレイユ105<br>福間駅より徒歩8分・駐車場あり</div>
-    <div class="badge-row"><span class="em">完全マンツーマン</span><span>参加無料</span><span>約60分</span><span>未経験OK</span><span>男女OK</span></div>
-  </div>
-</section>
-
-<!-- ============ 03 共感 ============ -->
-<section id="shindan" style="padding-top:28px;">
-  <div class="wrap">
-    <h2 class="title">こんなこと、<br>思ったことは<span class="hl">ありませんか？</span></h2>
-
-    <div class="empathy-box">
-      <p>家族が腰や肩をつらそうにしている。<br>私にも何かできないかな。</p>
-      <p>姿勢や骨盤は、身体とどう関係しているんだろう。</p>
-      <p>自分や家族のために、身体のことを学んでみたい。</p>
+    <h1>カイロを学ぶと、<br><span class="hl">あなたに<br>できることが増える。</span></h1>
+    <p class="hero-sub">身体を知る。手で整える。<br>誰かの役に立てる。</p>
+    <div class="hero-offer">
+      <div class="course-name">無料姿勢講座＋説明会</div>
+      <div class="hero-loc"><span class="hero-loc-label">開催場所</span><br>レディースカイロうらら（福岡県福津市）<br>福間駅より徒歩8分・駐車場あり</div>
+      <div class="badge-row"><span class="em">参加無料</span><span>完全マンツーマン</span><span>約60分</span><span>未経験OK</span><span>男女OK</span></div>
     </div>
-    <p class="closing-line">その「知りたい」が、最初の一歩です。</p>
   </div>
 </section>
 
-<!-- ============ 04 無料講座でわかること ============ -->
+<!-- ============ 02 共感 ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <h2 class="title">こんなこと、<br><span class="hl">感じていませんか？</span></h2>
+    <div class="empathy-box">
+      <p>家族が腰や肩をつらそうにしているのに、見ているだけしかできない。</p>
+      <p>自分の身体の不調を、なんとなく我慢している。</p>
+      <p>何か新しいことを学びたい。でも、何から始めればいいかわからない。</p>
+      <p>子育てや今の仕事と両立できる、自分のペースの働き方があったらいいな。</p>
+      <p>人に喜ばれることを、仕事にしてみたい。</p>
+    </div>
+    <p class="closing-line">そのどれもが、「カイロプラクティックを学ぶ」ことにつながっています。</p>
+  </div>
+</section>
+
+<div class="chev"></div>
+
+<!-- ============ 03 カイロとは ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <div class="kicker kicker-major">What is Chiropractic</div>
+    <h2 class="title">そもそも、<br><span class="hl">カイロプラクティック</span><br>とは？</h2>
+    <p class="body-text">背骨や骨盤など、身体の「土台」である骨格のバランスに着目して、手で身体を整えていく手技療法です。約130年前にアメリカで生まれ、今では世界中で親しまれています。</p>
+
+    <div class="single-photo"><img src="images/classroom-lecture.jpg" alt="骨格模型を使った講義の様子"></div>
+
+    <div class="point-list">
+      <div class="point">
+        <div class="point-h">大切にしていること</div>
+        <p>身体は、一つひとつの部分がバラバラに動いているのではなく、全体がつながっています。肩や腰だけを見るのではなく、姿勢や骨格全体から身体を見ていきます。</p>
+      </div>
+      <div class="point">
+        <div class="point-h">身体の見方</div>
+        <p>背骨は身体の柱、骨盤は土台です。建物の土台が傾くと上の階にゆがみが出るように、土台のバランスは姿勢や身体全体に影響します。</p>
+      </div>
+      <div class="point">
+        <div class="point-h">何をするの？</div>
+        <p>姿勢や骨格のバランスを確認し、手を使って整えていきます。大きな機械や道具は使いません。</p>
+      </div>
+      <div class="point">
+        <div class="point-h">整体やマッサージとは違うの？</div>
+        <p>マッサージは主に筋肉をほぐすものですが、カイロプラクティックは背骨や骨盤などの骨格に注目するのが特徴です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 なぜ学ぶ → 手に入るもの ============ -->
+<section class="gain-sec">
+  <div class="wrap">
+    <div class="kicker kicker-major">Why learn</div>
+    <h2 class="title">「受けるだけ」から、<br><span class="hl">「わかる・できる」へ。</span></h2>
+    <p class="body-text">身体がつらいとき、施術を受けて楽になる。それもとても大切なことです。</p>
+    <p class="body-text">でも、学ぶと「なぜつらくなったのか」「どう過ごせばいいのか」が、自分でわかるようになります。そしてその知識と技術は、自分だけでなく、家族や大切な人のためにも使えます。</p>
+    <p class="body-text">資格を取ることがゴールではありません。身体についての知識と、実際に触れる技術を自分のものにすること。それが、カイロを学ぶいちばんの意味です。</p>
+    <blockquote class="quote">「カイロを学び始めたのは、最初は自分と家族の身体のためでした。」<cite>講師 安藤真奈美</cite></blockquote>
+
+    <h2 class="title" style="margin-top:34px;">カイロを学ぶと、<br><span class="hl">手に入るもの</span></h2>
+    <p class="body-text">学ぶほどに、あなたにできることが増えていきます。</p>
+
+    <div class="gain">
+      <div class="gain-no">01</div>
+      <div class="gain-h">自分の身体を知る知識</div>
+      <p>不調を「なんとなく」で我慢しなくなります。姿勢や骨盤とのつながりがわかるので、座り方や立ち方、毎日の過ごし方を自分で見直せるようになります。</p>
+    </div>
+    <div class="gain">
+      <div class="gain-no">02</div>
+      <div class="gain-h">家族の身体をケアする知識と技術</div>
+      <p>「ちょっと横になって。みてあげる」と言える自分に。つらそうな家族を見ているだけだった毎日から、自分の手でケアしてあげられる毎日へ。</p>
+    </div>
+    <div class="gain">
+      <div class="gain-no">03</div>
+      <div class="gain-h">人の身体を見る目</div>
+      <p>肩の高さ、立ち姿、歩き方。人の身体のクセに気づけるようになります。家族や友人への声のかけ方も変わっていきます。</p>
+    </div>
+    <div class="gain">
+      <div class="gain-no">04</div>
+      <div class="gain-h">実際に身体に触れる技術</div>
+      <p>知識だけでなく、手で確かめ、手で整える技術。大きな道具や設備がいらないので、年齢を重ねても一生使えます。</p>
+    </div>
+    <div class="gain">
+      <div class="gain-no">05</div>
+      <div class="gain-h">誰かの役に立てる実感</div>
+      <p>「ありがとう」「楽になった」と言ってもらえる経験が、自分の自信になっていきます。</p>
+    </div>
+    <div class="gain">
+      <div class="gain-no">06</div>
+      <div class="gain-h">仕事にも活かせる、新しい選択肢</div>
+      <p>今の仕事にプラスする、副業にする、子育てしながら続ける、将来は自宅の一室で活動する。働き方は人それぞれです。仕事にするかどうかは、学んでから決めても大丈夫です。</p>
+    </div>
+
+    <div class="mid-cta">
+      <p>まずは、無料姿勢講座＋説明会で<br>カイロプラクティックにふれてみませんか？</p>
+      <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで日程を受け取る</a>
+      <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 学んだ先の可能性 ============ -->
 <section>
   <div class="wrap">
-    <div class="kicker">無料講座でわかること</div>
-    <h2 class="title">姿勢から、<br><span class="hl">身体のつながり</span>が見えてくる</h2>
+    <div class="kicker kicker-major">Possibilities</div>
+    <h2 class="title">学んだ先に、<br><span class="hl">広がる可能性</span></h2>
+    <p class="body-text">学びは、少しずつ広がっていきます。</p>
+
+    <div class="spread">
+      <div class="spread-row"><span class="spread-no">1</span><b>自分のため</b>自分の身体を知り、整える</div>
+      <div class="spread-row"><span class="spread-no">2</span><b>家族のため</b>家族の身体を、自分の手でみてあげる</div>
+      <div class="spread-row"><span class="spread-no">3</span><b>身近な人のため</b>友人や知人の「つらい」に応えられる</div>
+      <div class="spread-row"><span class="spread-no">4</span><b>仕事として</b>今の仕事にプラス、副業として</div>
+      <div class="spread-row final"><span class="spread-no">5</span><b>自分の活動として</b>将来、自宅や一室で施術院を開く</div>
+    </div>
+    <p class="body-note">最初から、仕事にすると決めなくても大丈夫です。</p>
+
+    <div class="step-label" style="margin-top:24px;">実際に学んだ方の今</div>
+    <div class="voice">
+      <div class="vq">「母のために学び始めました」</div>
+      <p>病気がちな母に何かしてあげたいと思い受講。今はマンションの一室で施術院を開き、活動しています。</p>
+      <span class="tag">奈良県</span>
+    </div>
+    <div class="voice">
+      <div class="vq">「子どもとの時間も大切にできています」</div>
+      <p>手に職をつけ、子どもとの時間を増やしたいと思い受講。現在は共同施術院で仕事をしています。</p>
+      <span class="tag">徳島県</span>
+    </div>
+    <div class="voice">
+      <div class="vq">前職はトラックドライバーの方</div>
+      <p>家族や知人をみることから始め、今は夫婦で2店舗の施術院を運営しています。</p>
+      <span class="tag">兵庫県</span>
+    </div>
+  </div>
+</section>
+
+<div class="chev"></div>
+
+<!-- ============ 06 講師・教室 ============ -->
+<section id="storySec" style="padding-top:28px;">
+  <div class="wrap story">
+    <div class="kicker kicker-major">講師紹介</div>
+    <h2 class="title">私も、家族のために<br><span class="hl">学び始めました。</span></h2>
+
+    <div class="story-head">
+      <img src="story.jpg" alt="院長 安藤真奈美">
+      <div>
+        <div class="story-name">安藤 真奈美</div>
+        <div class="story-role">レディースカイロうらら 院長</div>
+        <div class="story-tags"><span>元一級建築士</span><span>福津で開院12年</span></div>
+      </div>
+    </div>
+
+    <p>私はもともと一級建築士でした。生まれつき両足の股関節に問題があり、幼稚園に入る前までに5回の手術を経験しています。</p>
+    <p>カイロを学び始めたのは、最初は自分と家族の身体のためでした。学ぶうちに「身体って、おもしろい」と感じるようになり、知ることが楽しくなっていきました。</p>
+    <p class="pull">「ありがとう」と喜んでもらえることが増え、気づけば好きで学んでいたことが仕事になっていました。</p>
+    <p>現在は福津市で開院12年。今度は私が、学んでみたいと思った方の一歩をお手伝いしています。</p>
+
+    <div class="safe-box">
+      <div class="safe-h">初心者でも学べる理由</div>
+      <ul class="get-list">
+        <li>専門知識がなくても大丈夫。無料講座は初めての方にもわかりやすい内容です</li>
+        <li>無料講座 → 1日講座 → 4日間のセミナーと、段階を踏んで学べます</li>
+        <li>無料講座は完全マンツーマン。先生に直接、その場で質問できます</li>
+        <li>知識だけでなく、実技を実際に練習して身につけます</li>
+        <li>講師は女性なので、女性の方も安心して相談できます</li>
+      </ul>
+    </div>
+
+    <div class="org-box">
+      <h3>初級カイロ事業セミナーを主催する<br>Zenkenkaiとは</h3>
+      <div class="org-photo"><img src="seminar-scale.jpg" alt="全国から集まる会員による研修会の様子"></div>
+      <p>1977年創業。全国でカイロプラクティックの普及と人材育成に取り組み、各地に学ぶ仲間がいる団体です。</p>
+      <p>無料姿勢講座はレディースカイロうららが、初級カイロ事業セミナーはZenkenkaiが主催しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 学びのステップ ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker kicker-major">Steps</div>
+    <h2 class="title">学びは、<br><span class="hl">段階ごとに深まります</span></h2>
+
+    <div class="step-label">STEP1・体験編｜まず知る</div>
+    <div class="stepcard">
+      <div class="head"><div class="name">無料姿勢講座＋説明会</div><div class="price">0円</div></div>
+      <div class="desc">自分の姿勢のチェック、AI姿勢分析「シセイカルテ」、骨盤・背骨と姿勢のつながり、家でできる姿勢チェック法を、約60分・完全マンツーマンで学びます。</div>
+    </div>
+
+    <div class="step-label">STEP2・実践編｜自分と家族に活かす</div>
+    <div class="stepcard mid">
+      <div class="head"><div class="name">1日で学ぶカラダ講座</div><div class="price">10,000円</div></div>
+      <div class="desc">骨盤を中心に、骨格の仕組みや実践ワーク、睡眠や栄養など日常に活かせる内容まで、自分や家族に役立つ身体の知識とケアを1日で学びます。</div>
+    </div>
+    <details class="more-voice step-voices step-voices-mid">
+      <summary>受講した方の声を見る</summary>
+      <div class="voice" style="margin-top:4px;">
+        <div class="vq">「根本のゆがみを直すことが大事だと、すごくよくわかりました」</div>
+        <p>「体が好調だとメンタルにも現れるんだな」と、先生や参加者との明るい雰囲気も印象的だったそうです。</p>
+        <span class="tag">1日で学ぶカラダ講座 受講者</span>
+      </div>
+      <div class="voice">
+        <div class="vq">「色んな方とお話しすることができて、視野が広がりました」</div>
+        <p>骨格の仕組みや実践ワークを通して、姿勢と身体のつながりを体感していただけました。</p>
+        <span class="tag">1日で学ぶカラダ講座 受講者</span>
+      </div>
+      <div class="voice">
+        <div class="vq">「楽しかったです。自分の体をもっと知って、病気にならないようにします」</div>
+        <p>睡眠や栄養など、日常にすぐ活かせる内容が印象に残ったという声です。</p>
+        <span class="tag">1日で学ぶカラダ講座 受講者</span>
+      </div>
+    </details>
+
+    <div class="step-label">STEP3・マスター編｜技術を身につける</div>
+    <div class="stepcard hi">
+      <div class="head"><div class="name">初級カイロ事業セミナー</div></div>
+      <div class="desc">全身を対象に、カイロプラクティックの基礎から技術まで本格的に学ぶ4日間のセミナーです。実技を実際に練習します。<br>仕事にしたい方はもちろん、家族や大切な人のためにしっかり技術を身につけたい方も受講しています。</div>
+      <div class="desc2">費用・日程・内容は説明会で詳しくご案内します。</div>
+      <div class="org-photo" style="margin-top:12px;margin-bottom:0;"><img src="hands-on.jpg" alt="実技練習の様子"></div>
+    </div>
+
+    <p class="reassure">無料講座に参加したからといって、次の講座を受講する必要はありません。</p>
+  </div>
+</section>
+
+<div class="chev"></div>
+
+<!-- ============ 08 無料姿勢講座＋説明会 ============ -->
+<section style="padding-top:28px;">
+  <div class="wrap">
+    <div class="kicker kicker-major">無料姿勢講座＋説明会</div>
+    <h2 class="title">まずは、<br><span class="hl">自分の身体を知る</span><br>ことから。</h2>
 
     <div class="single-photo">
       <img src="ai-diagnosis.jpg" alt="タブレットを見ながら参加者に説明する安藤さん" style="object-position:center 18%;">
     </div>
-
-    <p class="body-text" style="margin-top:16px;">自分の姿勢を確認しながら、骨盤や背骨が身体とどう関係しているのかを、わかりやすく学びます。</p>
 
     <div class="ai-box">
       <div class="ai-title">無料なのに、ここまでわかる</div>
@@ -306,36 +554,54 @@
       </div>
     </div>
 
-    <div class="step-label" style="margin-top:22px;">当日の流れ</div>
-    <div class="flow" style="margin-top:10px;">
-      <div class="flow-row"><div class="num">1</div>カウンセリング</div>
-      <div class="flow-row"><div class="num">2</div>姿勢をチェック</div>
-      <div class="flow-row"><div class="num">3</div>AI姿勢分析「シセイカルテ」</div>
-      <div class="flow-row"><div class="num">4</div>骨盤・背骨と姿勢のつながりを学ぶ</div>
-      <div class="flow-row"><div class="num">5</div>自分の身体を確認</div>
-      <div class="flow-row final"><div class="num">6</div>家でもできるチェック方法</div>
-    </div>
-
-    <ul class="get-list">
+    <div class="step-label" style="margin-top:22px;">講座でわかること</div>
+    <ul class="get-list" style="margin-top:4px;">
       <li>シセイカルテで、今の自分の姿勢のゆがみが数値でわかる</li>
       <li>骨盤・背骨と姿勢のつながりを、その場で体感できる</li>
       <li>家に帰ってすぐ試せる、簡単な姿勢チェック法がわかる</li>
     </ul>
 
-    <p class="body-note">身体の知識がなくても大丈夫。知るほどに、身体はおもしろくなります。</p>
+    <dl class="schedule" style="margin-top:22px;">
+      <div><dt>形式</dt><dd>完全マンツーマン（各回1名）・約60分</dd></div>
+      <div><dt>場所</dt><dd>レディースカイロうらら<br>福岡県福津市花見ヶ丘1-9-8 ソレイユ105<br>福間駅より徒歩8分・駐車場あり</dd></div>
+      <div><dt>日程</dt><dd>直近2週間の中で複数日開催</dd></div>
+      <div><dt>申込み</dt><dd>ご都合のよい日をLINEでお選びください</dd></div>
+    </dl>
+
+    <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで無料姿勢講座＋説明会の日程を受け取る</a>
+    <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
   </div>
 </section>
 
-<!-- ============ 姿勢タイプ診断 ============ -->
+<!-- ============ 09 FAQ ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="title">よくあるご質問</h2>
+    <details class="faq"><summary>カイロプラクティックって何ですか？</summary><div class="a">背骨や骨盤など、骨格のバランスに着目して手で身体を整えていく手技療法です。約130年前にアメリカで生まれ、今では世界中で親しまれています。無料姿勢講座では、その考え方の入口として「姿勢と身体のつながり」を学びます。</div></details>
+    <details class="faq"><summary>整体やマッサージとは違うのですか？</summary><div class="a">マッサージは主に筋肉をほぐすものですが、カイロプラクティックは背骨や骨盤などの骨格に注目するのが特徴です。身体の土台から姿勢やバランスを見ていきます。</div></details>
+    <details class="faq"><summary>資格がなくても学べますか？</summary><div class="a">はい。日本ではカイロプラクティックは国家資格ではないので、どなたでも学び始めることができます。まずは無料講座で、自分の身体を知るところから始めてみてください。</div></details>
+    <details class="faq"><summary>一人で参加しても大丈夫ですか？</summary><div class="a">はい。無料講座は各回お一人の完全マンツーマンです。ほかの参加者を気にせず、気になることをその場で質問できます。</div></details>
+    <details class="faq"><summary>男性も参加できますか？</summary><div class="a">はい。無料姿勢講座は男女ともご参加いただけます。レディースカイロうららでの施術は女性専用です。</div></details>
+    <details class="faq"><summary>身体の知識がなくても参加できますか？</summary><div class="a">はい。初めての方にも分かりやすい内容です。専門知識は必要ありません。</div></details>
+    <details class="faq"><summary>無料講座に参加すると、次の講座も受ける必要がありますか？</summary><div class="a">いいえ。無料講座だけの参加でも大丈夫です。もっと学びたいと思った方に、その先の講座をご案内します。</div></details>
+    <details class="faq"><summary>今の仕事を続けながらでもいい？</summary><div class="a">はい。まず学んでみて、その先は個別にご相談しながら考えていけます。</div></details>
+    <details class="faq"><summary>子育て中でもできる？</summary><div class="a">私自身も、二人の娘を育てながら学び、仕事を続けてきました。</div></details>
+  </div>
+</section>
+
+<!-- ============ まだ迷っている方へ：姿勢タイプ診断 ============ -->
 <section class="quiz-sec">
   <div class="wrap">
-    <div class="kicker">30秒・無料</div>
+    <div class="kicker">まだ迷っている方へ｜30秒・無料</div>
     <h2 class="title">5つの質問でわかる<br><span class="hl">姿勢タイプ診断</span></h2>
     <p class="quiz-lead">まずは、簡単な質問で自分の姿勢タイプを知ることから始めてみませんか。</p>
-    <p class="quiz-tap-hint">👆 いちばん近いものをタップしてください</p>
+    <details class="quiz-toggle">
+    <summary class="quiz-btn">診断を始める</summary>
+    <p class="quiz-tap-hint" style="margin-top:16px;">👆 いちばん近いものをタップしてください</p>
     <form id="quiz" novalidate></form>
     <div class="quiz-progress" id="progress">0 / 5 回答済み</div>
     <button type="button" class="quiz-btn" id="showResult" disabled>結果を見る</button>
+    </details>
 
     <div class="result" id="result" hidden>
       <div class="result-kicker">あなたは…</div>
@@ -350,196 +616,20 @@
   </div>
 </section>
 
-<div class="chev"></div>
-
-<!-- ============ 07 講師紹介 ============ -->
-<section id="storySec" style="padding-top:28px;">
-  <div class="wrap story">
-    <div class="kicker kicker-major">講師紹介</div>
-    <h2 class="title">私も、家族のために<br><span class="hl">学び始めました。</span></h2>
-
-    <div class="story-head">
-      <img src="story.jpg" alt="院長 安藤真奈美">
-      <div>
-        <div class="story-name">安藤 真奈美</div>
-        <div class="story-role">レディースカイロうらら 院長</div>
-        <div class="story-tags"><span>元一級建築士</span><span>福津で開院12年</span></div>
-      </div>
-    </div>
-
-    <p>私はもともと一級建築士でした。生まれつき両足の股関節に問題があり、幼稚園に入る前までに5回の手術を経験しています。</p>
-    <p>カイロを学び始めたのは、最初は自分と家族の身体のためでした。学ぶうちに「身体って、おもしろい」と感じるようになり、知ることが楽しくなっていきました。</p>
-    <aside class="chiro-note">
-      <div class="chiro-note-label">カイロプラクティックとは？</div>
-      <p>背骨や骨盤など、骨格のバランスに着目して手で身体を整えていく手技療法です。約130年前にアメリカで生まれ、今では世界中で親しまれています。</p>
-    </aside>
-
-    <p class="pull">「ありがとう」と喜んでもらえることが増え、気づけば好きで学んでいたことが仕事になっていました。</p>
-
-    <p>現在は福津市で開院12年。今度は私が、学んでみたいと思った方の一歩をお手伝いしています。</p>
-  </div>
-</section>
-
-<!-- ============ 09 無料講座から、その先の学び + 10 Zenkenkai ============ -->
-<section>
-  <div class="wrap">
-    <div class="kicker kicker-major">無料講座のその先に</div>
-    <h2 class="title">もっと学びたいと思ったら、<br><span class="hl">次の学びへ</span>進めます</h2>
-
-    <div class="step-label">STEP1・体験編</div>
-    <div class="stepcard">
-      <div class="head"><div class="name">無料姿勢講座</div><div class="price">0円</div></div>
-      <div class="desc">自分の姿勢や身体のつながりを知る、約60分の無料講座です。各回お一人の完全マンツーマンで行います。</div>
-    </div>
-
-    <div class="step-label">STEP2・実践編</div>
-    <div class="stepcard mid">
-      <div class="head"><div class="name">1日で学ぶカラダ講座</div><div class="price">10,000円</div></div>
-      <div class="desc">骨盤を中心に、自分や家族に活かせる身体の知識とケアを、1日かけて学びます。</div>
-    </div>
-
-    <details class="more-voice step-voices step-voices-mid">
-      <summary>受講した方の声を見る</summary>
-      <div class="voice" style="margin-top:4px;">
-        <div class="vq">「根本のゆがみを直すことが大事だと、すごくよくわかりました」</div>
-        <p>「体が好調だとメンタルにも現れるんだな」と、先生や参加者との明るい雰囲気も印象的だったそうです。</p>
-        <span class="tag">1日で学ぶカラダ講座 受講者</span>
-      </div>
-
-      <div class="voice">
-        <div class="vq">「色んな方とお話しすることができて、視野が広がりました」</div>
-        <p>骨格の仕組みや実践ワークを通して、姿勢と身体のつながりを体感していただけました。</p>
-        <span class="tag">1日で学ぶカラダ講座 受講者</span>
-      </div>
-
-      <div class="voice">
-        <div class="vq">「楽しかったです。自分の体をもっと知って、病気にならないようにします」</div>
-        <p>睡眠や栄養など、日常にすぐ活かせる内容が印象に残ったという声です。</p>
-        <span class="tag">1日で学ぶカラダ講座 受講者</span>
-      </div>
-    </details>
-
-    <div class="step-label">STEP3・マスター編</div>
-    <div class="stepcard hi">
-      <div class="head"><div class="name">初級カイロ事業セミナー</div></div>
-      <div class="desc">全身を対象に、カイロプラクティックの基礎から技術まで本格的に学ぶ4日間のセミナーです。<br>仕事にしたい方はもちろん、家族や大切な人のためにしっかり技術を身につけたい方も受講しています。</div>
-      <div class="desc2">費用・日程・内容は説明会で詳しくご案内します。</div>
-      <div class="org-photo" style="margin-top:12px;margin-bottom:0;"><img src="hands-on.jpg" alt="実技練習の様子"></div>
-    </div>
-
-    <details class="more-voice step-voices step-voices-hi">
-      <summary>受講した方の声を見る</summary>
-      <div class="voice" style="margin-top:4px;">
-        <div class="vq">「母のために学び始めました」</div>
-        <p>病気がちな母に何かしてあげたいと思い受講。今はマンションの一室で施術院を開き、活動しています。</p>
-        <span class="tag">奈良県</span>
-      </div>
-
-      <div class="voice">
-        <div class="vq">「子どもとの時間も大切にできています」</div>
-        <p>手に職をつけ、子どもとの時間を増やしたいと思い受講。現在は共同施術院で仕事をしています。</p>
-        <span class="tag">徳島県</span>
-      </div>
-
-      <div class="voice">
-        <div class="vq">前職はトラックドライバーの方</div>
-        <p>家族や知人を看ることから始め、今は夫婦で2店舗の施術院を運営しています。</p>
-        <span class="tag">兵庫県</span>
-      </div>
-    </details>
-
-    <p class="reassure">無料講座に参加したからといって、次の講座を受講する必要はありません。</p>
-
-    <div class="org-box">
-      <h3>初級カイロ事業セミナーを主催する<br>Zenkenkaiとは</h3>
-      <div class="org-photo"><img src="seminar-scale.jpg" alt="全国から集まる会員による研修会の様子"></div>
-      <p>1977年創業、全国でカイロプラクティックの普及と人材育成に取り組んできた団体です。無料姿勢講座はレディースカイロうららが主催、初級カイロ事業セミナーはZenkenkaiが主催という関係で、内容や費用は無料講座の中で詳しくご案内します。</p>
-    </div>
-  </div>
-</section>
-
-<div class="chev"></div>
-
-<!-- ============ 11 おすすめする方 ============ -->
-<section style="padding-top:28px;">
-  <div class="wrap">
-    <div class="kicker kicker-major">ひとつでも当てはまる方へ</div>
-    <h2 class="title">身体のことを学んで、<br><span class="hl">誰かの役に立ちたい</span></h2>
-
-    <div class="recommend-box">
-      <ul>
-        <li>自分や家族の健康に役立てたい</li>
-        <li>身体のことを知るのがおもしろそう</li>
-        <li>人に喜んでもらえる仕事がしたい</li>
-        <li>今の仕事を続けながら、新しいことを始めたい</li>
-        <li>手に職をつけ、収入につなげたい</li>
-      </ul>
-    </div>
-    <p class="recommend-note">学んだ知識や技術を、仕事や収入につなげる道もあります。</p>
-    <ul class="get-list" style="margin-top:10px;">
-      <li>家族や身近な人のケアから始める</li>
-      <li>今の仕事を続けながら、少しずつ学ぶ</li>
-      <li>将来、自宅やお部屋の一室で施術院を開く</li>
-    </ul>
-  </div>
-</section>
-
-<div class="chev"></div>
-
-<!-- ============ 知ることから仕事になるまで ============ -->
-<section style="padding-top:28px;">
-  <div class="wrap">
-    <div class="kicker">学びは、少しずつ広がっていきます</div>
-    <h2 class="title">知ることから、<br><span class="hl">仕事になるまで</span></h2>
-
-    <p class="body-text">まずは、自分の身体を知ることから。学んだことが家族に役立ち、誰かに喜ばれ、その経験を仕事にする道もあります。</p>
-
-    <div class="flow">
-      <div class="flow-row"><div class="num">1</div><b>知る</b> — 自分の身体や姿勢を知る</div>
-      <div class="flow-row"><div class="num">2</div><b>できる</b> — 学んだことを家族に活かす</div>
-      <div class="flow-row"><div class="num">3</div><b>喜ばれる</b> — 誰かの役に立つ喜びを知る</div>
-      <div class="flow-row final"><div class="num">4</div><b>仕事になる</b> — さらに学び、仕事として活かす</div>
-    </div>
-
-    <p class="body-note">最初から、仕事にすると決めなくても大丈夫です。</p>
-  </div>
-</section>
-
-<!-- ============ 12 FAQ ============ -->
-<section>
-  <div class="wrap">
-    <h2 class="title">よくあるご質問</h2>
-
-    <details class="faq"><summary>カイロプラクティックって何ですか？</summary><div class="a">背骨や骨盤など、骨格のバランスに着目して手で身体を整えていく手技療法です。約130年前にアメリカで生まれ、今では世界中で親しまれています。無料姿勢講座では、その考え方の入口として「姿勢と身体のつながり」を学びます。</div></details>
-    <details class="faq"><summary>整体やマッサージとは違うのですか？</summary><div class="a">マッサージは主に筋肉をほぐすものですが、カイロプラクティックは背骨や骨盤などの骨格に注目するのが特徴です。身体の土台から姿勢やバランスを見ていきます。</div></details>
-    <details class="faq"><summary>資格がなくても学べますか？</summary><div class="a">はい。日本ではカイロプラクティックは国家資格ではないので、どなたでも学び始めることができます。まずは無料講座で、自分の身体を知るところから始めてみてください。</div></details>
-    <details class="faq"><summary>一人で参加しても大丈夫ですか？</summary><div class="a">はい。無料講座は各回お一人の完全マンツーマンです。ほかの参加者を気にせず、気になることをその場で質問できます。</div></details>
-    <details class="faq"><summary>男性も参加できますか？</summary><div class="a">はい。無料姿勢講座は男女ともご参加いただけます。レディースカイロうららでの施術は女性専用です。</div></details>
-    <details class="faq"><summary>身体の知識がなくても参加できますか？</summary><div class="a">はい。初めての方にも分かりやすい内容です。専門知識は必要ありません。</div></details>
-    <details class="faq"><summary>無料講座に参加すると、次の講座も受ける必要がありますか？</summary><div class="a">いいえ。無料講座だけの参加でも大丈夫です。もっと学びたいと思った方に、その先の講座をご案内します。</div></details>
-    <details class="faq"><summary>今の仕事を続けながらでもいい？</summary><div class="a">はい。まず学んでみて、その先は個別にご相談しながら考えていけます。</div></details>
-    <details class="faq"><summary>子育て中でもできる？</summary><div class="a">私自身も、二人の娘を育てながら学び、仕事を続けてきました。</div></details>
-  </div>
-</section>
-
-<!-- ============ 13 最終CTA ============ -->
+<!-- ============ 10 最終CTA ============ -->
 <section style="text-align:center;">
   <div class="wrap">
     <img class="final-photo" src="smile.jpg" alt="笑顔で話す安藤さん">
-    <h2 class="title" style="text-align:center;">まずは、身体のことを知る<br>60分から。</h2>
-    <dl class="schedule">
-      <div><dt>形式</dt><dd>完全マンツーマン（各回1名）</dd></div>
-      <div><dt>日程</dt><dd>直近2週間の中で複数日開催</dd></div>
-      <div><dt>申込み</dt><dd>ご都合のよい日をLINEでお選びください</dd></div>
-    </dl>
+    <h2 class="title" style="text-align:center;">まずは<br>無料姿勢講座＋説明会で、<br>カイロプラクティックを<br>知ってみませんか？</h2>
+    <p class="final-note">学ぶかどうかは、知ってから決めれば大丈夫です。</p>
 
     <a class="cta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
-      LINEで無料姿勢講座の日程を受け取る
+      LINEで無料姿勢講座＋説明会の日程を受け取る
     </a>
     <p class="cta-note">売り込みはしません｜ブロックはいつでもOK</p>
 
-    <div class="final-meta">参加無料｜未経験OK｜男女OK<br>福岡県福津市 レディースカイロうららにて開催</div>
+    <div class="final-meta">参加無料｜完全マンツーマン｜未経験OK｜男女OK<br>福岡県福津市 レディースカイロうららにて開催</div>
   </div>
 </section>
 
@@ -548,7 +638,7 @@
 <div class="sticky-cta">
   <a class="cta" id="stickyCta" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
-    <span id="stickyLabel">LINEで無料姿勢講座の日程を受け取る</span>
+    <span id="stickyLabel">LINEで無料講座＋説明会の日程を受け取る</span>
   </a>
 </div>
 
