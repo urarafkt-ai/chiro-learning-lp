@@ -127,6 +127,12 @@ function track(name,params){
   .sign-h{font-family:"Shippori Mincho",serif;font-weight:800;font-size:16px;color:var(--coral-deep);margin-bottom:4px;}
   .sign p{margin:0;font-size:13.5px;line-height:1.7;}
   @media (max-width:340px){.signs{grid-template-columns:1fr;}}
+  .links{display:grid;gap:10px;margin:4px 0 18px;}
+  .link{background:var(--card);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);text-align:center;}
+  .link-w{font-weight:800;font-size:15.5px;color:var(--ink);}
+  .link-arrow{color:var(--coral);font-weight:900;line-height:1.3;}
+  .link-c{font-size:14.5px;color:var(--ink-muted);line-height:1.7;}
+  .link-c b{color:var(--sage-deep);}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -214,12 +220,10 @@ function track(name,params){
     <img src="hero.jpg" alt="骨格模型を使って身体のしくみを説明する安藤さん">
   </div>
   <div class="wrap hero-body">
-    <h1>身体のこと、<br><span class="hl">ちゃんと学んで<br>みませんか？</span></h1>
-    <p class="hero-for">自分のために。<br>家族のために。<br>これからのために。</p>
-    <p class="hero-lead">肩こり、腰の重さ、疲れやすさ、ぽっこりお腹。<br>じつはどれも、「姿勢」とつながっていることがあります。</p>
-    <p class="hero-lead">まずは5つの質問で、<br>あなたの姿勢のクセをのぞいてみませんか。</p>
+    <h1>その肩こり、<br><span class="hl">肩だけの問題じゃ<br>ないかもしれません。</span></h1>
+    <p class="hero-lead">腰の重さ、疲れやすさ、ぽっこりお腹、子どもの猫背。<br>じつは「姿勢」とつながっていることがあります。</p>
     <div class="badges"><span>無料</span><span>約30秒</span><span>男女どちらもOK</span></div>
-    <button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button>
+    <button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button>
     <p class="hero-place">福岡県福津市　レディースカイロうらら<br>男性・女性どちらもご利用いただけます</p>
   </div>
 </section>
@@ -229,67 +233,40 @@ function track(name,params){
   <div class="wrap">
     <h2 class="title">こんなこと、<br><span class="hl">ありませんか？</span></h2>
     <ul class="worry">
+      <li>肩こりや腰の重さを、<br>「年のせいかな」で片づけている</li>
+      <li>整体に行くとラクになるのに、<br>1週間もすると元に戻っている</li>
+      <li>寝ても疲れが抜けない、<br>なんとなくスッキリしない</li>
       <li>子どもがスマホを見る姿が猫背なのに、<br>「姿勢よくして」としか言えない</li>
       <li>家族が「腰が痛い」と言っても、<br>さすってあげるくらいしかできない</li>
-      <li>整体に行くとラクになるのに、<br>1週間もすると元に戻っている</li>
-      <li>肩こりや腰の重さを、<br>「年のせいかな」で片づけている</li>
       <li>「骨盤がゆがんでいますね」と言われても、<br>それがどういうことか、よくわからない</li>
-      <li>子育てや仕事がひと段落して、<br>自分のために何か学んでみたい</li>
     </ul>
     <p class="soft">ひとつでも「わたしのことかも」と思ったら、<br>このページを少しだけ読んでみてください。</p>
   </div>
 </section>
 
-<!-- ============ 姿勢がくずれると ============ -->
+<!-- ============ え！姿勢が関係するの？ ============ -->
 <section>
   <div class="wrap">
-    <h2 class="title">姿勢がくずれると、<br><span class="hl">身体に何が起こるの？</span></h2>
-    <p class="text">姿勢がくずれると、<br>身体の一部の筋肉や関節にばかり、負担がかかるようになります。</p>
-    <p class="text">それが毎日続くと、<br>こんなかたちで表れることがあります。</p>
-    <div class="signs">
-      <div class="sign"><div class="sign-h">痛み</div><p>肩こり、首のこわばり、腰の重さ</p></div>
-      <div class="sign"><div class="sign-h">不調</div><p>頭が重い、なんとなくスッキリしない</p></div>
-      <div class="sign"><div class="sign-h">疲れやすさ</div><p>少し歩いただけで、すぐ疲れる<br>寝ても疲れが抜けない</p></div>
-      <div class="sign"><div class="sign-h">スタイル</div><p>ぽっこりお腹、猫背で老けて見える<br>写真に写った自分の姿にがっかりする</p></div>
+    <h2 class="title">え！それって、<br><span class="hl">姿勢が関係するの？</span></h2>
+    <p class="text">つらい場所と、原因になっているクセの場所は、<br>同じとは限りません。</p>
+    <div class="links">
+      <div class="link"><div class="link-w">肩や首がつらい</div><div class="link-arrow">↓</div><div class="link-c">頭が前に出る<b>「猫背」</b>のクセがあるかも</div></div>
+      <div class="link"><div class="link-w">腰が重い・痛い</div><div class="link-arrow">↓</div><div class="link-c">腰を反らせる<b>「反り腰」</b>のクセがあるかも</div></div>
+      <div class="link"><div class="link-w">いつも片側ばかりこる・痛い</div><div class="link-arrow">↓</div><div class="link-c">片足に体重をかける<b>「左右バランス」</b>のクセがあるかも</div></div>
+      <div class="link"><div class="link-w">ぽっこりお腹・背中が丸い</div><div class="link-arrow">↓</div><div class="link-c">骨盤が<b>「うしろに倒れる」</b>クセがあるかも</div></div>
     </div>
-    <p class="text soft">「ただのこり」「年のせい」と思っていたことが、<br>じつは毎日の姿勢とつながっているかもしれません。</p>
-  </div>
-</section>
-
-<!-- ============ なぜ姿勢なのか ============ -->
-<section class="tint">
-  <div class="wrap">
-    <h2 class="title">だから、身体を学ぶ入口は<br><span class="hl">「姿勢」です</span></h2>
-    <p class="text">骨も筋肉も、身体の内側にあって目に見えません。</p>
-    <p class="text">でも、姿勢を見れば、</p>
-    <ul class="shows">
-      <li>背骨や骨盤がどう並んでいるか</li>
-      <li>どこに負担がかかっているか</li>
-    </ul>
-    <p class="text">が、見えてきます。</p>
-    <p class="big-word">姿勢は、身体のしくみが<br>外に表れたもの。</p>
-    <p class="text soft">自分の姿勢のクセがわかると、<br>「なんで、いつもここがつらいんだろう」の理由が<br>見えてきます。</p>
-  </div>
-</section>
-
-<!-- ============ 姿勢がわかると ============ -->
-<section>
-  <div class="wrap">
-    <h2 class="title">姿勢がわかると、<br><span class="hl">こんなことが見えてきます</span></h2>
     <div class="example">
-      <p class="text">たとえば、肩がこりやすい人。<br>横から見ると、頭が少し前に出ていることがあります。</p>
-      <p class="text">頭は、ボウリングの球ほどの重さ。<br>それが前に出ると、首や肩はずっと支え続けることになります。</p>
+      <p class="text">たとえば、頭はボウリングの球ほどの重さ。<br>少し前に出るだけで、首や肩はずっと支え続けることになります。</p>
     </div>
-    <p class="text">肩だけを見るのではなく、<br>姿勢から、身体全体のつながりを見てみる。</p>
-    <p class="text soft">それが、身体を学ぶ面白さです。</p>
+    <p class="text soft">肩だけ、腰だけを見るのではなく、<br>姿勢から、身体全体のつながりを見てみる。<br>すると、「なんで、いつもここがつらいんだろう」の理由が見えてきます。</p>
   </div>
 </section>
 
 <!-- ============ 姿勢チェック ============ -->
 <section id="check" class="tint">
   <div class="wrap">
-    <h2 class="title">まずは、<br><span class="hl">自分の姿勢で試してみましょう</span></h2>
-    <p class="bridge">肩こりや疲れやすさの理由は、<br>あなたの姿勢のクセの中にあるかもしれません。<br>まずは、自分のクセを知るところから。</p>
+    <h2 class="title">じゃあ、わたしの姿勢は<br><span class="hl">どのタイプ？</span></h2>
+    <p class="bridge">5つの質問で、あなたの姿勢のクセと、<br>悩みとのつながりがわかります。（約30秒）</p>
     <ol class="steps">
       <li><span class="no">1</span>5つの質問に答える（約30秒）</li>
       <li><span class="no">2</span>その場で、あなたの姿勢タイプがわかる</li>
@@ -307,7 +284,7 @@ function track(name,params){
     <p class="feel">気軽に、思ったままに答えてみてください。</p>
 
     <div class="block-cta" id="startWrap">
-      <button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button>
+      <button type="button" class="cta js-start">チェックをはじめる</button>
     </div>
 
     <div class="quiz" id="quizArea" hidden>
@@ -320,6 +297,7 @@ function track(name,params){
       <p class="result-kicker">あなたは…</p>
       <div class="result-type" id="rType"></div>
       <p id="rText"></p>
+      <div class="link-box"><div class="link-label">このタイプの人によくある悩み</div><p id="rWorry"></p></div>
       <div class="link-box"><div class="link-label">身体とのつながり</div><p id="rBody"></p></div>
       <p class="soft">このタイプの姿勢が、<br>背骨や骨盤とどうつながっているのか。<br>おうちでできるセルフチェックと一緒に、<br>LINEでくわしくお届けします。</p>
       <ul class="how">
@@ -336,30 +314,31 @@ function track(name,params){
   </div>
 </section>
 
-<!-- ============ カイロプラクティック ============ -->
+<!-- ============ LINEでお届けすること ============ -->
 <section>
   <div class="wrap">
-    <h2 class="title">この「骨格から身体を見る」学びが、<br><span class="hl">カイロプラクティック</span>です</h2>
-    <div class="chiro-photo"><img src="images/classroom-lecture.jpg" alt="骨格模型を使って説明している様子"></div>
-    <p class="text">背骨や骨盤など、身体の土台に目を向けて、<br>身体全体のつながりを見ていく考え方です。</p>
-    <p class="text">家が土台に支えられているように、<br>身体も、土台のバランスを大切にしています。</p>
-    <p class="text soft">学んでいくと、<br>自分の姿勢だけでなく、<br>家族の姿勢の変化にも気づけるようになっていきます。</p>
+    <h2 class="title">自分と家族の身体を、<br><span class="hl">自分で見られるように。</span></h2>
+    <p class="text">LINEでは、こんなことを少しずつお届けしています。</p>
+    <ul class="gets">
+      <li>あなたのタイプの詳しい解説</li>
+      <li>おうちでできるセルフチェック</li>
+      <li>家族の姿勢を見るときのポイント</li>
+      <li>悩みと姿勢のつながりを、ひとつずつ</li>
+      <li>身体全体を見る考え方（カイロプラクティック）</li>
+    </ul>
+    <p class="text">読みやすい量で、少しずつお届けします。<br>LINE登録は無料で、いつでも配信を止められます。</p>
+    <div class="block-cta"><button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button></div>
   </div>
 </section>
 
-<!-- ============ LINEでお届けすること ============ -->
+<!-- ============ カイロプラクティック ============ -->
 <section class="tint">
   <div class="wrap">
-    <h2 class="title">LINEでは、こんなことを<br><span class="hl">少しずつお届けしています</span></h2>
-    <ul class="gets">
-      <li>あなたの姿勢タイプの詳しい解説</li>
-      <li>おうちでできるセルフチェック法</li>
-      <li>姿勢と背骨・骨盤のつながり</li>
-      <li>家族の姿勢を見るときのポイント</li>
-      <li>カイロプラクティックのこと</li>
-    </ul>
-    <p class="text">読みやすい量で、少しずつお届けします。<br>LINE登録は無料で、いつでも配信を止められます。</p>
-    <div class="block-cta"><button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button></div>
+    <h2 class="title">身体全体を見る考え方、<br><span class="hl">カイロプラクティック</span></h2>
+    <div class="chiro-photo"><img src="images/classroom-lecture.jpg" alt="骨格模型を使って説明している様子"></div>
+    <p class="text">こうした「つらい場所だけでなく、身体全体を見る」考え方を、<br>カイロプラクティックといいます。</p>
+    <p class="text">背骨や骨盤など、身体の土台に目を向けて、<br>身体全体のつながりを見ていきます。</p>
+    <p class="text soft">学んでいくと、自分の姿勢だけでなく、<br>家族の姿勢の変化にも気づけるようになっていきます。</p>
   </div>
 </section>
 
@@ -395,16 +374,16 @@ function track(name,params){
 <section class="final">
   <div class="wrap">
     <img class="final-photo" src="smile.jpg" alt="笑顔で話す安藤さん">
-    <h2 class="title">身体を学ぶ第一歩は、<br>自分の姿勢を知ることから。</h2>
-    <p>30秒だけ、<br>あなたの姿勢のクセを見てみませんか。</p>
-    <button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button>
+    <h2 class="title">その悩み、まずは<br>姿勢から見てみませんか？</h2>
+    <p>無料・約30秒。<br>あなたの姿勢のクセと、悩みとのつながりがわかります。</p>
+    <button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button>
   </div>
 </section>
 
 <footer>レディースカイロうらら（福岡県福津市）</footer>
 
 <div class="sticky-cta">
-  <button type="button" class="cta js-start" id="sticky">無料で姿勢チェックをはじめる</button>
+  <button type="button" class="cta js-start" id="sticky">30秒で、わたしの姿勢のクセを見てみる</button>
 </div>
 
 <script>
@@ -424,6 +403,13 @@ function track(name,params){
     "楽な寝方には、日中の姿勢のクセが表れやすいものです。",
     "靴のすり減り方には、立ち方や歩き方のクセが表れます。",
     "つらい場所と、クセのある場所が同じとは限りません。"
+  ];
+  var WORRY=[
+    "肩こり、首のこわばり、頭が重い感じ",
+    "腰の重さや痛み、立ちっぱなしがつらい",
+    "片側ばかりの肩こりや腰の痛み",
+    "ぽっこりお腹、背中の丸み、座っていると腰がだるい",
+    "今は大きな悩みが少ない方が多いタイプです"
   ];
   var BODY=[
     "頭が前に出ると、首から背中の背骨のカーブが強くなりやすく、首や肩まわりがずっと頭を支え続けることになります。",
@@ -503,6 +489,7 @@ function track(name,params){
     document.getElementById("rText").textContent=txt;
     document.getElementById("rKey").textContent=r.k;
     document.getElementById("rBody").textContent=BODY[best];
+    document.getElementById("rWorry").textContent=WORRY[best];
     area.hidden=true;
     var box=document.getElementById("result"); box.hidden=false; done=true;
     box.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
