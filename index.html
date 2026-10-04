@@ -108,6 +108,12 @@ function track(name,params){
   .badges span{font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--sage-tint);color:var(--sage-deep);}
   .hero-place{font-size:13px;color:var(--ink-muted);text-align:center;margin:14px 0 0;line-height:1.8;}
 
+  .big-word{font-family:"Shippori Mincho",serif;font-weight:800;font-size:22px;color:var(--sage-deep);margin:6px 0 16px;}
+  .shows{list-style:none;margin:0 0 16px;padding:14px 18px;background:var(--sage-tint);border-radius:14px;display:grid;gap:6px;}
+  .shows li{display:flex;gap:10px;font-size:15px;font-weight:700;line-height:1.6;}
+  .shows li::before{content:"・";color:var(--sage-deep);}
+  .example{background:var(--paper);border-radius:16px;padding:18px 18px 4px;margin:0 0 18px;box-shadow:var(--shadow);border-left:4px solid var(--coral);}
+  .example .text{margin-bottom:14px;}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -196,7 +202,8 @@ function track(name,params){
   <div class="wrap hero-body">
     <h1>身体のこと、<br><span class="hl">ちゃんと学んで<br>みませんか？</span></h1>
     <p class="hero-for">自分のために。<br>家族のために。<br>これからのために。</p>
-    <p class="hero-lead">まずは5つの質問で、<br>あなたの「姿勢のクセ」をのぞいてみませんか。</p>
+    <p class="hero-lead">学びの第一歩は、<br>いちばん身近な「自分の身体」を見ることから。</p>
+    <p class="hero-lead">まずは5つの質問で、<br>あなたの姿勢のクセをのぞいてみませんか。</p>
     <div class="badges"><span>無料</span><span>約30秒</span><span>男女どちらもOK</span></div>
     <button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button>
     <p class="hero-place">福岡県福津市　レディースカイロうらら<br>男性・女性どちらもご利用いただけます</p>
@@ -213,24 +220,44 @@ function track(name,params){
       <li>身体のしくみに、なんとなく興味がある</li>
       <li>何か新しいことを始めてみたい</li>
     </ul>
-    <p class="soft">ひとつでも当てはまったら、<br>まずは、自分の身体を知るところから<br>はじめてみませんか。</p>
+    <p class="soft">ひとつでも当てはまったら、<br>このページを少しだけ読んでみてください。</p>
   </div>
 </section>
 
-<!-- ============ 痛くなってからだけじゃない ============ -->
+<!-- ============ なぜ姿勢なのか ============ -->
 <section>
   <div class="wrap">
-    <h2 class="title">身体は、<br><span class="hl">「痛くなってから」だけじゃない</span></h2>
-    <p class="text">つらいときに施術を受ける。<br>それも、とても大切なことです。</p>
-    <p class="text">でも、たとえば肩がつらいとき。<br>もしかしたら、肩だけでなく、<br>いつもの姿勢や身体の使い方も<br>関わっているのかもしれません。</p>
-    <p class="text soft">痛いところだけでなく、身体全体を見てみる。<br>そんな見方があります。</p>
+    <h2 class="title">なぜ、身体を学ぶ入口が<br><span class="hl">「姿勢」なの？</span></h2>
+    <p class="text">身体のしくみは、ふだん目に見えません。<br>骨も、筋肉も、身体の内側にあるからです。</p>
+    <p class="text">でも、ひとつだけ、<br>身体のしくみが外に表れているものがあります。</p>
+    <p class="big-word">それが「姿勢」です。</p>
+    <ul class="shows">
+      <li>背骨や骨盤の並び方</li>
+      <li>どこに力が入り、どこがゆるんでいるか</li>
+      <li>毎日の座り方や立ち方のクセ</li>
+    </ul>
+    <p class="text">そのすべてが、姿勢に出ています。</p>
+    <p class="text soft">だから、姿勢を見ることは、<br>身体のしくみを知るいちばんの近道なんです。</p>
+  </div>
+</section>
+
+<!-- ============ 姿勢がわかると ============ -->
+<section class="tint">
+  <div class="wrap">
+    <h2 class="title">姿勢がわかると、<br><span class="hl">こんなことが見えてきます</span></h2>
+    <div class="example">
+      <p class="text">たとえば、肩がこりやすい人。<br>横から見ると、頭が少し前に出ていることがあります。</p>
+      <p class="text">頭は、ボウリングの球ほどの重さ。<br>それが前に出ると、首や肩はずっと支え続けることになります。</p>
+    </div>
+    <p class="text">肩だけを見るのではなく、<br>姿勢から、身体全体のつながりを見てみる。</p>
+    <p class="text soft">それが、身体を学ぶ面白さです。</p>
   </div>
 </section>
 
 <!-- ============ 姿勢チェック ============ -->
-<section class="tint" id="check">
+<section id="check">
   <div class="wrap">
-    <h2 class="title">まずは、<br><span class="hl">あなたの姿勢をチェック</span></h2>
+    <h2 class="title">まずは、<br><span class="hl">自分の姿勢で試してみましょう</span></h2>
     <ol class="steps">
       <li><span class="no">1</span>5つの質問に答える（約30秒）</li>
       <li><span class="no">2</span>その場で、あなたの姿勢タイプがわかる</li>
@@ -261,7 +288,7 @@ function track(name,params){
       <p class="result-kicker">あなたは…</p>
       <div class="result-type" id="rType"></div>
       <p id="rText"></p>
-      <p class="soft">どうしてこのタイプになりやすいのか、<br>おうちでできるセルフチェックと一緒に、<br>LINEでくわしくお届けします。</p>
+      <p class="soft">このタイプの姿勢が、<br>背骨や骨盤とどうつながっているのか。<br>おうちでできるセルフチェックと一緒に、<br>LINEでくわしくお届けします。</p>
       <ul class="how">
         <li><span>1.</span>下のキーワードをコピー</li>
         <li><span>2.</span>LINEで友だち追加</li>
@@ -277,34 +304,34 @@ function track(name,params){
 </section>
 
 <!-- ============ カイロプラクティック ============ -->
-<section>
+<section class="tint">
   <div class="wrap">
-    <h2 class="title">ここでお伝えしているのは、<br><span class="hl">「カイロプラクティック」</span><br>という学びです</h2>
+    <h2 class="title">この「骨格から身体を見る」学びが、<br><span class="hl">カイロプラクティック</span>です</h2>
     <div class="chiro-photo"><img src="images/classroom-lecture.jpg" alt="骨格模型を使って説明している様子"></div>
-    <p class="text">背骨や骨盤など、身体の土台に目を向けて、<br>身体全体を見ていく考え方です。</p>
+    <p class="text">背骨や骨盤など、身体の土台に目を向けて、<br>身体全体のつながりを見ていく考え方です。</p>
     <p class="text">家が土台に支えられているように、<br>身体も、土台のバランスを大切にしています。</p>
-    <p class="text soft">自分の身体のこと、家族の身体のこと。<br>ゆっくり考えてみるきっかけになればうれしいです。</p>
+    <p class="text soft">学んでいくと、<br>自分の姿勢だけでなく、<br>家族の姿勢の変化にも気づけるようになっていきます。</p>
   </div>
 </section>
 
 <!-- ============ LINEでお届けすること ============ -->
-<section class="tint">
+<section>
   <div class="wrap">
-    <h2 class="title">LINEでは、<br><span class="hl">こんなことをお届けしています</span></h2>
+    <h2 class="title">LINEでは、こんなことを<br><span class="hl">少しずつお届けしています</span></h2>
     <ul class="gets">
       <li>あなたの姿勢タイプの詳しい解説</li>
       <li>おうちでできるセルフチェック法</li>
-      <li>姿勢や骨盤など、身体のしくみ</li>
-      <li>家族の身体を見るときのポイント</li>
+      <li>姿勢と背骨・骨盤のつながり</li>
+      <li>家族の姿勢を見るときのポイント</li>
       <li>カイロプラクティックのこと</li>
     </ul>
-    <p class="text">少しずつ、読みやすい量でお届けします。<br>LINE登録は無料で、いつでも配信を止められます。</p>
+    <p class="text">読みやすい量で、少しずつお届けします。<br>LINE登録は無料で、いつでも配信を止められます。</p>
     <div class="block-cta"><button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button></div>
   </div>
 </section>
 
 <!-- ============ 講師 ============ -->
-<section>
+<section class="tint">
   <div class="wrap">
     <h2 class="title">この学びを<br><span class="hl">伝えている人</span></h2>
     <div class="story-head">
@@ -320,12 +347,12 @@ function track(name,params){
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="tint">
+<section>
   <div class="wrap">
     <h2 class="title">よくある質問</h2>
     <details class="faq"><summary>本当に無料ですか？</summary><div class="a">はい。姿勢チェックもLINE登録も無料です。</div></details>
     <details class="faq"><summary>男性でも大丈夫ですか？</summary><div class="a">はい。男性・女性どちらもご利用いただけます。</div></details>
-    <details class="faq"><summary>カイロプラクティックのことを知らなくても大丈夫？</summary><div class="a">もちろんです。はじめての方にも、わかりやすくお伝えしています。</div></details>
+    <details class="faq"><summary>身体のことを何も知らなくても大丈夫？</summary><div class="a">もちろんです。はじめての方にも、わかりやすくお伝えしています。</div></details>
     <details class="faq"><summary>資格を取りたいわけではないのですが…</summary><div class="a">大丈夫です。自分や家族のために知りたい、というところから始めていただけます。</div></details>
     <details class="faq"><summary>LINEに登録したら、勧誘されませんか？</summary><div class="a">LINEでは、身体のことや、講座などの学ぶ機会をご案内しています。合わないなと思ったら、いつでも配信を止められます。</div></details>
   </div>
@@ -335,7 +362,7 @@ function track(name,params){
 <section class="final">
   <div class="wrap">
     <img class="final-photo" src="smile.jpg" alt="笑顔で話す安藤さん">
-    <h2 class="title">まずは、<br>自分の身体を知ることから。</h2>
+    <h2 class="title">身体を学ぶ第一歩は、<br>自分の姿勢を知ることから。</h2>
     <p>30秒だけ、<br>あなたの姿勢のクセを見てみませんか。</p>
     <button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button>
   </div>
