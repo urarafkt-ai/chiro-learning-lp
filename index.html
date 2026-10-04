@@ -149,6 +149,7 @@ function track(name,params){
   .q{border:0;margin:0 0 14px;padding:18px 16px 14px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);min-width:0;}
   .q legend{padding:0;float:left;width:100%;margin-bottom:12px;}
   .q-no{font-family:"Shippori Mincho",serif;font-weight:800;color:var(--sage-deep);font-size:14px;display:block;}
+  .q-hint{display:block;font-size:12.5px;color:var(--ink-muted);font-weight:500;margin-top:2px;}
   .q-text{font-weight:700;font-size:16px;line-height:1.6;}
   .opts{display:grid;gap:8px;clear:both;}
   .opt{position:relative;}
@@ -299,7 +300,7 @@ function track(name,params){
     <div class="asks">
       <div class="ask"><b>立ち方</b>左右どちらに体重をかけやすい？</div>
       <div class="ask"><b>座り方</b>ふだん、どんな姿勢になりやすい？</div>
-      <div class="ask"><b>寝姿勢</b>仰向けのとき、腰はどうなっている？</div>
+      <div class="ask"><b>寝るとき</b>どんな寝方が楽？</div>
       <div class="ask"><b>靴のすり減り</b>どこがすり減りやすい？</div>
       <div class="ask"><b>気になる場所</b>首・肩？ 背中？ 腰？ 脚？</div>
     </div>
@@ -413,14 +414,14 @@ function track(name,params){
   var Q=[
     ["【立ち方】立っているとき、体重はどこにかかりやすい？",[["つま先側。少し前のめりになりやすい",0],["かかと寄りで、お腹を前に出しがち",1],["いつも決まった片足",2],["膝をゆるめて、少し後ろにもたれる感じ",3]]],
     ["【座り方】ふだん、どんな姿勢になりやすい？",[["スマホやパソコンで、前かがみ",0],["背筋を伸ばそうと、腰を反らせる",1],["足を組む・横座りが多い",2],["背もたれにもたれて、お尻が前にずれる",3]]],
-    ["【寝姿勢】仰向けで寝たとき、近いものは？",[["枕が高くないと落ち着かない",0],["腰の下に、手がすっぽり入る",1],["身体が左右どちらかに傾く感じがする",2],["膝を立てたほうが楽",3]]],
+    ["【寝るとき】いちばん近いものは？",[["枕が高くないと落ち着かない",0],["仰向けだと、腰が痛い・反る感じがする",1],["いつも同じ向きの横寝でないと眠れない",2],["身体を丸めて寝ることが多い",3]]],
     ["【靴のすり減り】すり減りやすいのは？",[["つま先側",0],["かかとの内側",1],["左右で減り方がちがう",2],["かかとの外側",3]]],
     ["【気になる場所】いちばん気になるのは？",[["首・肩",0],["腰",1],["片側の肩や腰",2],["背中・お腹まわり",3]]]
   ];
   var MEMO=[
     "片足に体重をかけるクセは、骨盤の高さの左右差につながることがあります。",
     "座り方は、背骨のカーブの形に表れやすいところです。",
-    "腰のすき間は、骨盤の傾きを知る手がかりになります。",
+    "楽な寝方には、日中の姿勢のクセが表れやすいものです。",
     "靴のすり減り方には、立ち方や歩き方のクセが表れます。",
     "つらい場所と、クセのある場所が同じとは限りません。"
   ];
@@ -429,19 +430,23 @@ function track(name,params){
     "腰の背骨のカーブが強くなり、骨盤が前に傾きやすい姿勢です。",
     "骨盤の高さに左右差が出て、背骨がそれを補うようにバランスをとりやすい姿勢です。",
     "骨盤が後ろに傾くと、背骨のゆるやかなS字カーブが少なくなり、背中が丸くなりやすくなります。"
+  ,
+    "背骨や骨盤の並びに、大きなかたよりが出にくい状態です。今のよい状態を保つためのセルフチェックを、LINEでお届けします。"
   ];
   var T=[
     {n:"前かがみ猫背タイプ",k:"猫背タイプ",t:"頭が前に出て、首や肩に負担が集まりやすい姿勢です。スマホやパソコンの時間が長い方に多い傾向があります。"},
     {n:"がんばり反り腰タイプ",k:"反り腰タイプ",t:"「いい姿勢」を意識するほど腰を反らせてしまい、腰に負担がかかりやすいタイプです。"},
     {n:"左右バランスくずれタイプ",k:"左右バランスタイプ",t:"片側に体重をかけるクセで、身体に左右差が出やすいタイプです。"},
     {n:"骨盤うしろ倒れタイプ",k:"骨盤うしろ倒れタイプ",t:"骨盤が後ろに倒れ、背中が丸くお腹が前に出やすいタイプです。座る時間が長い方に多い傾向があります。"}
+  ,
+    {n:"バランスタイプ",k:"バランスタイプ",t:"今は、目立った姿勢のクセが少ないタイプです。ただ、クセは毎日の過ごし方で少しずつ変わっていきます。"}
   ];
   var form=document.getElementById("quiz"),html="";
   Q.forEach(function(q,i){
-    html+='<fieldset class="q"><legend><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span></legend><div class="opts">';
-    q[1].forEach(function(o,j){
+    html+='<fieldset class="q"><legend><span class="q-no">Q'+(i+1)+'</span><span class="q-text">'+q[0]+'</span><span class="q-hint">当てはまるものを、いくつでも</span></legend><div class="opts">';
+    q[1].concat([["どれも当てはまらない",-1]]).forEach(function(o,j){
       var id="q"+i+"_"+j;
-      html+='<div class="opt"><input type="radio" name="q'+i+'" id="'+id+'" value="'+o[1]+'"><label for="'+id+'">'+o[0]+'</label></div>';
+      html+='<div class="opt"><input type="checkbox" name="q'+i+'" id="'+id+'" value="'+o[1]+'"><label for="'+id+'">'+o[0]+'</label></div>';
     });
     html+='</div><p class="memo" hidden><b>ひとことメモ</b>'+MEMO[i]+'</p></fieldset>';
   });
@@ -464,22 +469,34 @@ function track(name,params){
 
   function answered(){ var n=0; for(var i=0;i<Q.length;i++){ if(form.querySelector('input[name="q'+i+'"]:checked')) n++; } return n; }
   form.addEventListener("change",function(e){
+    var t=e.target, fs=t.closest("fieldset");
+    if(t.checked){
+      fs.querySelectorAll("input").forEach(function(o){
+        if(o!==t && ((t.value==="-1") !== (o.value==="-1"))) o.checked=false;
+      });
+    }
     var n=answered(); prog.textContent=n+" / 5 回答済み"; btn.disabled=n<Q.length;
-    var fs=e.target.closest("fieldset"), next=fs&&fs.nextElementSibling;
-    var memo=fs&&fs.querySelector(".memo"), first=memo&&memo.hidden;
-    if(memo) memo.hidden=false;
-    var wait=first?1400:300;
-    if(next && !next.querySelector("input:checked")) setTimeout(function(){ next.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"}); },wait);
-    else if(n===Q.length) setTimeout(function(){ btn.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"}); },wait);
+    var memo=fs.querySelector(".memo");
+    if(memo && fs.querySelector("input:checked")) memo.hidden=false;
+    if(n===Q.length && t.checked) setTimeout(function(){ btn.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"}); },900);
   });
 
   btn.addEventListener("click",function(){
     if(btn.disabled) return;
     var c=[0,0,0,0];
-    for(var i=0;i<Q.length;i++){ var el=form.querySelector('input[name="q'+i+'"]:checked'); if(el) c[+el.value]++; }
-    var max=Math.max.apply(null,c),best=c.indexOf(max);
+    form.querySelectorAll("input:checked").forEach(function(el){ var v=+el.value; if(v>=0) c[v]++; });
+    var max=Math.max.apply(null,c),best;
+    if(max===0){ best=4; }
+    else{
+      /* 同点のときは、Q5「いちばん気になる場所」で選んだタイプを優先 */
+      var tied=[]; for(var t=0;t<4;t++){ if(c[t]===max) tied.push(t); }
+      best=tied[0];
+      if(tied.length>1){
+        form.querySelectorAll('input[name="q4"]:checked').forEach(function(el){ var v=+el.value; if(tied.indexOf(v)>=0 && best===tied[0]) best=v; });
+      }
+    }
     var second=-1,secondMax=0;
-    for(var k=0;k<4;k++){ if(k!==best && c[k]>secondMax){ secondMax=c[k]; second=k; } }
+    if(best<4){ for(var k=0;k<4;k++){ if(k!==best && c[k]>secondMax){ secondMax=c[k]; second=k; } } }
     var r=T[best],txt=r.t;
     if(second>=0 && secondMax>=2){ txt+="「"+T[second].n+"」の傾向も少しありそうです。"; }
     document.getElementById("rType").textContent="「"+r.n+"」でした";
