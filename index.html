@@ -134,6 +134,11 @@ function track(name,params){
   .link-c{font-size:14.5px;color:var(--ink-muted);line-height:1.7;}
   .link-c b{color:var(--sage-deep);}
   .perk-label{display:inline-block;background:#06C755;color:#fff;font-size:13px;font-weight:800;border-radius:999px;padding:3px 14px;margin:0 0 10px;letter-spacing:.04em;}
+  .link-note{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:13px;color:var(--ink-muted);line-height:1.7;}
+  .line-only{text-align:center;margin:18px 0 0;font-size:14px;}
+  .line-only a{color:var(--sage-deep);font-weight:700;}
+  .chiro-mini{background:var(--sage-tint);border-radius:12px;padding:12px 14px;margin-top:6px;}
+  .chiro-mini p{margin:0;font-size:14.5px;}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -251,15 +256,13 @@ function track(name,params){
     <h2 class="title">え！それって、<br><span class="hl">姿勢が関係するの？</span></h2>
     <p class="text">つらい場所と、原因になっているクセの場所は、<br>同じとは限りません。</p>
     <div class="links">
-      <div class="link"><div class="link-w">肩や首がつらい</div><div class="link-arrow">↓</div><div class="link-c">頭が前に出る<b>「猫背」</b>のクセがあるかも</div></div>
+      <div class="link"><div class="link-w">肩や首がつらい</div><div class="link-arrow">↓</div><div class="link-c">頭が前に出る<b>「猫背」</b>のクセがあるかも</div><div class="link-note">頭はボウリングの球ほどの重さ。少し前に出るだけで、首や肩はずっと支え続けることに。</div></div>
       <div class="link"><div class="link-w">腰が重い・痛い</div><div class="link-arrow">↓</div><div class="link-c">腰を反らせる<b>「反り腰」</b>のクセがあるかも</div></div>
       <div class="link"><div class="link-w">いつも片側ばかりこる・痛い</div><div class="link-arrow">↓</div><div class="link-c">片足に体重をかける<b>「左右バランス」</b>のクセがあるかも</div></div>
       <div class="link"><div class="link-w">ぽっこりお腹・背中が丸い</div><div class="link-arrow">↓</div><div class="link-c">骨盤が<b>「うしろに倒れる」</b>クセがあるかも</div></div>
     </div>
-    <div class="example">
-      <p class="text">たとえば、頭はボウリングの球ほどの重さ。<br>少し前に出るだけで、首や肩はずっと支え続けることになります。</p>
-    </div>
-    <p class="text soft">肩だけ、腰だけを見るのではなく、<br>姿勢から、身体全体のつながりを見てみる。<br>すると、「なんで、いつもここがつらいんだろう」の理由が見えてきます。</p>
+    <p class="text soft">つらい場所だけでなく、姿勢から身体全体を見てみると、<br>「なんで、いつもここがつらいんだろう」の理由が見えてきます。</p>
+    <div class="block-cta"><button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button></div>
   </div>
 </section>
 
@@ -329,25 +332,14 @@ function track(name,params){
       <li>身体全体を見る考え方（カイロプラクティック）</li>
     </ul>
     <p class="text">LINE登録は無料で、いつでも配信を止められます。</p>
-    <div class="block-cta"><button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button></div>
+    <p class="line-only"><a class="js-line-direct" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">チェックせずに、LINEだけ登録する ›</a></p>
   </div>
 </section>
 
-<!-- ============ カイロプラクティック ============ -->
+<!-- ============ 講師・カイロ ============ -->
 <section class="tint">
   <div class="wrap">
-    <h2 class="title">身体全体を見る考え方、<br><span class="hl">カイロプラクティック</span></h2>
-    <div class="chiro-photo"><img src="images/classroom-lecture.jpg" alt="骨格模型を使って説明している様子"></div>
-    <p class="text">こうした「つらい場所だけでなく、身体全体を見る」考え方を、<br>カイロプラクティックといいます。</p>
-    <p class="text">背骨や骨盤など、身体の土台に目を向けて、<br>身体全体のつながりを見ていきます。</p>
-    <p class="text soft">学んでいくと、自分の姿勢だけでなく、<br>家族の姿勢の変化にも気づけるようになっていきます。</p>
-  </div>
-</section>
-
-<!-- ============ 講師 ============ -->
-<section>
-  <div class="wrap">
-    <h2 class="title">この学びを<br><span class="hl">伝えている人</span></h2>
+    <h2 class="title">この考え方を<br><span class="hl">伝えている人</span></h2>
     <div class="story-head">
       <img src="story.jpg" alt="院長 安藤真奈美">
       <div>
@@ -355,13 +347,16 @@ function track(name,params){
         <div class="story-name">安藤 真奈美</div>
       </div>
     </div>
-    <p class="text">もとは一級建築士。<br>生まれつき股関節に問題があり、幼いころに5回の手術を経験しました。</p>
-    <p class="text">自分と家族のために学び始めたカイロプラクティックが、いつのまにか仕事になり、福津市で開院して12年になります。</p>
+    <p class="text">もとは一級建築士。生まれつき股関節に問題があり、幼いころに5回の手術を経験しました。<br>自分と家族のために学び始めたカイロプラクティックが仕事になり、福津市で開院して12年になります。</p>
+    <div class="chiro-mini">
+      <div class="link-label">カイロプラクティックとは</div>
+      <p>つらい場所だけでなく、背骨や骨盤など身体全体のつながりを見ていく考え方です。</p>
+    </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="tint">
+<section>
   <div class="wrap">
     <h2 class="title">よくある質問</h2>
     <details class="faq"><summary>本当に無料ですか？</summary><div class="a">はい。姿勢チェックもLINE登録も無料です。</div></details>
@@ -504,6 +499,9 @@ function track(name,params){
     sticky.replaceWith(a);
   });
 
+  document.querySelectorAll(".js-line-direct").forEach(function(a){
+    a.addEventListener("click",function(){ track("click_line",{posture_type:"none",place:"direct"}); });
+  });
   document.querySelectorAll(".js-line").forEach(function(a){
     a.addEventListener("click",function(){ track("click_line",{posture_type:document.getElementById("rKey").textContent,place:"result"}); });
   });
