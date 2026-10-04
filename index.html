@@ -122,6 +122,11 @@ function track(name,params){
   .link-box{background:var(--sage-tint);border-radius:12px;padding:12px 14px;margin:0 0 16px;}
   .link-label{font-size:12.5px;font-weight:800;color:var(--sage-deep);}
   .link-box p{margin:0 !important;font-size:14.5px !important;}
+  .signs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 20px;}
+  .sign{background:var(--card);border-radius:14px;padding:14px 14px 12px;box-shadow:var(--shadow);border-top:3px solid var(--coral);}
+  .sign-h{font-family:"Shippori Mincho",serif;font-weight:800;font-size:16px;color:var(--coral-deep);margin-bottom:4px;}
+  .sign p{margin:0;font-size:13.5px;line-height:1.7;}
+  @media (max-width:340px){.signs{grid-template-columns:1fr;}}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -210,7 +215,7 @@ function track(name,params){
   <div class="wrap hero-body">
     <h1>身体のこと、<br><span class="hl">ちゃんと学んで<br>みませんか？</span></h1>
     <p class="hero-for">自分のために。<br>家族のために。<br>これからのために。</p>
-    <p class="hero-lead">学びの第一歩は、<br>いちばん身近な「自分の身体」を見ることから。</p>
+    <p class="hero-lead">肩こり、腰の重さ、疲れやすさ、ぽっこりお腹。<br>じつはどれも、「姿勢」とつながっていることがあります。</p>
     <p class="hero-lead">まずは5つの質問で、<br>あなたの姿勢のクセをのぞいてみませんか。</p>
     <div class="badges"><span>無料</span><span>約30秒</span><span>男女どちらもOK</span></div>
     <button type="button" class="cta js-start">無料で姿勢チェックをはじめる</button>
@@ -223,34 +228,51 @@ function track(name,params){
   <div class="wrap">
     <h2 class="title">こんなこと、<br><span class="hl">ありませんか？</span></h2>
     <ul class="worry">
-      <li>子どもや家族の姿勢、健康がちょっと気になる</li>
-      <li>自分の身体のこと、もう少し知りたい</li>
-      <li>身体のしくみに、なんとなく興味がある</li>
-      <li>何か新しいことを始めてみたい</li>
+      <li>子どもがスマホを見る姿が猫背なのに、<br>「姿勢よくして」としか言えない</li>
+      <li>家族が「腰が痛い」と言っても、<br>さすってあげるくらいしかできない</li>
+      <li>整体に行くとラクになるのに、<br>1週間もすると元に戻っている</li>
+      <li>肩こりや腰の重さを、<br>「年のせいかな」で片づけている</li>
+      <li>「骨盤がゆがんでいますね」と言われても、<br>それがどういうことか、よくわからない</li>
+      <li>子育てや仕事がひと段落して、<br>自分のために何か学んでみたい</li>
     </ul>
-    <p class="soft">ひとつでも当てはまったら、<br>このページを少しだけ読んでみてください。</p>
+    <p class="soft">ひとつでも「わたしのことかも」と思ったら、<br>このページを少しだけ読んでみてください。</p>
+  </div>
+</section>
+
+<!-- ============ 姿勢がくずれると ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="title">姿勢がくずれると、<br><span class="hl">身体に何が起こるの？</span></h2>
+    <p class="text">姿勢がくずれると、<br>身体の一部の筋肉や関節にばかり、負担がかかるようになります。</p>
+    <p class="text">それが毎日続くと、<br>こんなかたちで表れることがあります。</p>
+    <div class="signs">
+      <div class="sign"><div class="sign-h">痛み</div><p>肩こり、首のこわばり、腰の重さ</p></div>
+      <div class="sign"><div class="sign-h">不調</div><p>頭が重い、なんとなくスッキリしない</p></div>
+      <div class="sign"><div class="sign-h">疲れやすさ</div><p>少し歩いただけで、すぐ疲れる<br>寝ても疲れが抜けない</p></div>
+      <div class="sign"><div class="sign-h">スタイル</div><p>ぽっこりお腹、猫背で老けて見える<br>写真に写った自分の姿にがっかりする</p></div>
+    </div>
+    <p class="text soft">「ただのこり」「年のせい」と思っていたことが、<br>じつは毎日の姿勢とつながっているかもしれません。</p>
   </div>
 </section>
 
 <!-- ============ なぜ姿勢なのか ============ -->
-<section>
+<section class="tint">
   <div class="wrap">
-    <h2 class="title">なぜ、身体を学ぶ入口が<br><span class="hl">「姿勢」なの？</span></h2>
-    <p class="text">身体のしくみは、ふだん目に見えません。<br>骨も、筋肉も、身体の内側にあるからです。</p>
-    <p class="text">でも、ひとつだけ、<br>身体のしくみが外に表れているものがあります。</p>
-    <p class="big-word">それが「姿勢」です。</p>
+    <h2 class="title">だから、身体を学ぶ入口は<br><span class="hl">「姿勢」です</span></h2>
+    <p class="text">骨も筋肉も、身体の内側にあって目に見えません。</p>
+    <p class="text">でも、姿勢を見れば、</p>
     <ul class="shows">
-      <li>背骨や骨盤の並び方</li>
-      <li>どこに力が入り、どこがゆるんでいるか</li>
-      <li>毎日の座り方や立ち方のクセ</li>
+      <li>背骨や骨盤がどう並んでいるか</li>
+      <li>どこに負担がかかっているか</li>
     </ul>
-    <p class="text">そのすべてが、姿勢に出ています。</p>
-    <p class="text soft">だから、姿勢を見ることは、<br>身体のしくみを知るいちばんの近道なんです。</p>
+    <p class="text">が、見えてきます。</p>
+    <p class="big-word">姿勢は、身体のしくみが<br>外に表れたもの。</p>
+    <p class="text soft">だから、姿勢を知ることが、<br>自分の身体を知るいちばんの近道なんです。</p>
   </div>
 </section>
 
 <!-- ============ 姿勢がわかると ============ -->
-<section class="tint">
+<section>
   <div class="wrap">
     <h2 class="title">姿勢がわかると、<br><span class="hl">こんなことが見えてきます</span></h2>
     <div class="example">
@@ -263,7 +285,7 @@ function track(name,params){
 </section>
 
 <!-- ============ 姿勢チェック ============ -->
-<section id="check">
+<section id="check" class="tint">
   <div class="wrap">
     <h2 class="title">まずは、<br><span class="hl">自分の姿勢で試してみましょう</span></h2>
     <p class="bridge">姿勢には、背骨や骨盤の並びや、毎日のクセが表れています。<br>だから、姿勢を見ることは、身体のしくみを知る近道です。</p>
@@ -314,7 +336,7 @@ function track(name,params){
 </section>
 
 <!-- ============ カイロプラクティック ============ -->
-<section class="tint">
+<section>
   <div class="wrap">
     <h2 class="title">この「骨格から身体を見る」学びが、<br><span class="hl">カイロプラクティック</span>です</h2>
     <div class="chiro-photo"><img src="images/classroom-lecture.jpg" alt="骨格模型を使って説明している様子"></div>
@@ -325,7 +347,7 @@ function track(name,params){
 </section>
 
 <!-- ============ LINEでお届けすること ============ -->
-<section>
+<section class="tint">
   <div class="wrap">
     <h2 class="title">LINEでは、こんなことを<br><span class="hl">少しずつお届けしています</span></h2>
     <ul class="gets">
@@ -341,7 +363,7 @@ function track(name,params){
 </section>
 
 <!-- ============ 講師 ============ -->
-<section class="tint">
+<section>
   <div class="wrap">
     <h2 class="title">この学びを<br><span class="hl">伝えている人</span></h2>
     <div class="story-head">
@@ -357,7 +379,7 @@ function track(name,params){
 </section>
 
 <!-- ============ FAQ ============ -->
-<section>
+<section class="tint">
   <div class="wrap">
     <h2 class="title">よくある質問</h2>
     <details class="faq"><summary>本当に無料ですか？</summary><div class="a">はい。姿勢チェックもLINE登録も無料です。</div></details>
