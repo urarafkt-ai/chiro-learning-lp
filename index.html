@@ -149,6 +149,24 @@ function track(name,params){
   .line-only a{color:var(--sage-deep);font-weight:700;}
   .chiro-mini{background:var(--sage-tint);border-radius:12px;padding:12px 14px;margin-top:6px;}
   .chiro-mini p{margin:0;font-size:14.5px;}
+  .first-exp{display:inline-block;font-size:13.5px;font-weight:700;color:var(--sage-deep);background:var(--sage-tint);border-radius:999px;padding:3px 14px;margin:-6px 0 18px;}
+  .recommend{font-family:"Shippori Mincho",serif;font-weight:800;color:var(--coral-deep);font-size:17px;margin:0 0 18px;}
+  .stair{background:var(--card);border-radius:16px;padding:18px 18px 20px;box-shadow:var(--shadow);border:1px solid var(--line);}
+  .stair-main{border:2px solid #06C755;}
+  .stair-tag{display:inline-block;font-size:12.5px;font-weight:800;color:#fff;background:var(--sage-deep);border-radius:999px;padding:2px 12px;margin-bottom:8px;}
+  .stair-main .stair-tag{background:#06C755;}
+  .stair-h{font-family:"Shippori Mincho",serif;font-weight:800;font-size:18px;line-height:1.55;margin-bottom:8px;}
+  .stair p{font-size:14.5px;margin:0 0 12px;line-height:1.8;}
+  .stair-list{margin:0 0 12px;padding-left:18px;font-size:14.5px;line-height:1.8;}
+  .stair .voices{color:var(--sage-deep);font-weight:700;}
+  .stair .note{font-size:12px;color:var(--ink-muted);}
+  .stair-arrow{text-align:center;color:var(--sage);font-weight:900;margin:6px 0;}
+  .cta-sub{display:flex;align-items:center;justify-content:center;width:100%;border:1.5px solid var(--sage);color:var(--sage-deep);text-decoration:none;font-weight:700;padding:12px 16px;border-radius:999px;font-size:15px;}
+  details.grads{margin:0 0 12px;}
+  details.grads summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--sage-deep);list-style:none;padding:4px 0 8px;}
+  details.grads summary::-webkit-details-marker{display:none;}
+  details.grads summary::before{content:"＋ ";}
+  details.grads[open] summary::before{content:"－ ";}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -233,72 +251,77 @@ function track(name,params){
 </style>
 </head><body>
 
-<!-- ============ ファーストビュー ============ -->
+<!-- ============ 1 ファーストビュー ============ -->
 <section class="hero">
   <div class="hero-media">
     <img src="hero.jpg" alt="骨格模型を使って身体のしくみを説明する安藤さん">
   </div>
   <div class="wrap hero-body">
-    <h1>その肩こり、<br><span class="hl">肩だけの問題じゃ<br>ないかもしれません。</span></h1>
-    <p class="hero-lead">腰の重さ、疲れやすさ、ぽっこりお腹、子どもの猫背。<br>じつは「姿勢」とつながっていることがあります。</p>
-    <div class="badges"><span>無料</span><span>約30秒</span><span>男女どちらもOK</span></div>
+    <h1>その身体のつらさ、<br><span class="hl">「年齢のせい」<br>「疲れのせい」で</span><br>終わらせていませんか？</h1>
+    <p class="hero-lead">肩や首のつらさ、腰の重さ、子どもの猫背。<br>じつは「姿勢」とつながっていることがあります。</p>
     <button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button>
-    <p class="hero-place">福岡県福津市　レディースカイロうらら<br>男性・女性どちらもご利用いただけます</p>
+    <p class="hero-place">無料・男女どちらもOK<br>福岡県福津市　レディースカイロうらら</p>
   </div>
 </section>
 
-<!-- ============ こんなこと、ありませんか？ ============ -->
+<!-- ============ 2 悩み ============ -->
 <section class="tint">
   <div class="wrap">
     <h2 class="title">こんなこと、<br><span class="hl">ありませんか？</span></h2>
     <ul class="worry">
-      <li>肩こりや腰の重さを、<br>「年のせいかな」で片づけている</li>
-      <li>整体に行くとラクになるのに、<br>1週間もすると元に戻っている</li>
-      <li>寝ても疲れが抜けない、<br>なんとなくスッキリしない</li>
-      <li>子どもがスマホを見る姿が猫背なのに、<br>「姿勢よくして」としか言えない</li>
-      <li>家族が「腰が痛い」と言っても、<br>さすってあげるくらいしかできない</li>
-      <li>「骨盤がゆがんでいますね」と言われても、<br>それがどういうことか、よくわからない</li>
+      <li>肩や首がつらい</li>
+      <li>腰の重さが気になる</li>
+      <li>疲れが抜けない</li>
+      <li>子どもに「姿勢よくして」と言っても、すぐ元に戻る</li>
+      <li>家族の身体も、自分で見てあげたい</li>
+      <li>マッサージで楽になっても、また気になる</li>
     </ul>
-    <p class="soft">ひとつでも「わたしのことかも」と思ったら、<br>このページを少しだけ読んでみてください。</p>
+    <p class="soft">「そもそも、なぜこうなるんだろう？」</p>
   </div>
 </section>
 
-<!-- ============ え！姿勢が関係するの？ ============ -->
+<!-- ============ 3 姿勢が関係？ ============ -->
 <section>
   <div class="wrap">
-    <h2 class="title">え！それって、<br><span class="hl">姿勢が関係するの？</span></h2>
-    <p class="text">つらい場所と、原因になっているクセの場所は、<br>同じとは限りません。</p>
+    <h2 class="title">え？それって、<br><span class="hl">姿勢が関係するの？</span></h2>
+    <p class="text">つらい場所と、クセがある場所は、<br>同じとは限りません。</p>
     <div class="links">
-      <div class="link"><div class="link-w">肩や首がつらい</div><div class="link-arrow">↓</div><div class="link-c">頭が前に出る<b>「猫背」</b>のクセがあるかも</div><div class="link-note">頭はボウリングの球ほどの重さ。少し前に出るだけで、首や肩はずっと支え続けることに。</div></div>
-      <div class="link"><div class="link-w">腰が重い・痛い</div><div class="link-arrow">↓</div><div class="link-c">腰を反らせる<b>「反り腰」</b>のクセがあるかも</div></div>
-      <div class="link"><div class="link-w">いつも片側ばかりこる・痛い</div><div class="link-arrow">↓</div><div class="link-c">片足に体重をかける<b>「左右バランス」</b>のクセがあるかも</div></div>
-      <div class="link"><div class="link-w">ぽっこりお腹・背中が丸い</div><div class="link-arrow">↓</div><div class="link-c">骨盤が<b>「うしろに倒れる」</b>クセがあるかも</div></div>
+      <div class="link"><div class="link-w">肩や首がつらい</div><div class="link-arrow">↓</div><div class="link-c">頭の位置や<b>猫背</b>のクセ</div></div>
+      <div class="link"><div class="link-w">腰が気になる</div><div class="link-arrow">↓</div><div class="link-c"><b>反り腰</b>などのクセ</div></div>
+      <div class="link"><div class="link-w">いつも片側ばかり</div><div class="link-arrow">↓</div><div class="link-c"><b>左右のバランス</b>のクセ</div></div>
     </div>
-    <p class="text soft">つらい場所だけでなく、姿勢から身体全体を見てみると、<br>「なんで、いつもここがつらいんだろう」の理由が見えてきます。</p>
-    <div class="block-cta"><button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button></div>
+    <p class="text soft">身体は、頭・背骨・骨盤がつながっています。<br>だから、痛いところだけでなく、身体全体を見る。</p>
   </div>
 </section>
 
-<!-- ============ 姿勢チェック ============ -->
-<section id="check" class="tint">
+<!-- ============ 4 その場しのぎ ============ -->
+<section class="tint">
+  <div class="wrap">
+    <h2 class="title">その場しのぎに、<br><span class="hl">なっていませんか？</span></h2>
+    <div class="example">
+      <p class="text">肩がつらいから、とりあえず揉む。<br>腰がつらいから、とりあえず伸ばす。<br>猫背が気になるから、「姿勢よくして」。</p>
+    </div>
+    <p class="text">どれも、そのときは大切なことです。<br>でも、身体のことを知らないと、<br>その場しのぎになってしまうことも。</p>
+    <ul class="shows">
+      <li>身体は今、どうなっている？</li>
+      <li>どこを見ればいい？</li>
+      <li>なぜ、そうなっている？</li>
+    </ul>
+    <p class="big-word">「何をするか」だけでなく、<br>「自分の身体をどう見るか」。</p>
+    <p class="text soft">だから、身体のことを知ることが大切です。</p>
+  </div>
+</section>
+
+<!-- ============ 5 姿勢チェック ============ -->
+<section id="check">
   <div class="wrap">
     <h2 class="title">じゃあ、わたしの姿勢は<br><span class="hl">どのタイプ？</span></h2>
-    <p class="bridge">5つの質問で、あなたの姿勢のクセと、<br>悩みとのつながりがわかります。（約30秒）</p>
+    <p class="first-exp">身体を学ぶ、最初の体験です</p>
     <ol class="steps">
-      <li><span class="no">1</span>5つの質問に答える（約30秒）</li>
-      <li><span class="no">2</span>その場で、あなたの姿勢タイプがわかる</li>
-      <li class="line-step"><span class="no">3</span>詳しい解説とセルフチェック法を、LINEで受け取る</li>
+      <li><span class="no">1</span>5つの質問に答える</li>
+      <li><span class="no">2</span>約30秒で姿勢タイプがわかる</li>
+      <li class="line-step"><span class="no">3</span>詳しい解説とセルフケアを、LINEで受け取る</li>
     </ol>
-
-    <p class="ask-label">こんなことを聞いていきます</p>
-    <div class="asks">
-      <div class="ask"><b>立ち方</b>左右どちらに体重をかけやすい？</div>
-      <div class="ask"><b>座り方</b>ふだん、どんな姿勢になりやすい？</div>
-      <div class="ask"><b>寝るとき</b>どんな寝方が楽？</div>
-      <div class="ask"><b>靴のすり減り</b>どこがすり減りやすい？</div>
-      <div class="ask"><b>気になる場所</b>首・肩？ 背中？ 腰？ 脚？</div>
-    </div>
-    <p class="feel">気軽に、思ったままに答えてみてください。</p>
 
     <div class="block-cta" id="startWrap">
       <button type="button" class="cta js-start">チェックをはじめる</button>
@@ -315,8 +338,13 @@ function track(name,params){
       <div class="result-type" id="rType"></div>
       <p id="rText"></p>
       <div class="link-box"><div class="link-label">このタイプの人によくある悩み</div><p id="rWorry"></p></div>
-      <div class="link-box"><div class="link-label">身体とのつながり</div><p id="rBody"></p></div>
-      <p class="soft">このタイプの姿勢が、<br>背骨や骨盤とどうつながっているのか。<br>おうちでできるセルフチェックと一緒に、<br>LINEでくわしくお届けします。</p>
+      <p class="soft">気づいた今が、スタートです。</p>
+      <p class="text" style="margin-bottom:6px;">LINEでは、こんなことをお届けします。</p>
+      <ul class="shows">
+        <li>なぜ、このタイプになりやすいのか</li>
+        <li>日常で気をつけたいこと</li>
+        <li>おうちでできるセルフチェックとセルフケア</li>
+      </ul>
       <ul class="how">
         <li><span>1.</span>下のキーワードをコピー</li>
         <li><span>2.</span>LINEで友だち追加</li>
@@ -325,34 +353,67 @@ function track(name,params){
       <div class="keyword"><span>LINEで送るキーワード<br><b id="rKey"></b></span><button type="button" class="copy-btn" id="copyKey">コピー</button></div>
       <a class="cta cta-line js-line" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>詳しい解説をLINEで受け取る</a>
       <p class="cta-note">LINE登録は無料です。いつでも配信を止められます。</p>
+      <p class="line-only"><a href="#stairs">もっと実際に見てみたい方へ → 学びの階段を見る</a></p>
     </div>
 
     <p class="disclaimer">※医療的な診断ではなく、姿勢の傾向を知るためのチェックです。</p>
   </div>
 </section>
 
-<!-- ============ LINEでお届けすること ============ -->
-<section>
+<!-- ============ 7 学びの階段 ============ -->
+<section id="stairs" class="tint">
   <div class="wrap">
-    <p class="perk-label">LINE登録の特典</p>
-    <h2 class="title">LINEに登録すると、<br><span class="hl">こんなことが受け取れます</span></h2>
-    <p class="text">自分と家族の身体を、自分で見られるように。<br>少しずつお届けします。</p>
-    <ul class="gets">
-      <li>あなたのタイプの詳しい解説</li>
-      <li>おうちでできるセルフチェック</li>
-      <li>家族の姿勢を見るときのポイント</li>
-      <li>悩みと姿勢のつながりを、ひとつずつ</li>
-      <li>身体全体を見る考え方（カイロプラクティック）</li>
-    </ul>
-    <p class="text">LINE登録は無料で、いつでも配信を止められます。</p>
-    <p class="line-only"><a class="js-line-direct" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">チェックせずに、LINEだけ登録する ›</a></p>
+    <h2 class="title">知る。体験する。<br><span class="hl">学ぶ。深める。</span></h2>
+    <p class="text">今の自分に合うところから始められます。</p>
+    <p class="recommend">迷ったら、まずはLINEから。</p>
+
+    <div class="stair stair-main">
+      <div class="stair-tag">導入編｜LINEミニ講座（無料）</div>
+      <div class="stair-h">身体のことを知る、最初の一歩。</div>
+      <ul class="stair-list"><li>姿勢タイプの詳しい解説</li><li>セルフチェックとセルフケア</li><li>家族の身体を見るポイント</li></ul>
+      <a class="cta cta-line js-line-direct" data-place="stairs" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで受け取る</a>
+    </div>
+    <div class="stair-arrow">↓</div>
+
+    <div class="stair">
+      <div class="stair-tag">体験編｜無料講座</div>
+      <div class="stair-h">身体の見方を、実際に体験。</div>
+      <p>約60分・マンツーマン。<br>AI姿勢分析で、今の姿勢を一緒に確かめます。<br>福津市・レディースカイロうららにて</p>
+      <a class="cta-sub js-track" data-ev="click_free_lesson" href="https://calendar.app.google/HbwF1YYNr8htry1c6" target="_blank" rel="noopener">空いている日時を見る</a>
+    </div>
+    <div class="stair-arrow">↓</div>
+
+    <div class="stair">
+      <div class="stair-tag">入門編｜半日・1日講座</div>
+      <div class="stair-h">身体の見方とケアを、実際に学ぶ。</div>
+      <ul class="stair-list"><li>骨盤や姿勢の見方</li><li>身体のしくみ</li><li>手を使ったケア</li></ul>
+      <p>半日（3時間）5,000円／1日 10,000円<br>少人数制・初心者歓迎</p>
+      <a class="cta-sub js-track" data-ev="click_course" href="https://urarafkt-ai.github.io/karada-lp/" target="_blank" rel="noopener">講座の日程を見る</a>
+    </div>
+    <div class="stair-arrow">↓</div>
+
+    <div class="stair">
+      <div class="stair-tag">本格編｜初級カイロプラクティック</div>
+      <div class="stair-h">自分や家族の身体を、もっと深く学ぶ。</div>
+      <p class="voices">「自分のために学びたい」<br>「家族の身体を、自分でも見てあげたい」<br>「これからの健康のために知っておきたい」</p>
+      <p>そんな思いから、学び始める方がたくさんいます。<br>そして、その学びを仕事につなげていきたい方にも。</p>
+      <details class="grads"><summary>学んだ方の今を見る</summary>
+        <ul class="stair-list">
+          <li>母のために学び始め、今はマンションの一室で施術院を開いています（奈良県）</li>
+          <li>手に職をつけたいと受講し、今は共同施術院で仕事をしています（徳島県）</li>
+          <li>前職はトラックドライバー。今は夫婦で2店舗の施術院を運営しています（兵庫県）</li>
+        </ul>
+      </details>
+      <p class="note">※初級カイロプラクティックは、1977年創業のZenkenkaiが主催しています。</p>
+      <a class="cta-sub js-line-direct" data-place="shokyu" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">LINEで問い合わせる</a>
+    </div>
   </div>
 </section>
 
-<!-- ============ 講師・カイロ ============ -->
-<section class="tint">
+<!-- ============ 8 講師 ============ -->
+<section>
   <div class="wrap">
-    <h2 class="title">この考え方を<br><span class="hl">伝えている人</span></h2>
+    <h2 class="title">この学びを<br><span class="hl">伝えている人</span></h2>
     <div class="story-head">
       <img src="story.jpg" alt="院長 安藤真奈美">
       <div>
@@ -360,32 +421,33 @@ function track(name,params){
         <div class="story-name">安藤 真奈美</div>
       </div>
     </div>
-    <p class="text">もとは一級建築士。生まれつき股関節に問題があり、幼いころに5回の手術を経験しました。<br>自分と家族のために学び始めたカイロプラクティックが仕事になり、福津市で開院して12年になります。</p>
+    <p class="text">もとは一級建築士。<br>生まれつき股関節に問題があり、幼いころに5回の手術を経験しました。</p>
+    <p class="text">最初は、自分と家族の身体のために学び始めたカイロプラクティック。<br>いつのまにか仕事になり、福津市で開院して12年です。</p>
     <div class="chiro-mini">
       <div class="link-label">カイロプラクティックとは</div>
-      <p>つらい場所だけでなく、背骨や骨盤など身体全体のつながりを見ていく考え方です。</p>
+      <p>骨格や姿勢から、身体全体を見ていく考え方です。</p>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section>
+<!-- ============ 9 FAQ ============ -->
+<section class="tint">
   <div class="wrap">
     <h2 class="title">よくある質問</h2>
-    <details class="faq"><summary>本当に無料ですか？</summary><div class="a">はい。姿勢チェックもLINE登録も無料です。</div></details>
-    <details class="faq"><summary>男性でも大丈夫ですか？</summary><div class="a">はい。男性・女性どちらもご利用いただけます。</div></details>
-    <details class="faq"><summary>身体のことを何も知らなくても大丈夫？</summary><div class="a">もちろんです。はじめての方にも、わかりやすくお伝えしています。</div></details>
-    <details class="faq"><summary>資格を取りたいわけではないのですが…</summary><div class="a">大丈夫です。自分や家族のために知りたい、というところから始めていただけます。</div></details>
-    <details class="faq"><summary>LINEに登録したら、勧誘されませんか？</summary><div class="a">LINEでは、身体のことや、講座などの学ぶ機会をご案内しています。合わないなと思ったら、いつでも配信を止められます。</div></details>
+    <details class="faq"><summary>チェックのあとは、どうすればいい？</summary><div class="a">まずはLINEで、姿勢と身体のつながりを知ってみてください。もっと知りたくなったら、無料講座や講座へ進めます。</div></details>
+    <details class="faq"><summary>仕事にするつもりがなくても、初級を受けられる？</summary><div class="a">はい。多くの方が、自分や家族のために学んでいます。</div></details>
+    <details class="faq"><summary>身体の知識がなくても大丈夫？</summary><div class="a">大丈夫です。はじめての方にも、一つずつお伝えしています。</div></details>
+    <details class="faq"><summary>男性でも大丈夫？</summary><div class="a">はい。男性・女性どちらもご参加いただけます。</div></details>
+    <details class="faq"><summary>LINEに登録したら、勧誘されませんか？</summary><div class="a">身体のことや講座のご案内をお届けします。いつでも配信を止められます。</div></details>
   </div>
 </section>
 
-<!-- ============ 最終CTA ============ -->
+<!-- ============ 10 最後 ============ -->
 <section class="final">
   <div class="wrap">
     <img class="final-photo" src="smile.jpg" alt="笑顔で話す安藤さん">
-    <h2 class="title">その悩み、まずは<br>姿勢から見てみませんか？</h2>
-    <p>無料・約30秒。<br>あなたの姿勢のクセと、悩みとのつながりがわかります。</p>
+    <h2 class="title">身体を知ることは、<br>自分と家族を大切にすること。</h2>
+    <p>まずは、自分の身体を知ることから。</p>
     <button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button>
   </div>
 </section>
@@ -502,7 +564,7 @@ function track(name,params){
     document.getElementById("rType").textContent="「"+r.n+"」でした";
     document.getElementById("rText").textContent=txt;
     document.getElementById("rKey").textContent=r.k;
-    document.getElementById("rBody").textContent=BODY[best];
+    var rb=document.getElementById("rBody"); if(rb) rb.textContent=BODY[best];
     document.getElementById("rWorry").textContent=WORRY[best];
     area.hidden=true;
     var box=document.getElementById("result"); box.hidden=false; done=true;
@@ -517,7 +579,10 @@ function track(name,params){
   });
 
   document.querySelectorAll(".js-line-direct").forEach(function(a){
-    a.addEventListener("click",function(){ track("click_line",{posture_type:"none",place:"direct"}); });
+    a.addEventListener("click",function(){ track("click_line",{posture_type:"none",place:a.dataset.place||"direct"}); });
+  });
+  document.querySelectorAll(".js-track").forEach(function(a){
+    a.addEventListener("click",function(){ track(a.dataset.ev); });
   });
   document.querySelectorAll(".js-line").forEach(function(a){
     a.addEventListener("click",function(){ track("click_line",{posture_type:document.getElementById("rKey").textContent,place:"result"}); });
