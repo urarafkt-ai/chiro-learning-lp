@@ -167,6 +167,18 @@ function track(name,params){
   details.grads summary::-webkit-details-marker{display:none;}
   details.grads summary::before{content:"＋ ";}
   details.grads[open] summary::before{content:"－ ";}
+  .sheet-bg{position:fixed;inset:0;z-index:100;background:rgba(30,25,20,.45);display:flex;align-items:flex-end;justify-content:center;}
+  .sheet-bg[hidden]{display:none;}
+  .sheet{position:relative;width:100%;max-width:560px;background:var(--paper);border-radius:22px 22px 0 0;padding:26px 20px calc(24px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 30px rgba(0,0,0,.18);animation:up .25s ease;}
+  @keyframes up{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+  @media (prefers-reduced-motion: reduce){.sheet{animation:none;}}
+  .sheet-x{position:absolute;top:10px;right:12px;border:0;background:transparent;font-size:26px;color:var(--ink-muted);cursor:pointer;line-height:1;padding:6px 10px;}
+  .sheet-title{font-family:"Shippori Mincho",serif;font-weight:800;font-size:19px;margin:0 0 16px;text-align:center;}
+  .sheet-back{background:var(--ivory);border-radius:14px;padding:14px 16px;margin:16px 0 14px;}
+  .sheet-back p{margin:0;font-size:14.5px;line-height:1.8;}
+  .sheet-back .sheet-back-h{font-weight:800;color:var(--sage-deep);margin-bottom:4px;}
+  .sheet-key{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--paper);border:1px solid var(--line);font-weight:900;}
+  body.sheet-open{overflow:hidden;}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -452,6 +464,19 @@ function track(name,params){
   </div>
 </section>
 
+<div class="sheet-bg" id="lineSheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button type="button" class="sheet-x" id="lineClose" aria-label="閉じる">×</button>
+    <p class="sheet-title" id="sheetTitle">LINEを開きます</p>
+    <a class="cta cta-line" id="lineGo" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEを開く</a>
+    <div class="sheet-back">
+      <p class="sheet-back-h">LINEのあと、このページに戻るには</p>
+      <p>画面左上の <span class="sheet-key">＜</span> を押してください。<br>ほかの学び（無料講座・講座）も、続けて見られます。</p>
+    </div>
+    <button type="button" class="cta-sub" id="lineMore">先に、ほかの学びも見る</button>
+  </div>
+</div>
+
 <footer>
   <div class="f-name">レディースカイロうらら　院長　安藤真奈美</div>
   <div>福岡県福津市花見ヶ丘1-9-8 ソレイユ105</div>
@@ -574,18 +599,34 @@ function track(name,params){
     var a=document.createElement("a");
     a.className="cta cta-line js-line"; a.href=LINE_URL; a.target="_blank"; a.rel="noopener";
     a.textContent="詳しい解説をLINEで受け取る";
-    a.addEventListener("click",function(){ track("click_line",{posture_type:r.k,place:"sticky"}); });
+    a.addEventListener("click",function(e){ e.preventDefault(); openLineSheet(r.k,"sticky"); });
     sticky.replaceWith(a);
   });
 
+  /* LINEボタン：すぐ移動せず、戻り方の案内を出す */
+  var sheet=document.getElementById("lineSheet"), sheetGo=document.getElementById("lineGo");
+  function openLineSheet(type,place){
+    sheetGo.dataset.type=type||"none"; sheetGo.dataset.place=place||"direct";
+    sheet.hidden=false; document.body.classList.add("sheet-open");
+  }
+  function closeLineSheet(){ sheet.hidden=true; document.body.classList.remove("sheet-open"); }
+  sheetGo.addEventListener("click",function(){
+    track("click_line",{posture_type:sheetGo.dataset.type,place:sheetGo.dataset.place});
+    setTimeout(closeLineSheet,600);
+  });
+  document.getElementById("lineMore").addEventListener("click",function(){
+    closeLineSheet(); document.getElementById("stairs").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
+  });
+  document.getElementById("lineClose").addEventListener("click",closeLineSheet);
+  sheet.addEventListener("click",function(e){ if(e.target===sheet) closeLineSheet(); });
   document.querySelectorAll(".js-line-direct").forEach(function(a){
-    a.addEventListener("click",function(){ track("click_line",{posture_type:"none",place:a.dataset.place||"direct"}); });
+    a.addEventListener("click",function(e){ e.preventDefault(); openLineSheet("none",a.dataset.place||"direct"); });
   });
   document.querySelectorAll(".js-track").forEach(function(a){
     a.addEventListener("click",function(){ track(a.dataset.ev); });
   });
   document.querySelectorAll(".js-line").forEach(function(a){
-    a.addEventListener("click",function(){ track("click_line",{posture_type:document.getElementById("rKey").textContent,place:"result"}); });
+    a.addEventListener("click",function(e){ e.preventDefault(); openLineSheet(document.getElementById("rKey").textContent,"result"); });
   });
 
   document.getElementById("copyKey").addEventListener("click",function(e){
