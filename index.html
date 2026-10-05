@@ -179,6 +179,10 @@ function track(name,params){
   .sheet-back .sheet-back-h{font-weight:800;color:var(--sage-deep);margin-bottom:4px;}
   .sheet-key{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--paper);border:1px solid var(--line);font-weight:900;}
   body.sheet-open{overflow:hidden;}
+  .stair-meta{font-size:13.5px !important;font-weight:700;color:var(--sage-deep);background:var(--sage-tint);border-radius:10px;padding:8px 12px;margin:0 !important;}
+  .stair .stair-list{margin-bottom:10px;}
+  .stair details.grads{margin:10px 0 0;}
+  .stairs-note{text-align:center;font-size:14.5px;font-weight:700;margin:22px 0 12px;}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -376,39 +380,33 @@ function track(name,params){
 <section id="stairs" class="tint">
   <div class="wrap">
     <h2 class="title">知る。体験する。<br><span class="hl">学ぶ。深める。</span></h2>
-    <p class="text">今の自分に合うところから始められます。</p>
-    <p class="recommend">迷ったら、まずはLINEから。</p>
-
+    <p class="text">今の自分に合うところから。</p>
     <div class="stair stair-main">
-      <div class="stair-tag">導入編｜LINEミニ講座（無料）</div>
-      <div class="stair-h">身体のことを知る、最初の一歩。</div>
-      <ul class="stair-list"><li>姿勢タイプの詳しい解説</li><li>セルフチェックとセルフケア</li><li>家族の身体を見るポイント</li></ul>
-      <a class="cta cta-line js-line-direct" data-place="stairs" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで受け取る</a>
+      <div class="stair-tag">導入編｜LINEミニ講座</div>
+      <div class="stair-h">身体のことを知る、最初の一歩</div>
+      <ul class="stair-list"><li>あなたの姿勢タイプの詳しい解説</li><li>おうちでできるセルフチェックとセルフケア</li><li>家族の姿勢を見るときのポイント</li></ul>
+      <p class="stair-meta">無料｜LINEで受け取れます</p>
     </div>
     <div class="stair-arrow">↓</div>
-
     <div class="stair">
-      <div class="stair-tag">体験編｜無料講座</div>
-      <div class="stair-h">身体の見方を、実際に体験。</div>
-      <p>約60分・マンツーマン。<br>AI姿勢分析で、今の姿勢を一緒に確かめます。<br>福津市・レディースカイロうららにて</p>
-      <a class="cta-sub js-track" data-ev="click_free_lesson" href="https://calendar.app.google/HbwF1YYNr8htry1c6" target="_blank" rel="noopener">空いている日時を見る</a>
+      <div class="stair-tag">体験編｜無料姿勢講座</div>
+      <div class="stair-h">まずは、自分の身体を知る</div>
+      <ul class="stair-list"><li>良い姿勢と、くずれた姿勢の違い</li><li>AI姿勢分析で、今の姿勢を数値で確認</li><li>姿勢と身体のつながりを一緒に見ていく</li></ul>
+      <p class="stair-meta">約60分・マンツーマン｜無料｜福津市</p>
     </div>
     <div class="stair-arrow">↓</div>
-
     <div class="stair">
-      <div class="stair-tag">入門編｜半日・1日講座</div>
-      <div class="stair-h">身体の見方とケアを、実際に学ぶ。</div>
-      <ul class="stair-list"><li>骨盤や姿勢の見方</li><li>身体のしくみ</li><li>手を使ったケア</li></ul>
-      <p>半日（3時間）5,000円／1日 10,000円<br>少人数制・初心者歓迎</p>
-      <a class="cta-sub js-track" data-ev="click_course" href="https://urarafkt-ai.github.io/karada-lp/" target="_blank" rel="noopener">講座の日程を見る</a>
+      <div class="stair-tag">実践編｜半日・1日講座</div>
+      <div class="stair-h">学んで、やってみる</div>
+      <ul class="stair-list"><li>姿勢と骨盤の関係、身体のゆがみの見方</li><li>骨盤調整の技術を、実際に体験</li><li>自宅でできるケアと、毎日の生活のヒント</li></ul>
+      <p class="stair-meta">半日 5,000円／1日 10,000円｜少人数制・初心者歓迎</p>
     </div>
     <div class="stair-arrow">↓</div>
-
     <div class="stair">
-      <div class="stair-tag">本格編｜初級カイロプラクティック</div>
-      <div class="stair-h">自分や家族の身体を、もっと深く学ぶ。</div>
-      <p class="voices">「自分のために学びたい」<br>「家族の身体を、自分でも見てあげたい」<br>「これからの健康のために知っておきたい」</p>
-      <p>そんな思いから、学び始める方がたくさんいます。<br>そして、その学びを仕事につなげていきたい方にも。</p>
+      <div class="stair-tag">マスター編｜初級セミナー</div>
+      <div class="stair-h">自分や家族の身体を、もっと深く学ぶ</div>
+      <ul class="stair-list"><li>身体の基礎知識（解剖学・栄養・運動など）</li><li>検査から、骨盤・背骨・首など全身の手技</li><li>家族へのケアから、仕事に活かす方法まで</li></ul>
+      <p class="stair-meta">3泊4日｜費用はLINEでご案内｜主催：Zenkenkai</p>
       <details class="grads"><summary>学んだ方の今を見る</summary>
         <ul class="stair-list">
           <li>母のために学び始め、今はマンションの一室で施術院を開いています（奈良県）</li>
@@ -416,9 +414,9 @@ function track(name,params){
           <li>前職はトラックドライバー。今は夫婦で2店舗の施術院を運営しています（兵庫県）</li>
         </ul>
       </details>
-      <p class="note">※初級カイロプラクティックは、1977年創業のZenkenkaiが主催しています。</p>
-      <a class="cta-sub js-line-direct" data-place="shokyu" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">LINEで問い合わせる</a>
     </div>
+    <p class="stairs-note">日程・お申し込みは、LINEのメニューからいつでも。</p>
+    <a class="cta cta-line js-line-direct" data-place="stairs" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで講座の詳細を見る</a>
   </div>
 </section>
 
