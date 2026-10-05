@@ -190,6 +190,18 @@ function track(name,params){
   .step-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 14px;}
   .step-flow span{font-size:13.5px;font-weight:700;color:var(--sage-deep);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;}
   .step-flow i{font-style:normal;color:var(--coral);font-weight:900;}
+  .line-mark{color:#06a14a;font-weight:800;}
+  .line-guide{background:var(--card);border:2px solid #06C755;border-radius:18px;padding:20px 18px 16px;margin:24px 0 16px;text-align:center;box-shadow:var(--shadow);}
+  .line-guide-h{font-weight:900;font-size:16.5px;line-height:1.7;margin:0 0 12px;}
+  .line-guide-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:0;margin:0 0 12px;}
+  .line-guide-list li{font-size:14px;font-weight:700;background:#e9f9ef;color:#067a39;border-radius:999px;padding:4px 12px;}
+  .line-guide-list li::before{content:"✓ ";}
+  .line-guide-sub{font-size:13.5px;color:var(--ink-muted);margin:0 0 12px;}
+  .rm-mock{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:10px;overflow:hidden;}
+  .rm{font-size:11.5px;font-weight:700;padding:10px 4px;line-height:1.5;display:flex;flex-direction:column;gap:2px;}
+  .rm b{font-size:12.5px;}
+  .rm1{background:#d6eed6;color:#24543a;} .rm2{background:#f7e1c8;color:#7a3b14;} .rm3{background:#d3e6f8;color:#1d3f7a;}
+  .rm-cap{font-size:12px;color:var(--ink-muted);margin:6px 0 0;}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -388,7 +400,7 @@ function track(name,params){
   <div class="wrap">
     <h2 class="title">身体の学び方、<br><span class="hl">4つのステップ</span></h2>
     <div class="step-flow"><span>LINEで知る</span><i>→</i><span>無料講座で体験</span><i>→</i><span>講座で学ぶ</span><i>→</i><span>セミナーで深める</span></div>
-    <p class="text">今の自分に合うところから。</p>
+    <p class="text">今の自分に合うところから。<br><b class="line-mark">詳細・日程・お申し込みは、LINEでご案内しています。</b></p>
     <div class="stair stair-main">
       <div class="stair-tag">導入編｜LINEミニ講座</div>
       <div class="stair-h">身体のことを知る、最初の一歩</div>
@@ -429,7 +441,21 @@ function track(name,params){
         </ul>
       </details>
     </div>
-    <p class="stairs-note">日程・お申し込みは、LINEのメニューからいつでも。</p>
+    <div class="line-guide">
+      <p class="line-guide-h">4つの講座の詳細・日程・お申し込みは<br>すべてLINEでご案内しています</p>
+      <ul class="line-guide-list">
+        <li>講座の詳しい内容</li>
+        <li>最新の日程</li>
+        <li>お申し込み</li>
+      </ul>
+      <p class="line-guide-sub">LINEの画面下のメニューから、いつでも見られます</p>
+      <div class="rm-mock" aria-hidden="true">
+        <div class="rm rm1"><b>体験編</b>無料姿勢講座</div>
+        <div class="rm rm2"><b>実践編</b>1日講座</div>
+        <div class="rm rm3"><b>マスター編</b>初級セミナー</div>
+      </div>
+      <p class="rm-cap">▲ LINEのメニュー</p>
+    </div>
     <a class="cta cta-line js-line-direct" data-place="stairs" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで講座の詳細を見る</a>
   </div>
 </section>
