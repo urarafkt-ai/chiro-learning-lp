@@ -32,7 +32,7 @@ var META_PIXEL_ID = "1332588299943612"; /* 例："123456789012345" */
 })();
 function track(name,params){
   try{ if(window.gtag) gtag("event",name,params||{}); }catch(e){}
-  try{ if(window.fbq){ if(name==="click_line") fbq("track","Lead",params||{}); else fbq("trackCustom",name,params||{}); } }catch(e){}
+  try{ if(window.fbq){ fbq("trackCustom",name,params||{}); } }catch(e){}
 }
 </script>
 
@@ -167,18 +167,6 @@ function track(name,params){
   details.grads summary::-webkit-details-marker{display:none;}
   details.grads summary::before{content:"＋ ";}
   details.grads[open] summary::before{content:"－ ";}
-  .sheet-bg{position:fixed;inset:0;z-index:100;background:rgba(30,25,20,.45);display:flex;align-items:flex-end;justify-content:center;}
-  .sheet-bg[hidden]{display:none;}
-  .sheet{position:relative;width:100%;max-width:560px;background:var(--paper);border-radius:22px 22px 0 0;padding:26px 20px calc(24px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 30px rgba(0,0,0,.18);animation:up .25s ease;}
-  @keyframes up{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
-  @media (prefers-reduced-motion: reduce){.sheet{animation:none;}}
-  .sheet-x{position:absolute;top:10px;right:12px;border:0;background:transparent;font-size:26px;color:var(--ink-muted);cursor:pointer;line-height:1;padding:6px 10px;}
-  .sheet-title{font-family:"Shippori Mincho",serif;font-weight:800;font-size:19px;margin:0 0 16px;text-align:center;}
-  .sheet-back{background:var(--ivory);border-radius:14px;padding:14px 16px;margin:16px 0 14px;}
-  .sheet-back p{margin:0;font-size:14.5px;line-height:1.8;}
-  .sheet-back .sheet-back-h{font-weight:800;color:var(--sage-deep);margin-bottom:4px;}
-  .sheet-key{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--paper);border:1px solid var(--line);font-weight:900;}
-  body.sheet-open{overflow:hidden;}
   .stair-meta{font-size:13.5px !important;font-weight:700;color:var(--sage-deep);background:var(--sage-tint);border-radius:10px;padding:8px 12px;margin:0 !important;}
   .stair .stair-list{margin-bottom:10px;}
   .stair details.grads{margin:10px 0 0;}
@@ -202,6 +190,9 @@ function track(name,params){
   .rm b{font-size:12.5px;}
   .rm1{background:#d6eed6;color:#24543a;} .rm2{background:#f7e1c8;color:#7a3b14;} .rm3{background:#d3e6f8;color:#1d3f7a;}
   .rm-cap{font-size:12px;color:var(--ink-muted);margin:6px 0 0;}
+  .stair-use{font-size:14.5px !important;line-height:1.8;margin:0 0 10px !important;}
+  .line-lead{font-size:14px;font-weight:700;text-align:center;margin:0 0 12px;line-height:1.8;}
+  .copy-hint{font-size:13px;color:var(--coral-deep);margin:-8px 0 12px;}
   /* 共感 */
   .worry{list-style:none;margin:0 0 20px;padding:4px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);}
   .worry li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px;line-height:1.7;}
@@ -343,7 +334,14 @@ function track(name,params){
       <li>なぜ、そうなっている？</li>
     </ul>
     <p class="big-word">「何をするか」だけでなく、<br>「自分の身体をどう見るか」。</p>
-    <p class="text soft">だから、身体のことを知ることが大切です。</p>
+    <p class="text" style="margin-bottom:8px;">身体のしくみを学ぶと、</p>
+    <ul class="shows">
+      <li>自分の姿勢のクセに気づける</li>
+      <li>家族の姿勢を見るポイントがわかる</li>
+      <li>毎日のケアを、理由を知って選べる</li>
+    </ul>
+    <p class="text">「とりあえず」から、<br>身体のことを知って、考えるケアへ。</p>
+    <p class="text soft">だから、身体のことを学ぶことが大切です。</p>
   </div>
 </section>
 
@@ -381,13 +379,15 @@ function track(name,params){
         <li>おうちでできるセルフチェックとセルフケア</li>
       </ul>
       <ul class="how">
-        <li><span>1.</span>下のキーワードをコピー</li>
-        <li><span>2.</span>LINEで友だち追加</li>
-        <li><span>3.</span>キーワードを送ると、解説が届きます</li>
+        <li><span>①</span>下のキーワードをコピー</li>
+        <li><span>②</span>LINEで友だち追加</li>
+        <li><span>③</span>トーク画面にキーワードを貼り付けて送信</li>
       </ul>
       <div class="keyword"><span>LINEで送るキーワード<br><b id="rKey"></b></span><button type="button" class="copy-btn" id="copyKey">コピー</button></div>
+      <p class="copy-hint" id="copyHint" hidden>うまくコピーできない場合は、キーワードを長押ししてコピーしてください。</p>
+      <p class="line-lead">友だち追加後に、<br>このキーワードを送ると、<br>あなたのタイプの詳しい解説が届きます。</p>
       <a class="cta cta-line js-line" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>詳しい解説をLINEで受け取る</a>
-      <p class="cta-note">LINE登録は無料です。いつでも配信を止められます。</p>
+      <p class="cta-note">LINE登録は無料です。いつでも配信を止められます。<br>LINEを開いたあとも、このページに戻って続きを見られます。</p>
       <p class="line-only"><a href="#stairs">もっと実際に見てみたい方へ → 学びの階段を見る</a></p>
     </div>
 
@@ -405,6 +405,7 @@ function track(name,params){
       <div class="stair-tag">① 導入編｜LINEミニ講座</div>
       <div class="stair-h">身体のことを知る、最初の一歩</div>
       <ul class="stair-list"><li>あなたの姿勢タイプの詳しい解説</li><li>おうちでできるセルフチェックとセルフケア</li><li>家族の姿勢を見るときのポイント</li></ul>
+      <p class="stair-use">自分の姿勢を、毎日の生活の中で意識するきっかけに。</p>
       <p class="stair-meta">無料｜LINEで受け取れます</p>
     </div>
     <div class="stair-arrow">↓</div>
@@ -412,6 +413,7 @@ function track(name,params){
       <div class="stair-tag">② 体験編｜無料姿勢講座</div>
       <div class="stair-h">まずは、自分の身体を知る</div>
       <ul class="stair-list"><li>良い姿勢と、くずれた姿勢の違い</li><li>AI姿勢分析で、今の姿勢を数値で確認</li><li>姿勢と身体のつながりを一緒に見ていく</li></ul>
+      <p class="stair-use">自分の姿勢を一緒に確認し、日常で気をつけたいポイントを知る時間です。</p>
       <p class="stair-meta">約60分・マンツーマン｜無料｜福津市</p>
     </div>
     <div class="stair-arrow">↓</div>
@@ -419,6 +421,7 @@ function track(name,params){
       <div class="stair-tag">③ 実践編｜半日・1日講座</div>
       <div class="stair-h">学んで、やってみる</div>
       <ul class="stair-list"><li>姿勢と骨盤の関係、身体のゆがみの見方</li><li>骨盤調整の技術を、実際に体験</li><li>自宅でできるケアと、毎日の生活のヒント</li></ul>
+      <p class="stair-use">自分や家族の身体を見るポイントと、日常に取り入れられるケアを学びます。</p>
       <p class="stair-meta">半日 5,000円／1日 10,000円｜少人数制・初心者歓迎</p>
       <details class="grads"><summary>受講した方の声を見る</summary>
         <div class="voice-q"><p class="vq">「根本のゆがみを直すことが大事だと、すごくよくわかりました」</p><p class="vs">「身体が好調だと、メンタルにも表れるんだな」と、明るい雰囲気も印象に残ったそうです。</p></div>
@@ -432,6 +435,7 @@ function track(name,params){
       <div class="stair-tag">④ マスター編｜初級セミナー</div>
       <div class="stair-h">自分や家族の身体を、もっと深く学ぶ</div>
       <ul class="stair-list"><li>身体の基礎知識（解剖学・栄養・運動など）</li><li>検査から、骨盤・背骨・首など全身の手技</li><li>家族へのケアから、仕事に活かす方法まで</li></ul>
+      <p class="stair-use">自分や家族の身体を、知識と技術の両方から考えられるよう、学びを深めます。</p>
       <p class="stair-meta">3泊4日｜費用はLINEでご案内｜主催：Zenkenkai</p>
       <details class="grads"><summary>学んだ方の今を見る</summary>
         <ul class="stair-list">
@@ -457,6 +461,7 @@ function track(name,params){
       <p class="rm-cap">▲ LINEのメニュー</p>
     </div>
     <a class="cta cta-line js-line-direct" data-place="stairs" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEで講座の詳細を見る</a>
+    <p class="cta-note">LINEを開いたあとも、このページに戻って続きを見られます。</p>
   </div>
 </section>
 
@@ -501,19 +506,6 @@ function track(name,params){
     <button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button>
   </div>
 </section>
-
-<div class="sheet-bg" id="lineSheet" hidden>
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-    <button type="button" class="sheet-x" id="lineClose" aria-label="閉じる">×</button>
-    <p class="sheet-title" id="sheetTitle">LINEを開きます</p>
-    <a class="cta cta-line" id="lineGo" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>LINEを開く</a>
-    <div class="sheet-back">
-      <p class="sheet-back-h">LINEのあと、このページに戻るには</p>
-      <p>画面左上の <span class="sheet-key">＜</span> を押してください。<br>ほかの学び（無料講座・講座）も、続けて見られます。</p>
-    </div>
-    <button type="button" class="cta-sub" id="lineMore">先に、ほかの学びも見る</button>
-  </div>
-</div>
 
 <footer>
   <div class="f-name">レディースカイロうらら　院長　安藤真奈美</div>
@@ -637,40 +629,38 @@ function track(name,params){
     var a=document.createElement("a");
     a.className="cta cta-line js-line"; a.href=LINE_URL; a.target="_blank"; a.rel="noopener";
     a.textContent="詳しい解説をLINEで受け取る";
-    a.addEventListener("click",function(e){ e.preventDefault(); openLineSheet(r.k,"sticky"); });
+    a.addEventListener("click",function(){ track("click_line",{posture_type:r.k,place:"sticky"}); });
     sticky.replaceWith(a);
   });
 
-  /* LINEボタン：すぐ移動せず、戻り方の案内を出す */
-  var sheet=document.getElementById("lineSheet"), sheetGo=document.getElementById("lineGo");
-  function openLineSheet(type,place){
-    sheetGo.dataset.type=type||"none"; sheetGo.dataset.place=place||"direct";
-    sheet.hidden=false; document.body.classList.add("sheet-open");
-  }
-  function closeLineSheet(){ sheet.hidden=true; document.body.classList.remove("sheet-open"); }
-  sheetGo.addEventListener("click",function(){
-    track("click_line",{posture_type:sheetGo.dataset.type,place:sheetGo.dataset.place});
-    setTimeout(closeLineSheet,600);
-  });
-  document.getElementById("lineMore").addEventListener("click",function(){
-    closeLineSheet(); document.getElementById("stairs").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
-  });
-  document.getElementById("lineClose").addEventListener("click",closeLineSheet);
-  sheet.addEventListener("click",function(e){ if(e.target===sheet) closeLineSheet(); });
+  /* LINEボタン：押したらそのままLINEへ（クリック時に1回だけ計測） */
   document.querySelectorAll(".js-line-direct").forEach(function(a){
-    a.addEventListener("click",function(e){ e.preventDefault(); openLineSheet("none",a.dataset.place||"direct"); });
+    a.addEventListener("click",function(){ track("click_line",{posture_type:"none",place:a.dataset.place||"direct"}); });
   });
   document.querySelectorAll(".js-track").forEach(function(a){
     a.addEventListener("click",function(){ track(a.dataset.ev); });
   });
   document.querySelectorAll(".js-line").forEach(function(a){
-    a.addEventListener("click",function(e){ e.preventDefault(); openLineSheet(document.getElementById("rKey").textContent,"result"); });
+    a.addEventListener("click",function(){ track("click_line",{posture_type:document.getElementById("rKey").textContent,place:"result"}); });
   });
 
   document.getElementById("copyKey").addEventListener("click",function(e){
-    var b=e.currentTarget,k=document.getElementById("rKey");
-    function sel(){ var rg=document.createRange(); rg.selectNodeContents(k); var s=getSelection(); s.removeAllRanges(); s.addRange(rg); b.textContent="選択しました"; }
-    try{ navigator.clipboard.writeText(k.textContent).then(function(){ b.textContent="コピーしました"; },sel); }catch(err){ sel(); }
+    var b=e.currentTarget,k=document.getElementById("rKey"),hint=document.getElementById("copyHint");
+    function ok(){ b.textContent="コピーしました"; hint.hidden=true; }
+    function fallback(){
+      var done=false;
+      try{
+        var t=document.createElement("textarea"); t.value=k.textContent; t.setAttribute("readonly","");
+        t.style.position="fixed"; t.style.opacity="0"; document.body.appendChild(t); t.select(); t.setSelectionRange(0,99);
+        done=document.execCommand("copy"); document.body.removeChild(t);
+      }catch(err){ done=false; }
+      if(done){ ok(); return; }
+      var rg=document.createRange(); rg.selectNodeContents(k); var s=getSelection(); s.removeAllRanges(); s.addRange(rg);
+      b.textContent="コピー"; hint.hidden=false;
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(k.textContent).then(ok,fallback);
+    }else{ fallback(); }
   });
 })();
 </script>
