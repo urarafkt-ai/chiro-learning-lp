@@ -191,6 +191,9 @@ function track(name,params){
   .rm1{background:#d6eed6;color:#24543a;} .rm2{background:#f7e1c8;color:#7a3b14;} .rm3{background:#d3e6f8;color:#1d3f7a;}
   .rm-cap{font-size:12px;color:var(--ink-muted);margin:6px 0 0;}
   .stair-use{font-size:14.5px !important;line-height:1.8;margin:0 0 10px !important;}
+  .hero-line{text-align:center;margin:12px 0 0;font-size:14.5px;}
+  .hero-line a{color:var(--sage-deep);font-weight:700;}
+  .key-name{background:var(--ivory);border:1px solid var(--line);border-radius:8px;padding:1px 8px;margin:0 2px;white-space:nowrap;}
   .line-lead{font-size:14px;font-weight:700;text-align:center;margin:0 0 12px;line-height:1.8;}
   .copy-hint{font-size:13px;color:var(--coral-deep);margin:-8px 0 12px;}
   /* 共感 */
@@ -283,9 +286,10 @@ function track(name,params){
     <img src="hero-family.jpg" alt="タブレットで姿勢の見方を説明する安藤さんと、話を聞く親子" style="object-position:62% 40%">
   </div>
   <div class="wrap hero-body">
-    <h1>その身体のつらさ、<br><span class="hl">「年齢のせい」<br>「疲れのせい」で</span><br>終わらせていませんか？</h1>
-    <p class="hero-lead">肩や首のつらさ、腰の重さ、子どもの猫背。<br>じつは「姿勢」とつながっていることがあります。</p>
+    <h1>揉んでも、また戻る。<br><span class="hl">それ、肩だけの<br>問題じゃないかも。</span></h1>
+    <p class="hero-lead">肩や首のつらさ、腰の重さ、疲れやすさ、子どもの猫背。<br>じつは「姿勢」とつながっていることがあります。</p>
     <button type="button" class="cta js-start">30秒で、わたしの姿勢のクセを見てみる</button>
+    <p class="hero-line"><a class="js-line-direct" data-place="hero" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener">チェックせずに、LINEで解説を受け取る ›</a></p>
     <p class="hero-place">無料・男女どちらもOK<br>福岡県福津市　レディースカイロうらら</p>
   </div>
 </section>
@@ -379,13 +383,10 @@ function track(name,params){
         <li>おうちでできるセルフチェックとセルフケア</li>
       </ul>
       <ul class="how">
-        <li><span>①</span>下のキーワードをコピー</li>
-        <li><span>②</span>LINEで友だち追加</li>
-        <li><span>③</span>トーク画面にキーワードを貼り付けて送信</li>
+        <li><span>①</span><div>下のボタンから、LINEで友だち追加</div></li>
+        <li><span>②</span><div>届いたカードから、<b class="key-name" id="rKey"></b>の<br>「解説を見る」を押す</div></li>
       </ul>
-      <div class="keyword"><span>LINEで送るキーワード<br><b id="rKey"></b></span><button type="button" class="copy-btn" id="copyKey">コピー</button></div>
-      <p class="copy-hint" id="copyHint" hidden>うまくコピーできない場合は、キーワードを長押ししてコピーしてください。</p>
-      <p class="line-lead">友だち追加後に、<br>このキーワードを送ると、<br>あなたのタイプの詳しい解説が届きます。</p>
+      <p class="line-lead">それだけで、あなたのタイプの<br>詳しい解説が届きます。</p>
       <a class="cta cta-line js-line" href="https://lin.ee/UHhSOx5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.09 2 5.77 5 7.32-.15.53-.66 2.3-.76 2.65-.12.44.16.43.34.31.14-.09 2.3-1.56 3.24-2.2.7.1 1.42.15 2.18.15 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>詳しい解説をLINEで受け取る</a>
       <p class="cta-note">LINE登録は無料です。いつでも配信を止められます。<br>LINEを開いたあとも、このページに戻って続きを見られます。</p>
       <p class="line-only"><a href="#stairs">もっと実際に見てみたい方へ → 4つのステップを見る</a></p>
@@ -642,24 +643,7 @@ function track(name,params){
     a.addEventListener("click",function(){ track("click_line",{posture_type:document.getElementById("rKey").textContent,place:"result"}); });
   });
 
-  document.getElementById("copyKey").addEventListener("click",function(e){
-    var b=e.currentTarget,k=document.getElementById("rKey"),hint=document.getElementById("copyHint");
-    function ok(){ b.textContent="コピーしました"; hint.hidden=true; }
-    function fallback(){
-      var done=false;
-      try{
-        var t=document.createElement("textarea"); t.value=k.textContent; t.setAttribute("readonly","");
-        t.style.position="fixed"; t.style.opacity="0"; document.body.appendChild(t); t.select(); t.setSelectionRange(0,99);
-        done=document.execCommand("copy"); document.body.removeChild(t);
-      }catch(err){ done=false; }
-      if(done){ ok(); return; }
-      var rg=document.createRange(); rg.selectNodeContents(k); var s=getSelection(); s.removeAllRanges(); s.addRange(rg);
-      b.textContent="コピー"; hint.hidden=false;
-    }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(k.textContent).then(ok,fallback);
-    }else{ fallback(); }
-  });
+
 })();
 </script>
 
